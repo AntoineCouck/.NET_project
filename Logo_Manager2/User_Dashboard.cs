@@ -1,6 +1,6 @@
 ﻿using Logo_Manager2.User_forms;
 using System.Windows.Forms;
-
+using System;
 
 namespace Logo_Manager2
 {
@@ -11,7 +11,7 @@ namespace Logo_Manager2
         public static Log_in log_In = new Log_in();
         public static Sign_in sign_in = new Sign_in();
         // instances of my forms 
-        public static  readonly Logo_managerEntities logo_ManagerEntities =new Logo_managerEntities();
+        public static readonly Logo_managerEntities logo_ManagerEntities = new Logo_managerEntities();
         public User_Dashboard()
         {
             InitializeComponent();

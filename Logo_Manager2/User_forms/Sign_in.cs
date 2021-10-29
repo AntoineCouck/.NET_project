@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using System.Linq;
+using System.Data.SqlClient;
 
 namespace Logo_Manager2.User_forms
 {
@@ -15,16 +16,32 @@ namespace Logo_Manager2.User_forms
 
             var name = input_name_register.Text;
             var email = input_email_register.Text;
-            var password = Utils.HashDefaultPassword();
+            var password = input_password_register.Text;
+
 
             var User = new User
             {
                 Name = name,
-                E_mail = email,
+                Email = email,
                 Password = password
             };
 
-            User_Dashboard.logo_ManagerEntities.Add();
+            try
+            {
+
+                User_Dashboard.logo_ManagerEntities.Users.Add(User);
+                User_Dashboard.logo_ManagerEntities.SaveChanges();
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            if (name != null && email != null && password != null)
+            {
+                User_Dashboard.sign_in.Close();
+            }
         }
     }
 }

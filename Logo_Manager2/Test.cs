@@ -17,6 +17,6 @@ namespace Logo_Manager2
         public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
-        public string Type_of_followUp { get; set; }
+        public string TypefollowUp { get; set; }
     }
 }
