@@ -21,7 +21,6 @@ namespace Logo_Manager2.User_forms
             try
             {
 
-
             var User = new User
             {
                 Name = name,
