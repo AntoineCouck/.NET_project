@@ -46,18 +46,19 @@
             this.login_submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.login_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_submit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.login_submit.Location = new System.Drawing.Point(363, 273);
+            this.login_submit.Location = new System.Drawing.Point(345, 278);
             this.login_submit.Margin = new System.Windows.Forms.Padding(2);
             this.login_submit.Name = "login_submit";
             this.login_submit.Size = new System.Drawing.Size(77, 32);
             this.login_submit.TabIndex = 9;
             this.login_submit.Text = "Submit";
             this.login_submit.UseVisualStyleBackColor = false;
+            this.login_submit.Click += new System.EventHandler(this.login_submit_Click);
             // 
             // input_password_register
             // 
             this.input_password_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.input_password_register.Location = new System.Drawing.Point(338, 216);
+            this.input_password_register.Location = new System.Drawing.Point(320, 221);
             this.input_password_register.Margin = new System.Windows.Forms.Padding(2);
             this.input_password_register.Name = "input_password_register";
             this.input_password_register.Size = new System.Drawing.Size(127, 26);
@@ -67,7 +68,7 @@
             // 
             this.input_email_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.input_email_register.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.input_email_register.Location = new System.Drawing.Point(338, 151);
+            this.input_email_register.Location = new System.Drawing.Point(320, 156);
             this.input_email_register.Margin = new System.Windows.Forms.Padding(2);
             this.input_email_register.Name = "input_email_register";
             this.input_email_register.Size = new System.Drawing.Size(127, 26);
@@ -77,7 +78,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(335, 197);
+            this.label2.Location = new System.Drawing.Point(317, 202);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 17);
@@ -88,7 +89,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(335, 132);
+            this.label1.Location = new System.Drawing.Point(317, 137);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 17);
@@ -99,7 +100,7 @@
             // 
             this.input_name_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.input_name_register.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.input_name_register.Location = new System.Drawing.Point(338, 88);
+            this.input_name_register.Location = new System.Drawing.Point(320, 93);
             this.input_name_register.Margin = new System.Windows.Forms.Padding(2);
             this.input_name_register.Name = "input_name_register";
             this.input_name_register.Size = new System.Drawing.Size(127, 26);
@@ -109,7 +110,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(335, 69);
+            this.label3.Location = new System.Drawing.Point(317, 74);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 17);
@@ -120,7 +121,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(275, 324);
+            this.label4.Location = new System.Drawing.Point(279, 331);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 17);
@@ -131,7 +132,7 @@
             // 
             this.link_log_in.AutoSize = true;
             this.link_log_in.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.link_log_in.Location = new System.Drawing.Point(435, 324);
+            this.link_log_in.Location = new System.Drawing.Point(439, 331);
             this.link_log_in.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.link_log_in.Name = "link_log_in";
             this.link_log_in.Size = new System.Drawing.Size(51, 17);
