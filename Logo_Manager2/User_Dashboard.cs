@@ -14,8 +14,6 @@ namespace Logo_Manager2
         public User_Dashboard()
         {
             InitializeComponent();
-
-
         }
 
         private void User_Dashboard_Load(object sender, System.EventArgs e)
@@ -25,7 +23,7 @@ namespace Logo_Manager2
 
         private void disconnectToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-
+            // disconect button 
         }
     }
 }
