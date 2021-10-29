@@ -1,6 +1,5 @@
-﻿using System.Windows.Forms;
-using System.Linq;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Logo_Manager2.User_forms
 {
@@ -19,16 +18,17 @@ namespace Logo_Manager2.User_forms
             var password = input_password_register.Text;
 
 
+            try
+            {
+
+
             var User = new User
             {
                 Name = name,
                 Email = email,
                 Password = password
+               
             };
-
-            try
-            {
-
                 User_Dashboard.logo_ManagerEntities.Users.Add(User);
                 User_Dashboard.logo_ManagerEntities.SaveChanges();
 
@@ -41,6 +41,9 @@ namespace Logo_Manager2.User_forms
             if (name != null && email != null && password != null)
             {
                 User_Dashboard.sign_in.Close();
+            } else
+            {
+               // something
             }
         }
     }

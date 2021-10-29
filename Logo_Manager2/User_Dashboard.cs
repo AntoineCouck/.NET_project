@@ -1,6 +1,5 @@
 ﻿using Logo_Manager2.User_forms;
 using System.Windows.Forms;
-using System;
 
 namespace Logo_Manager2
 {
@@ -15,8 +14,8 @@ namespace Logo_Manager2
         public User_Dashboard()
         {
             InitializeComponent();
-            
-            
+
+
         }
 
         private void User_Dashboard_Load(object sender, System.EventArgs e)

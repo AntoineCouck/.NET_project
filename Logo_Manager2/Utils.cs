@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Logo_Manager2
 {
@@ -13,8 +9,8 @@ namespace Logo_Manager2
         {
             SHA256 sha = SHA256.Create();
             byte[] data = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
-            StringBuilder stringBuilder= new StringBuilder();
-            for(int i = 0; i < data.Length; i++)
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < data.Length; i++)
             {
                 stringBuilder.Append(data[i].ToString("x2"));
             }
