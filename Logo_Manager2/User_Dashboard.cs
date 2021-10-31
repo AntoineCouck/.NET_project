@@ -9,8 +9,9 @@ namespace Logo_Manager2
 
         public static Log_in log_In = new Log_in();
         public static Sign_in sign_in = new Sign_in();
-        // instances of my forms 
-        public static readonly Logo_managerEntities logo_ManagerEntities = new Logo_managerEntities();
+        public static bool is_connected = false;
+        public static string username;
+        
         public User_Dashboard()
         {
             InitializeComponent();
@@ -19,11 +20,18 @@ namespace Logo_Manager2
         private void User_Dashboard_Load(object sender, System.EventArgs e)
         {
             log_In.ShowDialog();
+            username = log_In.username;
+            is_connected = log_In.is_connected;
+
+            AccountName.Text = username;
+            
         }
 
         private void disconnectToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             // disconect button 
         }
+
+        
     }
 }

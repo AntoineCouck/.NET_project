@@ -20,7 +20,7 @@ namespace Logo_Manager2
         public System.DateTime Birthday { get; set; }
         public string Followup { get; set; }
         public int LeftSessions { get; set; }
-        public int UserId { get; set; }
+        public Nullable<int> UserId { get; set; }
     
         public virtual User User { get; set; }
     }

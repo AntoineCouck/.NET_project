@@ -580,7 +580,6 @@ namespace Logo_Manager2 {
                 this.columnFollowup.AllowDBNull = false;
                 this.columnFollowup.MaxLength = 50;
                 this.columnLeftSessions.AllowDBNull = false;
-                this.columnUserId.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1409,7 +1408,12 @@ namespace Logo_Manager2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int UserId {
                 get {
-                    return ((int)(this[this.tablePatients.UserIdColumn]));
+                    try {
+                        return ((int)(this[this.tablePatients.UserIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UserId\' in table \'Patients\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablePatients.UserIdColumn] = value;
@@ -1425,6 +1429,18 @@ namespace Logo_Manager2 {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Users"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsUserIdNull() {
+                return this.IsNull(this.tablePatients.UserIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetUserIdNull() {
+                this[this.tablePatients.UserIdColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1811,7 +1827,7 @@ namespace Logo_Manager2.Logo_managerDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Patients] WHERE (([Id] = @Original_Id) AND ([Firstname] = @Original_Firstname) AND ([Lastname] = @Original_Lastname) AND ([Birthday] = @Original_Birthday) AND ([Followup] = @Original_Followup) AND ([LeftSessions] = @Original_LeftSessions) AND ([UserId] = @Original_UserId))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Patients] WHERE (([Id] = @Original_Id) AND ([Firstname] = @Original_Firstname) AND ([Lastname] = @Original_Lastname) AND ([Birthday] = @Original_Birthday) AND ([Followup] = @Original_Followup) AND ([LeftSessions] = @Original_LeftSessions) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Firstname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Firstname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1819,6 +1835,7 @@ namespace Logo_Manager2.Logo_managerDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Followup", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Followup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LeftSessions", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LeftSessions", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -1833,7 +1850,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Patients] SET [Firstname] = @Firstname, [Lastname] = @Lastname, [Birthday] = @Birthday, [Followup] = @Followup, [LeftSessions] = @LeftSessions, [UserId] = @UserId WHERE (([Id] = @Original_Id) AND ([Firstname] = @Original_Firstname) AND ([Lastname] = @Original_Lastname) AND ([Birthday] = @Original_Birthday) AND ([Followup] = @Original_Followup) AND ([LeftSessions] = @Original_LeftSessions) AND ([UserId] = @Original_UserId));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Patients] SET [Firstname] = @Firstname, [Lastname] = @Lastname, [Birthday] = @Birthday, [Followup] = @Followup, [LeftSessions] = @LeftSessions, [UserId] = @UserId WHERE (([Id] = @Original_Id) AND ([Firstname] = @Original_Firstname) AND ([Lastname] = @Original_Lastname) AND ([Birthday] = @Original_Birthday) AND ([Followup] = @Original_Followup) AND ([LeftSessions] = @Original_LeftSessions) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)));
 SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Patients WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Firstname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Firstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1848,6 +1865,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Followup", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Followup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LeftSessions", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LeftSessions", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -1927,7 +1945,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Firstname, string Original_Lastname, System.DateTime Original_Birthday, string Original_Followup, int Original_LeftSessions, int Original_UserId) {
+        public virtual int Delete(int Original_Id, string Original_Firstname, string Original_Lastname, System.DateTime Original_Birthday, string Original_Followup, int Original_LeftSessions, global::System.Nullable<int> Original_UserId) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Firstname == null)) {
                 throw new global::System.ArgumentNullException("Original_Firstname");
@@ -1949,7 +1967,14 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Followup));
             }
             this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_LeftSessions));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_UserId));
+            if ((Original_UserId.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_UserId.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1970,7 +1995,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Firstname, string Lastname, System.DateTime Birthday, string Followup, int LeftSessions, int UserId) {
+        public virtual int Insert(string Firstname, string Lastname, System.DateTime Birthday, string Followup, int LeftSessions, global::System.Nullable<int> UserId) {
             if ((Firstname == null)) {
                 throw new global::System.ArgumentNullException("Firstname");
             }
@@ -1991,7 +2016,12 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Followup));
             }
             this.Adapter.InsertCommand.Parameters[4].Value = ((int)(LeftSessions));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(UserId));
+            if ((UserId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(UserId.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2012,7 +2042,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Firstname, string Lastname, System.DateTime Birthday, string Followup, int LeftSessions, int UserId, int Original_Id, string Original_Firstname, string Original_Lastname, System.DateTime Original_Birthday, string Original_Followup, int Original_LeftSessions, int Original_UserId, int Id) {
+        public virtual int Update(string Firstname, string Lastname, System.DateTime Birthday, string Followup, int LeftSessions, global::System.Nullable<int> UserId, int Original_Id, string Original_Firstname, string Original_Lastname, System.DateTime Original_Birthday, string Original_Followup, int Original_LeftSessions, global::System.Nullable<int> Original_UserId, int Id) {
             if ((Firstname == null)) {
                 throw new global::System.ArgumentNullException("Firstname");
             }
@@ -2033,7 +2063,12 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Followup));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(LeftSessions));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(UserId));
+            if ((UserId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(UserId.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id));
             if ((Original_Firstname == null)) {
                 throw new global::System.ArgumentNullException("Original_Firstname");
@@ -2055,8 +2090,15 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Followup));
             }
             this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_LeftSessions));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_UserId));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id));
+            if ((Original_UserId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_UserId.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2077,7 +2119,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserId FROM Pa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Firstname, string Lastname, System.DateTime Birthday, string Followup, int LeftSessions, int UserId, int Original_Id, string Original_Firstname, string Original_Lastname, System.DateTime Original_Birthday, string Original_Followup, int Original_LeftSessions, int Original_UserId) {
+        public virtual int Update(string Firstname, string Lastname, System.DateTime Birthday, string Followup, int LeftSessions, global::System.Nullable<int> UserId, int Original_Id, string Original_Firstname, string Original_Lastname, System.DateTime Original_Birthday, string Original_Followup, int Original_LeftSessions, global::System.Nullable<int> Original_UserId) {
             return this.Update(Firstname, Lastname, Birthday, Followup, LeftSessions, UserId, Original_Id, Original_Firstname, Original_Lastname, Original_Birthday, Original_Followup, Original_LeftSessions, Original_UserId, Original_Id);
         }
     }
@@ -2634,7 +2676,7 @@ SELECT Id, Name, Email, Password FROM Users WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Logo_managerDataSet.UsersDataTable GetData() {
+        public virtual Logo_managerDataSet.UsersDataTable GetUsers() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             Logo_managerDataSet.UsersDataTable dataTable = new Logo_managerDataSet.UsersDataTable();
             this.Adapter.Fill(dataTable);

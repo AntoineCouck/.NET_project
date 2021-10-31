@@ -5,6 +5,8 @@ namespace Logo_Manager2
 {
     internal class Utils
     {
+
+
         public static string HashPassword(string password)
         {
             SHA256 sha = SHA256.Create();
@@ -28,5 +30,21 @@ namespace Logo_Manager2
             }
             return stringBuilder.ToString();
         }
+
+        private bool IsEveritingADigit(string text)
+        {
+            foreach (char c in text)
+            {
+                if (!(char.IsDigit(c)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+
     }
+
 }

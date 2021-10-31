@@ -42,7 +42,6 @@
             // login_submit
             // 
             this.login_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.login_submit.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.login_submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.login_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_submit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -139,6 +138,7 @@
             this.link_log_in.TabIndex = 13;
             this.link_log_in.TabStop = true;
             this.link_log_in.Text = "Log_in";
+            this.link_log_in.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_log_in_LinkClicked);
             // 
             // Sign_in
             // 

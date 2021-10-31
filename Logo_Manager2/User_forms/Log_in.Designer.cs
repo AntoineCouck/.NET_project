@@ -85,7 +85,6 @@
             // login_submit
             // 
             this.login_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.login_submit.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.login_submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.login_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_submit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -96,6 +95,7 @@
             this.login_submit.TabIndex = 4;
             this.login_submit.Text = "Submit";
             this.login_submit.UseVisualStyleBackColor = false;
+            this.login_submit.Click += new System.EventHandler(this.login_submit_Click);
             // 
             // password_login_input
             // 
