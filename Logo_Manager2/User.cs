@@ -20,7 +20,6 @@ namespace Logo_Manager2
             this.Patients = new HashSet<Patient>();
         }
     
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }

@@ -13,10 +13,10 @@ namespace Logo_Manager2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Logo_managerEntities : DbContext
+    public partial class Logo_managerEntities1 : DbContext
     {
-        public Logo_managerEntities()
-            : base("name=Logo_managerEntities")
+        public Logo_managerEntities1()
+            : base("name=Logo_managerEntities1")
         {
         }
     

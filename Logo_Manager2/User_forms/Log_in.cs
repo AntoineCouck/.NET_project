@@ -12,7 +12,7 @@ namespace Logo_Manager2
     {
 
         protected string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Antoine\source\repos\project.net\.NETproject\Logo_Manager2\Logo_manager.mdf;Integrated Security=True";
-        Logo_managerEntities context = new Logo_managerEntities();
+        Logo_managerEntities1 context = new Logo_managerEntities1();
         public string username { get; set; }
         public bool is_connected {  get; set; }
 

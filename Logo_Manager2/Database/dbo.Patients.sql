@@ -6,6 +6,6 @@
     [Birthday] DATETIME NOT NULL, 
     [Followup] NVARCHAR(50) NOT NULL, 
     [LeftSessions] INT NOT NULL ,
-    [UserId] INT  NULL ,
-    CONSTRAINT [FK_Users] FOREIGN KEY (UserId) REFERENCES Users (Id) 
+    [UserName] NVARCHAR(50)  NULL ,
+    CONSTRAINT [FK_Users] FOREIGN KEY (UserName) REFERENCES Users(Name)
 )

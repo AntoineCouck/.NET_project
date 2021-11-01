@@ -10,7 +10,7 @@ namespace Logo_Manager2.User_forms
     public partial class Sign_in : Form
     {
         protected string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Antoine\source\repos\project.net\.NETproject\Logo_Manager2\Logo_manager.mdf;Integrated Security=True";
-        Logo_managerEntities context = new Logo_managerEntities();
+        Logo_managerEntities1 context = new Logo_managerEntities1();
 
 
         public Sign_in()
@@ -91,7 +91,7 @@ namespace Logo_Manager2.User_forms
                 context.Users.Add(user);
                 context.SaveChanges();
 
-                MessageBox.Show(user.Email);
+               
                 
                 User_Dashboard.sign_in.Close();
 
