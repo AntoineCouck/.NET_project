@@ -1,6 +1,7 @@
-﻿using Logo_Manager2.User_forms;
-using Logo_Manager2.create_forms;
+﻿using Logo_Manager2.create_forms;
+using Logo_Manager2.User_forms;
 using System.Windows.Forms;
+using System;
 
 namespace Logo_Manager2
 {
@@ -13,7 +14,7 @@ namespace Logo_Manager2
         public static create_new_patient create_patient = new create_new_patient();
         public static bool is_connected = false;
         public static string username;
-        
+
         public User_Dashboard()
         {
             InitializeComponent();
@@ -27,15 +28,21 @@ namespace Logo_Manager2
 
             AccountName.Text = username;
 
-           
+            if (is_connected)
+            {
+                // TODO: This line of code loads data into the 'logo_managerDataSet.Tests' table. You can move, or remove it, as needed.
+                this.testsTableAdapter.Fill(this.logo_managerDataSet.Tests);
+                // TODO: This line of code loads data into the 'logo_managerDataSet.Patients' table. You can move, or remove it, as needed.
+                this.patientsTableAdapter.Fill(this.logo_managerDataSet.Patients);
 
-            // TODO: This line of code loads data into the 'logo_managerDataSet.Tests' table. You can move, or remove it, as needed.
-            this.testsTableAdapter.Fill(this.logo_managerDataSet.Tests);
-            // TODO: This line of code loads data into the 'logo_managerDataSet.Patients' table. You can move, or remove it, as needed.
-            this.patientsTableAdapter.Fill(this.logo_managerDataSet.Patients);
+            }
 
             
+      
         }
+
+
+        
 
         private void disconnectToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
@@ -50,6 +57,7 @@ namespace Logo_Manager2
         private void btn_dashboard_add_patient_Click(object sender, System.EventArgs e)
         {
             create_patient.ShowDialog();
+
         }
     }
 }

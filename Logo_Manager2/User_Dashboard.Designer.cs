@@ -43,30 +43,30 @@
             this.AccountName = new System.Windows.Forms.TextBox();
             this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientsTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.PatientsTableAdapter();
+            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testsTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.TestsTableAdapter();
+            this.btn_dashboard_add_test = new System.Windows.Forms.Button();
+            this.btn_dashboard_add_patient = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.patientsDataGridView = new System.Windows.Forms.DataGridView();
+            this.testsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.testsTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.TestsTableAdapter();
-            this.testsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_dashboard_add_test = new System.Windows.Forms.Button();
-            this.btn_dashboard_add_patient = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Menu_dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,6 +149,58 @@
             // 
             this.patientsTableAdapter.ClearBeforeFill = true;
             // 
+            // testsBindingSource
+            // 
+            this.testsBindingSource.DataMember = "Tests";
+            this.testsBindingSource.DataSource = this.logo_managerDataSet;
+            // 
+            // testsTableAdapter
+            // 
+            this.testsTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_dashboard_add_test
+            // 
+            this.btn_dashboard_add_test.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_dashboard_add_test.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_dashboard_add_test.Location = new System.Drawing.Point(1004, 567);
+            this.btn_dashboard_add_test.Name = "btn_dashboard_add_test";
+            this.btn_dashboard_add_test.Size = new System.Drawing.Size(100, 39);
+            this.btn_dashboard_add_test.TabIndex = 7;
+            this.btn_dashboard_add_test.Text = "Add test";
+            this.btn_dashboard_add_test.UseVisualStyleBackColor = true;
+            // 
+            // btn_dashboard_add_patient
+            // 
+            this.btn_dashboard_add_patient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_dashboard_add_patient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_dashboard_add_patient.Location = new System.Drawing.Point(276, 567);
+            this.btn_dashboard_add_patient.Name = "btn_dashboard_add_patient";
+            this.btn_dashboard_add_patient.Size = new System.Drawing.Size(100, 39);
+            this.btn_dashboard_add_patient.TabIndex = 8;
+            this.btn_dashboard_add_patient.Text = "Add patient";
+            this.btn_dashboard_add_patient.UseVisualStyleBackColor = true;
+            this.btn_dashboard_add_patient.Click += new System.EventHandler(this.btn_dashboard_add_patient_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(272, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Patients";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(1032, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Tests";
+            // 
             // patientsDataGridView
             // 
             this.patientsDataGridView.AutoGenerateColumns = false;
@@ -161,21 +213,35 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.patientsDataGridView.DataSource = this.patientsBindingSource;
-            this.patientsDataGridView.Location = new System.Drawing.Point(12, 61);
+            this.patientsDataGridView.Location = new System.Drawing.Point(23, 61);
             this.patientsDataGridView.Name = "patientsDataGridView";
-            this.patientsDataGridView.Size = new System.Drawing.Size(539, 500);
-            this.patientsDataGridView.TabIndex = 4;
+            this.patientsDataGridView.Size = new System.Drawing.Size(573, 500);
+            this.patientsDataGridView.TabIndex = 11;
+            // 
+            // testsDataGridView
+            // 
+            this.testsDataGridView.AutoGenerateColumns = false;
+            this.testsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.testsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.testsDataGridView.DataSource = this.testsBindingSource;
+            this.testsDataGridView.Location = new System.Drawing.Point(864, 61);
+            this.testsDataGridView.Name = "testsDataGridView";
+            this.testsDataGridView.Size = new System.Drawing.Size(370, 490);
+            this.testsDataGridView.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
             this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 20;
+            this.dataGridViewTextBoxColumn1.Width = 25;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -194,7 +260,6 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Birthday";
             this.dataGridViewTextBoxColumn4.HeaderText = "Birthday";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -207,106 +272,34 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "LeftSessions";
             this.dataGridViewTextBoxColumn6.HeaderText = "LeftSessions";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 75;
-            // 
-            // testsBindingSource
-            // 
-            this.testsBindingSource.DataMember = "Tests";
-            this.testsBindingSource.DataSource = this.logo_managerDataSet;
-            // 
-            // testsTableAdapter
-            // 
-            this.testsTableAdapter.ClearBeforeFill = true;
-            // 
-            // testsDataGridView
-            // 
-            this.testsDataGridView.AutoGenerateColumns = false;
-            this.testsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.testsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.testsDataGridView.DataSource = this.testsBindingSource;
-            this.testsDataGridView.Location = new System.Drawing.Point(831, 61);
-            this.testsDataGridView.Name = "testsDataGridView";
-            this.testsDataGridView.Size = new System.Drawing.Size(395, 500);
-            this.testsDataGridView.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
             this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn7.HeaderText = "Id";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 20;
+            this.dataGridViewTextBoxColumn7.Width = 25;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Name";
             this.dataGridViewTextBoxColumn8.HeaderText = "Name";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 150;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Age";
             this.dataGridViewTextBoxColumn9.HeaderText = "Age";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 30;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "TypefollowUp";
             this.dataGridViewTextBoxColumn10.HeaderText = "TypefollowUp";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 150;
-            // 
-            // btn_dashboard_add_test
-            // 
-            this.btn_dashboard_add_test.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_dashboard_add_test.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_dashboard_add_test.Location = new System.Drawing.Point(989, 567);
-            this.btn_dashboard_add_test.Name = "btn_dashboard_add_test";
-            this.btn_dashboard_add_test.Size = new System.Drawing.Size(100, 39);
-            this.btn_dashboard_add_test.TabIndex = 7;
-            this.btn_dashboard_add_test.Text = "Add test";
-            this.btn_dashboard_add_test.UseVisualStyleBackColor = true;
-            // 
-            // btn_dashboard_add_patient
-            // 
-            this.btn_dashboard_add_patient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_dashboard_add_patient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_dashboard_add_patient.Location = new System.Drawing.Point(215, 567);
-            this.btn_dashboard_add_patient.Name = "btn_dashboard_add_patient";
-            this.btn_dashboard_add_patient.Size = new System.Drawing.Size(100, 39);
-            this.btn_dashboard_add_patient.TabIndex = 8;
-            this.btn_dashboard_add_patient.Text = "Add patient";
-            this.btn_dashboard_add_patient.UseVisualStyleBackColor = true;
-            this.btn_dashboard_add_patient.Click += new System.EventHandler(this.btn_dashboard_add_patient_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(235, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Patients";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(1012, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Tests";
             // 
             // User_Dashboard
             // 
@@ -314,12 +307,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1337, 758);
+            this.Controls.Add(this.testsDataGridView);
+            this.Controls.Add(this.patientsDataGridView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_dashboard_add_patient);
             this.Controls.Add(this.btn_dashboard_add_test);
-            this.Controls.Add(this.testsDataGridView);
-            this.Controls.Add(this.patientsDataGridView);
             this.Controls.Add(this.AccountName);
             this.Controls.Add(this.Menu_dashboard);
             this.IsMdiContainer = true;
@@ -335,8 +328,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -357,24 +350,24 @@
         private System.Windows.Forms.TextBox AccountName;
         private System.Windows.Forms.BindingSource patientsBindingSource;
         private Logo_managerDataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;
+        private System.Windows.Forms.BindingSource testsBindingSource;
+        private Logo_managerDataSetTableAdapters.TestsTableAdapter testsTableAdapter;
+        private System.Windows.Forms.Button btn_dashboard_add_test;
+        private System.Windows.Forms.Button btn_dashboard_add_patient;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView patientsDataGridView;
+        private System.Windows.Forms.DataGridView testsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.BindingSource testsBindingSource;
-        private Logo_managerDataSetTableAdapters.TestsTableAdapter testsTableAdapter;
-        private System.Windows.Forms.DataGridView testsDataGridView;
-        private System.Windows.Forms.Button btn_dashboard_add_test;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.Button btn_dashboard_add_patient;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
 
