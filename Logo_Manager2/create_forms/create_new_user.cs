@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Logo_Manager2.create_forms
@@ -14,6 +7,7 @@ namespace Logo_Manager2.create_forms
     {
 
         Logo_managerEntities1 db = new Logo_managerEntities1();
+        User_Dashboard d = new User_Dashboard();
 
 
         public create_new_patient()
@@ -30,7 +24,20 @@ namespace Logo_Manager2.create_forms
 
         private void btn_new_patient_Click(object sender, EventArgs e)
         {
-            //create a new patient
+            var patient = new Patient();
+
+            patient.Firstname = input_patient_firstname.Text;
+            patient.Lastname = input_patient_lastname.Text;
+            patient.Birthday = input_patient_birthday.Value;
+            patient.Followup = input_patient_followup.Text;
+            patient.UserName = input_patient_user.Text;
+
+            db.Patients.Add(patient);
+
+            db.SaveChanges();
+
+            this.Close();
+
         }
     }
 }

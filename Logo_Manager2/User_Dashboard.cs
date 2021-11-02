@@ -1,7 +1,7 @@
 ﻿using Logo_Manager2.create_forms;
 using Logo_Manager2.User_forms;
-using System.Windows.Forms;
 using System;
+using System.Windows.Forms;
 
 namespace Logo_Manager2
 {
@@ -12,6 +12,7 @@ namespace Logo_Manager2
         public static Log_in log_In = new Log_in();
         public static Sign_in sign_in = new Sign_in();
         public static create_new_patient create_patient = new create_new_patient();
+        public static Create_tests create_Tests = new Create_tests();
         public static bool is_connected = false;
         public static string username;
 
@@ -37,12 +38,15 @@ namespace Logo_Manager2
 
             }
 
-            
-      
+
+
+
+
+
         }
 
 
-        
+
 
         private void disconnectToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
@@ -57,7 +61,22 @@ namespace Logo_Manager2
         private void btn_dashboard_add_patient_Click(object sender, System.EventArgs e)
         {
             create_patient.ShowDialog();
+            if (create_patient.DialogResult == DialogResult.OK)
+            {
+                this.patientsTableAdapter.Fill(this.logo_managerDataSet.Patients);
+            }
+        }
 
+        private void btn_dashboard_add_test_Click(object sender, EventArgs e)
+        {
+
+            create_Tests.ShowDialog();
+
+
+            if (create_Tests.DialogResult == DialogResult.OK)
+            {
+                this.testsTableAdapter.Fill(this.logo_managerDataSet.Tests);
+            }
         }
     }
 }

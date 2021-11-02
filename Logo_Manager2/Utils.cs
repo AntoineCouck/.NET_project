@@ -31,7 +31,7 @@ namespace Logo_Manager2
             return stringBuilder.ToString();
         }
 
-        private bool IsEveritingADigit(string text)
+        public static  bool IsEveritingADigit(string text)
         {
             foreach (char c in text)
             {

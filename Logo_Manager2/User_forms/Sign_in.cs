@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Data.Linq;
-using System.ComponentModel;
 
 namespace Logo_Manager2.User_forms
 {
@@ -26,7 +23,7 @@ namespace Logo_Manager2.User_forms
 
         }
 
-       
+
 
         //public void BewaarPersoon(string Name, string Email, string Password)
         //{
@@ -71,7 +68,7 @@ namespace Logo_Manager2.User_forms
 
                 MessageBox.Show("unvalid input , try again");
             }
-            else 
+            else
             {
 
                 //BewaarPersoon(input_name_register.Text, input_email_register.Text, input_password_register.Text);
@@ -91,8 +88,8 @@ namespace Logo_Manager2.User_forms
                 context.Users.Add(user);
                 context.SaveChanges();
 
-               
-                
+
+
                 User_Dashboard.sign_in.Close();
 
             }

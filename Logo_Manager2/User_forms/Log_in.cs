@@ -1,9 +1,7 @@
-﻿using System.Windows.Forms;
-using System;
+﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Data.Linq;
+using System.Windows.Forms;
 
 
 namespace Logo_Manager2
@@ -14,10 +12,10 @@ namespace Logo_Manager2
         protected string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Antoine\source\repos\project.net\.NETproject\Logo_Manager2\Logo_manager.mdf;Integrated Security=True";
         Logo_managerEntities1 context = new Logo_managerEntities1();
         public string username { get; set; }
-        public bool is_connected {  get; set; }
+        public bool is_connected { get; set; }
 
-        
-       
+
+
 
         public Log_in()
         {
@@ -31,7 +29,7 @@ namespace Logo_Manager2
             string email = email_login_input.Text;
             string password = password_login_input.Text;
 
-            if(string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
 
 
@@ -40,11 +38,12 @@ namespace Logo_Manager2
                 password_login_input.Text = null;
 
 
-            } else    
+            }
+            else
             {
                 var result = context.Users.Where(x => x.Email == email && x.Password == password).ToList();
 
-                foreach(User user in result)
+                foreach (User user in result)
                 {
                     username = user.Name;
                     is_connected = true;
@@ -52,7 +51,7 @@ namespace Logo_Manager2
 
                 if (is_connected)
                 {
-                  Close();
+                    Close();
                 }
 
                 email_login_input.Text = null;
@@ -70,6 +69,6 @@ namespace Logo_Manager2
 
         }
 
-     
+
     }
 }

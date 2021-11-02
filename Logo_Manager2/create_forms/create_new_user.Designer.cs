@@ -108,10 +108,12 @@ namespace Logo_Manager2.create_forms
             this.input_patient_birthday.Name = "input_patient_birthday";
             this.input_patient_birthday.Size = new System.Drawing.Size(122, 20);
             this.input_patient_birthday.TabIndex = 6;
+            this.input_patient_birthday.Value = new System.DateTime(2021, 11, 2, 0, 0, 0, 0);
             // 
             // btn_new_patient
             // 
             this.btn_new_patient.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_new_patient.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_new_patient.FlatAppearance.BorderSize = 2;
             this.btn_new_patient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_new_patient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
