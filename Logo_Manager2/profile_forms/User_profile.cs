@@ -34,8 +34,23 @@ namespace Logo_Manager2.profile_forms
                 profile_info_lastname.Text = patient.Lastname;
                 profile_info_birthday.Text = patient.Birthday.ToString();
                 profile_info_followBy.Text = patient.UserName;
+                
+                if(patient.LeftSessions == 0)
+                {
+                    patient_total.Text = "0";
+                } else
+                {
+                    patient_total.Text = patient.LeftSessions.ToString();
+                }
+
             }
 
+
+        }
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            // save changes of the patient 
 
         }
     }

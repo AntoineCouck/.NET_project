@@ -35,14 +35,26 @@
             this.profile_info_lastname = new System.Windows.Forms.TextBox();
             this.profile_info_birthday = new System.Windows.Forms.TextBox();
             this.profile_info_firstname = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.input_patient_add = new System.Windows.Forms.NumericUpDown();
+            this.input_patient_remove = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.patient_total = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button_save = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).BeginInit();
             this.SuspendLayout();
             // 
             // title_profile_patient
             // 
             this.title_profile_patient.AutoSize = true;
             this.title_profile_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.title_profile_patient.Location = new System.Drawing.Point(382, 41);
+            this.title_profile_patient.Location = new System.Drawing.Point(389, 40);
             this.title_profile_patient.Name = "title_profile_patient";
             this.title_profile_patient.Size = new System.Drawing.Size(104, 26);
             this.title_profile_patient.TabIndex = 26;
@@ -59,7 +71,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(266, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(347, 142);
+            this.groupBox1.Size = new System.Drawing.Size(359, 161);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal information";
@@ -114,11 +126,104 @@
             this.profile_info_firstname.Size = new System.Drawing.Size(146, 26);
             this.profile_info_firstname.TabIndex = 0;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Bisque;
+            this.groupBox2.Controls.Add(this.button_save);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.patient_total);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.input_patient_remove);
+            this.groupBox2.Controls.Add(this.input_patient_add);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox2.Location = new System.Drawing.Point(266, 364);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(359, 201);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Sessions manager";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label2.Location = new System.Drawing.Point(389, 314);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 26);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Manager";
+            // 
+            // input_patient_add
+            // 
+            this.input_patient_add.Location = new System.Drawing.Point(27, 117);
+            this.input_patient_add.Name = "input_patient_add";
+            this.input_patient_add.Size = new System.Drawing.Size(120, 23);
+            this.input_patient_add.TabIndex = 0;
+            // 
+            // input_patient_remove
+            // 
+            this.input_patient_remove.Location = new System.Drawing.Point(209, 117);
+            this.input_patient_remove.Name = "input_patient_remove";
+            this.input_patient_remove.Size = new System.Drawing.Size(120, 23);
+            this.input_patient_remove.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(66, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Add";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(234, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Remove";
+            // 
+            // patient_total
+            // 
+            this.patient_total.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.patient_total.Enabled = false;
+            this.patient_total.Location = new System.Drawing.Point(152, 67);
+            this.patient_total.Name = "patient_total";
+            this.patient_total.Size = new System.Drawing.Size(47, 23);
+            this.patient_total.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(149, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Actual";
+            // 
+            // button_save
+            // 
+            this.button_save.Location = new System.Drawing.Point(141, 167);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(68, 28);
+            this.button_save.TabIndex = 30;
+            this.button_save.Text = "Save";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
             // User_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 601);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.title_profile_patient);
             this.Name = "User_profile";
@@ -127,6 +232,10 @@
             this.Load += new System.EventHandler(this.User_profile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +250,14 @@
         private System.Windows.Forms.TextBox profile_info_lastname;
         private System.Windows.Forms.TextBox profile_info_birthday;
         private System.Windows.Forms.TextBox profile_info_firstname;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox patient_total;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown input_patient_remove;
+        private System.Windows.Forms.NumericUpDown input_patient_add;
     }
 }
