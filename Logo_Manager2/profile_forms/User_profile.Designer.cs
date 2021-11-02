@@ -30,11 +30,11 @@
         {
             this.title_profile_patient = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.profile_info_firstname = new System.Windows.Forms.TextBox();
-            this.profile_info_birthday = new System.Windows.Forms.TextBox();
-            this.profile_info_lastname = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.profile_info_followBy = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.profile_info_lastname = new System.Windows.Forms.TextBox();
+            this.profile_info_birthday = new System.Windows.Forms.TextBox();
+            this.profile_info_firstname = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             // 
             this.title_profile_patient.AutoSize = true;
             this.title_profile_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.title_profile_patient.Location = new System.Drawing.Point(380, 21);
+            this.title_profile_patient.Location = new System.Drawing.Point(382, 41);
             this.title_profile_patient.Name = "title_profile_patient";
             this.title_profile_patient.Size = new System.Drawing.Size(104, 26);
             this.title_profile_patient.TabIndex = 26;
@@ -64,35 +64,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal information";
             // 
-            // profile_info_firstname
+            // profile_info_followBy
             // 
-            this.profile_info_firstname.BackColor = System.Drawing.SystemColors.Menu;
-            this.profile_info_firstname.Enabled = false;
-            this.profile_info_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.profile_info_firstname.Location = new System.Drawing.Point(15, 32);
-            this.profile_info_firstname.Name = "profile_info_firstname";
-            this.profile_info_firstname.Size = new System.Drawing.Size(146, 26);
-            this.profile_info_firstname.TabIndex = 0;
-            // 
-            // profile_info_birthday
-            // 
-            this.profile_info_birthday.BackColor = System.Drawing.SystemColors.Menu;
-            this.profile_info_birthday.Enabled = false;
-            this.profile_info_birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.profile_info_birthday.Location = new System.Drawing.Point(15, 96);
-            this.profile_info_birthday.Name = "profile_info_birthday";
-            this.profile_info_birthday.Size = new System.Drawing.Size(146, 26);
-            this.profile_info_birthday.TabIndex = 1;
-            // 
-            // profile_info_lastname
-            // 
-            this.profile_info_lastname.BackColor = System.Drawing.SystemColors.Menu;
-            this.profile_info_lastname.Enabled = false;
-            this.profile_info_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.profile_info_lastname.Location = new System.Drawing.Point(15, 64);
-            this.profile_info_lastname.Name = "profile_info_lastname";
-            this.profile_info_lastname.Size = new System.Drawing.Size(146, 26);
-            this.profile_info_lastname.TabIndex = 2;
+            this.profile_info_followBy.BackColor = System.Drawing.SystemColors.Menu;
+            this.profile_info_followBy.Enabled = false;
+            this.profile_info_followBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.profile_info_followBy.Location = new System.Drawing.Point(215, 64);
+            this.profile_info_followBy.Name = "profile_info_followBy";
+            this.profile_info_followBy.Size = new System.Drawing.Size(114, 23);
+            this.profile_info_followBy.TabIndex = 4;
             // 
             // label1
             // 
@@ -104,15 +84,35 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Follow by";
             // 
-            // profile_info_followBy
+            // profile_info_lastname
             // 
-            this.profile_info_followBy.BackColor = System.Drawing.SystemColors.Menu;
-            this.profile_info_followBy.Enabled = false;
-            this.profile_info_followBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.profile_info_followBy.Location = new System.Drawing.Point(215, 64);
-            this.profile_info_followBy.Name = "profile_info_followBy";
-            this.profile_info_followBy.Size = new System.Drawing.Size(114, 23);
-            this.profile_info_followBy.TabIndex = 4;
+            this.profile_info_lastname.BackColor = System.Drawing.SystemColors.Menu;
+            this.profile_info_lastname.Enabled = false;
+            this.profile_info_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.profile_info_lastname.Location = new System.Drawing.Point(15, 64);
+            this.profile_info_lastname.Name = "profile_info_lastname";
+            this.profile_info_lastname.Size = new System.Drawing.Size(146, 26);
+            this.profile_info_lastname.TabIndex = 2;
+            // 
+            // profile_info_birthday
+            // 
+            this.profile_info_birthday.BackColor = System.Drawing.SystemColors.Menu;
+            this.profile_info_birthday.Enabled = false;
+            this.profile_info_birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.profile_info_birthday.Location = new System.Drawing.Point(15, 96);
+            this.profile_info_birthday.Name = "profile_info_birthday";
+            this.profile_info_birthday.Size = new System.Drawing.Size(146, 26);
+            this.profile_info_birthday.TabIndex = 1;
+            // 
+            // profile_info_firstname
+            // 
+            this.profile_info_firstname.BackColor = System.Drawing.SystemColors.Menu;
+            this.profile_info_firstname.Enabled = false;
+            this.profile_info_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.profile_info_firstname.Location = new System.Drawing.Point(15, 32);
+            this.profile_info_firstname.Name = "profile_info_firstname";
+            this.profile_info_firstname.Size = new System.Drawing.Size(146, 26);
+            this.profile_info_firstname.TabIndex = 0;
             // 
             // User_profile
             // 
@@ -124,7 +124,6 @@
             this.Name = "User_profile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User_profile";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.User_profile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

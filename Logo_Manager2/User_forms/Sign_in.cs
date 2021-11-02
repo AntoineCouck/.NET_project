@@ -23,44 +23,6 @@ namespace Logo_Manager2.User_forms
 
         }
 
-
-
-        //public void BewaarPersoon(string Name, string Email, string Password)
-        //{
-
-        //    string insertSqlText = "INSERT INTO Users(Name, Email, Password) VALUES(@Name,  @Email,  @Password)";
-        //    SqlCommand insertSql = new SqlCommand(insertSqlText);
-        //    insertSql.Connection = GetDbConnectie();
-        //    insertSql.Parameters.Add(new SqlParameter("@Name", Name));
-        //    insertSql.Parameters.Add(new SqlParameter("@Email", Email));
-        //    insertSql.Parameters.Add(new SqlParameter("@Password", Password));
-
-        //    try
-        //    {
-        //        insertSql.Connection.Open(); insertSql.ExecuteNonQuery();
-
-        //    }
-
-        //    catch (SqlException ex)
-        //    {
-        //        Console.WriteLine("Create peresoon is " + ex.Message);
-        //    }
-
-        //    finally
-        //    {
-        //        if (insertSql.Connection.State == ConnectionState.Open)
-        //        {
-        //            insertSql.Connection.Close();
-        //        }
-        //    }
-
-
-
-
-        //}
-
-
-
         private void login_submit_Click(object sender, System.EventArgs e)
         {
             if (input_email_register.Text == String.Empty || input_email_register.Text == String.Empty || input_password_register.Text == String.Empty)
@@ -71,13 +33,6 @@ namespace Logo_Manager2.User_forms
             else
             {
 
-                //BewaarPersoon(input_name_register.Text, input_email_register.Text, input_password_register.Text);
-
-                //input_name_register.Text = null;
-                //input_email_register.Text = null;
-                //input_password_register.Text = null;
-                //User_Dashboard.sign_in.Close();
-                //MessageBox.Show("good");
 
                 var user = new User();
 
@@ -93,9 +48,6 @@ namespace Logo_Manager2.User_forms
                 User_Dashboard.sign_in.Close();
 
             }
-
-
-
 
 
         }
