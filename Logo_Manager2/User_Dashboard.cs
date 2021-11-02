@@ -1,6 +1,8 @@
 ﻿using Logo_Manager2.create_forms;
 using Logo_Manager2.User_forms;
+using Logo_Manager2.profile_forms;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Logo_Manager2
@@ -13,8 +15,12 @@ namespace Logo_Manager2
         public static Sign_in sign_in = new Sign_in();
         public static create_new_patient create_patient = new create_new_patient();
         public static Create_tests create_Tests = new Create_tests();
+        public static User_profile profile = new User_profile();
         public static bool is_connected = false;
         public static string username;
+        public static int currentPatientId { get; set; }
+
+        Logo_managerEntities1 db = new Logo_managerEntities1();
 
         public User_Dashboard()
         {
@@ -46,8 +52,6 @@ namespace Logo_Manager2
         }
 
 
-
-
         private void disconnectToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             this.Close();
@@ -77,6 +81,33 @@ namespace Logo_Manager2
             {
                 this.testsTableAdapter.Fill(this.logo_managerDataSet.Tests);
             }
+        }
+
+        private void patientsDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataGridView data = (DataGridView)sender;
+            int currentData = data.CurrentCell.RowIndex;
+            int teller = 0;
+
+             var result = db.Patients;
+
+
+
+            foreach (var test in result)
+            {
+                if(teller == currentData)
+                {
+
+                   MessageBox.Show(test.Id.ToString());
+                    currentPatientId = test.Id;
+                } 
+
+                teller++;
+            }
+
+            profile.ShowDialog();
+
         }
     }
 }

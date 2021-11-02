@@ -129,6 +129,12 @@
     <Compile Include="Patient.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="profile_forms\User_profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile_forms\User_profile.Designer.cs">
+      <DependentUpon>User_profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="create_forms\Create_tests.resx">
       <DependentUpon>Create_tests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile_forms\User_profile.resx">
+      <DependentUpon>User_profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_forms\Log_in.resx">
       <DependentUpon>Log_in.cs</DependentUpon>
