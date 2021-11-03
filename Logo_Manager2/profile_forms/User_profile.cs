@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Logo_Manager2.profile_forms
@@ -14,7 +9,9 @@ namespace Logo_Manager2.profile_forms
     {
 
         Logo_managerEntities1 db = new Logo_managerEntities1();
-         
+
+
+
 
         public User_profile()
         {
@@ -25,20 +22,21 @@ namespace Logo_Manager2.profile_forms
         {
 
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
-            
 
-            foreach(var patient in Patient)
+
+            foreach (var patient in Patient)
             {
                 title_profile_patient.Text = "profile of:" + "" + patient.Lastname + " " + patient.Firstname;
                 profile_info_firstname.Text = patient.Firstname;
                 profile_info_lastname.Text = patient.Lastname;
                 profile_info_birthday.Text = patient.Birthday.ToString();
                 profile_info_followBy.Text = patient.UserName;
-                
-                if(patient.LeftSessions == 0)
+
+                if (patient.LeftSessions == 0)
                 {
                     patient_total.Text = "0";
-                } else
+                }
+                else
                 {
                     patient_total.Text = patient.LeftSessions.ToString();
                 }
@@ -50,7 +48,43 @@ namespace Logo_Manager2.profile_forms
 
         private void button_save_Click(object sender, EventArgs e)
         {
+            var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
+            int Add = int.Parse(input_patient_add.Value.ToString());
+            int remove = int.Parse(input_patient_remove.Value.ToString());
+            
+
+            foreach (var patient in Patient)
+            {
+
+
+                patient.LeftSessions = patient.LeftSessions + Add - remove;
+
+                patient_total.Text = patient.LeftSessions.ToString();
+
+                
+                
+
+                //var contact = new Contact { Id = 1 };
+                //contact.FirstName = "Something new";
+                //context.Entry(contact).Property("FirstName").IsModified = true;
+                //context.SaveChanges();
+
+            }
+
             // save changes of the patient 
+
+            input_patient_add.Value = 0;
+            input_patient_remove.Value = 0;
+
+        }
+
+        private void input_patient_add_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void input_patient_remove_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

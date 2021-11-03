@@ -43,8 +43,6 @@ namespace Logo_Manager2.User_forms
                 context.Users.Add(user);
                 context.SaveChanges();
 
-
-
                 User_Dashboard.sign_in.Close();
 
             }

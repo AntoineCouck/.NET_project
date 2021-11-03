@@ -20,15 +20,16 @@ namespace Logo_Manager2.create_forms
 
             test.Name = input_test_name.Text;
 
-            if(Utils.IsEveritingADigit(input_test_age.Text) != true)
+            if (Utils.IsEveritingADigit(input_test_age.Text) != true)
             {
                 test.Age = 0;
                 input_test_age.Text = null;
                 input_test_age.Text = null;
                 input_test_followup.Text = null;
-                    
+
                 MessageBox.Show("the given number for age is not a digit , this will be set at age 0");
-            } else
+            }
+            else
             {
                 test.Age = int.Parse(input_test_age.Text);
             }

@@ -36,18 +36,18 @@
             this.profile_info_birthday = new System.Windows.Forms.TextBox();
             this.profile_info_firstname = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.input_patient_add = new System.Windows.Forms.NumericUpDown();
-            this.input_patient_remove = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.patient_total = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.button_save = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.patient_total = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.input_patient_remove = new System.Windows.Forms.NumericUpDown();
+            this.input_patient_add = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).BeginInit();
             this.SuspendLayout();
             // 
             // title_profile_patient
@@ -144,59 +144,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sessions manager";
             // 
-            // label2
+            // button_save
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(389, 314);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 26);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Manager";
-            // 
-            // input_patient_add
-            // 
-            this.input_patient_add.Location = new System.Drawing.Point(27, 117);
-            this.input_patient_add.Name = "input_patient_add";
-            this.input_patient_add.Size = new System.Drawing.Size(120, 23);
-            this.input_patient_add.TabIndex = 0;
-            // 
-            // input_patient_remove
-            // 
-            this.input_patient_remove.Location = new System.Drawing.Point(209, 117);
-            this.input_patient_remove.Name = "input_patient_remove";
-            this.input_patient_remove.Size = new System.Drawing.Size(120, 23);
-            this.input_patient_remove.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(66, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Add";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(234, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Remove";
-            // 
-            // patient_total
-            // 
-            this.patient_total.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.patient_total.Enabled = false;
-            this.patient_total.Location = new System.Drawing.Point(152, 67);
-            this.patient_total.Name = "patient_total";
-            this.patient_total.Size = new System.Drawing.Size(47, 23);
-            this.patient_total.TabIndex = 8;
-            this.patient_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.button_save.Location = new System.Drawing.Point(141, 167);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(68, 28);
+            this.button_save.TabIndex = 30;
+            this.button_save.Text = "Save";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // label4
             // 
@@ -208,15 +164,61 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Actual";
             // 
-            // button_save
+            // patient_total
             // 
-            this.button_save.Location = new System.Drawing.Point(141, 167);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(68, 28);
-            this.button_save.TabIndex = 30;
-            this.button_save.Text = "Save";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            this.patient_total.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.patient_total.Enabled = false;
+            this.patient_total.Location = new System.Drawing.Point(152, 67);
+            this.patient_total.Name = "patient_total";
+            this.patient_total.Size = new System.Drawing.Size(47, 23);
+            this.patient_total.TabIndex = 8;
+            this.patient_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(234, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Remove";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(66, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Add";
+            // 
+            // input_patient_remove
+            // 
+            this.input_patient_remove.Location = new System.Drawing.Point(209, 117);
+            this.input_patient_remove.Name = "input_patient_remove";
+            this.input_patient_remove.Size = new System.Drawing.Size(120, 23);
+            this.input_patient_remove.TabIndex = 1;
+            this.input_patient_remove.ValueChanged += new System.EventHandler(this.input_patient_remove_ValueChanged);
+            // 
+            // input_patient_add
+            // 
+            this.input_patient_add.Location = new System.Drawing.Point(27, 117);
+            this.input_patient_add.Name = "input_patient_add";
+            this.input_patient_add.Size = new System.Drawing.Size(120, 23);
+            this.input_patient_add.TabIndex = 0;
+            this.input_patient_add.ValueChanged += new System.EventHandler(this.input_patient_add_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label2.Location = new System.Drawing.Point(389, 314);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 26);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Manager";
             // 
             // User_profile
             // 
@@ -235,8 +237,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

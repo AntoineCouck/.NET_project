@@ -1,8 +1,7 @@
 ﻿using Logo_Manager2.create_forms;
-using Logo_Manager2.User_forms;
 using Logo_Manager2.profile_forms;
+using Logo_Manager2.User_forms;
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Logo_Manager2
@@ -90,18 +89,18 @@ namespace Logo_Manager2
             int currentData = data.CurrentCell.RowIndex;
             int teller = 0;
 
-             var result = db.Patients;
+            var result = db.Patients;
 
 
 
             foreach (var test in result)
             {
-                if(teller == currentData)
+                if (teller == currentData)
                 {
 
-                   MessageBox.Show(test.Id.ToString());
+                    MessageBox.Show(test.Id.ToString());
                     currentPatientId = test.Id;
-                } 
+                }
 
                 teller++;
             }
