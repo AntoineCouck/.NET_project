@@ -196,6 +196,7 @@
             this.patient_total.Name = "patient_total";
             this.patient_total.Size = new System.Drawing.Size(47, 23);
             this.patient_total.TabIndex = 8;
+            this.patient_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
