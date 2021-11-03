@@ -71,7 +71,7 @@ namespace Logo_Manager2.profile_forms
 
             }
 
-            // save changes of the patient 
+          
 
             input_patient_add.Value = 0;
             input_patient_remove.Value = 0;
