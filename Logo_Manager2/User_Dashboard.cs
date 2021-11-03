@@ -98,7 +98,7 @@ namespace Logo_Manager2
                 if (teller == currentData)
                 {
 
-                    MessageBox.Show(test.Id.ToString());
+                    
                     currentPatientId = test.Id;
                 }
 
@@ -106,6 +106,11 @@ namespace Logo_Manager2
             }
 
             profile.ShowDialog();
+
+            if(profile.DialogResult == DialogResult.OK)
+            {
+                this.patientsTableAdapter.Fill(this.logo_managerDataSet.Patients);
+            }
 
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -51,27 +52,19 @@ namespace Logo_Manager2.profile_forms
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
             int Add = int.Parse(input_patient_add.Value.ToString());
             int remove = int.Parse(input_patient_remove.Value.ToString());
-            
+
 
             foreach (var patient in Patient)
-            {
+            { 
 
-
-                patient.LeftSessions = patient.LeftSessions + Add - remove;
-
-                patient_total.Text = patient.LeftSessions.ToString();
-
-                
-                
-
-                //var contact = new Contact { Id = 1 };
-                //contact.FirstName = "Something new";
-                //context.Entry(contact).Property("FirstName").IsModified = true;
-                //context.SaveChanges();
-
+                   patient.LeftSessions = patient.LeftSessions + Add - remove;
+                   patient_total.Text = patient.LeftSessions.ToString();
             }
 
-          
+                db.SaveChanges();
+
+
+
 
             input_patient_add.Value = 0;
             input_patient_remove.Value = 0;
