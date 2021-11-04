@@ -54,6 +54,8 @@
             this.btn_add_test_to_patient = new System.Windows.Forms.Button();
             this.testsTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.TestsTableAdapter();
             this.testsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).BeginInit();
@@ -76,6 +78,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.input_paztient_insurance);
             this.groupBox1.Controls.Add(this.profile_info_followBy);
             this.groupBox1.Controls.Add(this.label1);
@@ -105,7 +109,7 @@
             this.profile_info_followBy.BackColor = System.Drawing.SystemColors.Menu;
             this.profile_info_followBy.Enabled = false;
             this.profile_info_followBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.profile_info_followBy.Location = new System.Drawing.Point(215, 64);
+            this.profile_info_followBy.Location = new System.Drawing.Point(215, 128);
             this.profile_info_followBy.Name = "profile_info_followBy";
             this.profile_info_followBy.Size = new System.Drawing.Size(114, 23);
             this.profile_info_followBy.TabIndex = 4;
@@ -114,7 +118,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label1.Location = new System.Drawing.Point(248, 45);
+            this.label1.Location = new System.Drawing.Point(248, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 3;
@@ -312,6 +316,26 @@
             this.testsBindingSource1.DataMember = "Tests";
             this.testsBindingSource1.DataSource = this.logo_managerDataSet;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.Location = new System.Drawing.Point(215, 64);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(114, 26);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label7.Location = new System.Drawing.Point(248, 45);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Follow by";
+            // 
             // User_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,5 +394,7 @@
         private Logo_managerDataSetTableAdapters.TestsTableAdapter testsTableAdapter;
         private System.Windows.Forms.TextBox input_paztient_insurance;
         private System.Windows.Forms.BindingSource testsBindingSource1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
