@@ -47,9 +47,16 @@ namespace Logo_Manager2.create_forms
             this.usersTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.UsersTableAdapter();
             this.label5 = new System.Windows.Forms.Label();
             this.input_patient_followup = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.input_patient_insurance = new System.Windows.Forms.ComboBox();
+            this.insurancesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.insurancesTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.InsurancesTableAdapter();
+            this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // input_patient_lastname
@@ -72,9 +79,9 @@ namespace Logo_Manager2.create_forms
             this.input_patient_user.DataSource = this.usersBindingSource1;
             this.input_patient_user.DisplayMember = "Name";
             this.input_patient_user.FormattingEnabled = true;
-            this.input_patient_user.Location = new System.Drawing.Point(467, 223);
+            this.input_patient_user.Location = new System.Drawing.Point(453, 169);
             this.input_patient_user.Name = "input_patient_user";
-            this.input_patient_user.Size = new System.Drawing.Size(122, 21);
+            this.input_patient_user.Size = new System.Drawing.Size(152, 21);
             this.input_patient_user.TabIndex = 5;
             this.input_patient_user.ValueMember = "Name";
             // 
@@ -153,7 +160,7 @@ namespace Logo_Manager2.create_forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(487, 133);
+            this.label4.Location = new System.Drawing.Point(488, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 10;
@@ -163,7 +170,7 @@ namespace Logo_Manager2.create_forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(511, 200);
+            this.label6.Location = new System.Drawing.Point(506, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 20);
             this.label6.TabIndex = 12;
@@ -204,16 +211,54 @@ namespace Logo_Manager2.create_forms
             "e: Dysphagie ",
             "f: Dysphasie ",
             "g: Locked-in syndrome (30min)"});
-            this.input_patient_followup.Location = new System.Drawing.Point(452, 169);
+            this.input_patient_followup.Location = new System.Drawing.Point(453, 116);
             this.input_patient_followup.Name = "input_patient_followup";
             this.input_patient_followup.Size = new System.Drawing.Size(152, 21);
             this.input_patient_followup.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(489, 200);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 20);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Insurance";
+            // 
+            // input_patient_insurance
+            // 
+            this.input_patient_insurance.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.insurancesBindingSource1, "Name", true));
+            this.input_patient_insurance.DataSource = this.insurancesBindingSource;
+            this.input_patient_insurance.DisplayMember = "Name";
+            this.input_patient_insurance.FormattingEnabled = true;
+            this.input_patient_insurance.Location = new System.Drawing.Point(453, 240);
+            this.input_patient_insurance.Name = "input_patient_insurance";
+            this.input_patient_insurance.Size = new System.Drawing.Size(152, 21);
+            this.input_patient_insurance.TabIndex = 17;
+            this.input_patient_insurance.ValueMember = "Name";
+            // 
+            // insurancesBindingSource
+            // 
+            this.insurancesBindingSource.DataMember = "Insurances";
+            this.insurancesBindingSource.DataSource = this.logo_managerDataSet;
+            // 
+            // insurancesTableAdapter
+            // 
+            this.insurancesTableAdapter.ClearBeforeFill = true;
+            // 
+            // insurancesBindingSource1
+            // 
+            this.insurancesBindingSource1.DataMember = "Insurances";
+            this.insurancesBindingSource1.DataSource = this.logo_managerDataSet;
             // 
             // create_new_patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 455);
+            this.Controls.Add(this.input_patient_insurance);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.input_patient_followup);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -233,6 +278,8 @@ namespace Logo_Manager2.create_forms
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +303,10 @@ namespace Logo_Manager2.create_forms
         private BindingSource usersBindingSource1;
         private Label label5;
         private ComboBox input_patient_followup;
+        private Label label7;
+        private ComboBox input_patient_insurance;
+        private BindingSource insurancesBindingSource;
+        private Logo_managerDataSetTableAdapters.InsurancesTableAdapter insurancesTableAdapter;
+        private BindingSource insurancesBindingSource1;
     }
 }

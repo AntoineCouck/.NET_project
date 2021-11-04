@@ -17,6 +17,8 @@ namespace Logo_Manager2.create_forms
 
         private void create_new_patient_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'logo_managerDataSet.Insurances' table. You can move, or remove it, as needed.
+            this.insurancesTableAdapter.Fill(this.logo_managerDataSet.Insurances);
             // TODO: This line of code loads data into the 'logo_managerDataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.logo_managerDataSet.Users);
 
@@ -31,6 +33,7 @@ namespace Logo_Manager2.create_forms
             patient.Birthday = input_patient_birthday.Value;
             patient.Followup = input_patient_followup.Text;
             patient.UserName = input_patient_user.Text;
+            patient.InsuranceName = input_patient_insurance.Text;
 
             db.Patients.Add(patient);
 
