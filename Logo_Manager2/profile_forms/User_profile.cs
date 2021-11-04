@@ -20,8 +20,22 @@ namespace Logo_Manager2.profile_forms
 
         private void User_profile_Load(object sender, EventArgs e)
         {
-
+            testsList.Items.Clear();
+            // TODO: This line of code loads data into the 'logo_managerDataSet.Tests' table. You can move, or remove it, as needed.
+            this.testsTableAdapter.Fill(this.logo_managerDataSet.Tests);
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
+
+            var ListTests = db.PatientsTests.Join( db.Patients, x => x.PatientId, y => y.Id, (x, y) => new
+            {
+                patienttest = x,
+                patientId = y.Id
+            }).Join(db.Tests, x => x.patienttest.TestId, y => y.Id, (x, y) => new
+            {
+                patientTest2 = x,
+                testId = y.Id,
+                testName = y.Name
+            }).Where(x => x.patientTest2.patientId == User_Dashboard.currentPatientId);
+
 
 
             foreach (var patient in Patient)
@@ -31,6 +45,7 @@ namespace Logo_Manager2.profile_forms
                 profile_info_lastname.Text = patient.Lastname;
                 profile_info_birthday.Text = patient.Birthday.ToString();
                 profile_info_followBy.Text = patient.UserName;
+                input_paztient_insurance.Text = patient.InsuranceName;
 
                 if (patient.LeftSessions == 0)
                 {
@@ -42,6 +57,13 @@ namespace Logo_Manager2.profile_forms
                 }
 
             }
+
+            foreach (var element in ListTests)
+            {
+                testsList.Items.Add(element.testName);
+            }
+
+
 
 
         }
@@ -73,13 +95,48 @@ namespace Logo_Manager2.profile_forms
 
         }
 
-        private void input_patient_add_ValueChanged(object sender, EventArgs e)
-        {
+     
 
-        }
-
-        private void input_patient_remove_ValueChanged(object sender, EventArgs e)
+        private void btn_add_test_to_patient_Click(object sender, EventArgs e)
         {
+            testsList.Items.Clear();
+
+            var list = db.Tests.Where(x => x.Name == comboBox1.Text);
+            int testId = 0;
+
+            foreach(var element in list)
+            {
+                testId = element.Id;
+            }
+
+            
+            var Patienttest = new PatientsTest();
+            Patienttest.PatientId = User_Dashboard.currentPatientId;
+            Patienttest.TestId = testId;
+
+            db.PatientsTests.Add(Patienttest);
+            db.SaveChanges();
+
+
+
+
+            var ListTests = db.PatientsTests.Join(db.Patients, x => x.PatientId, y => y.Id, (x, y) => new
+            {
+                patienttest = x,
+                patientId = y.Id
+            }).Join(db.Tests, x => x.patienttest.TestId, y => y.Id, (x, y) => new
+            {
+                patientTest2 = x,
+                testId = y.Id,
+                testName = y.Name
+            }).Where(x => x.patientTest2.patientId == User_Dashboard.currentPatientId);
+
+            foreach (var element in ListTests)
+            {
+                testsList.Items.Add(element.testName);
+            }
+
+
 
         }
     }

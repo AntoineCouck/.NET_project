@@ -29,8 +29,9 @@ namespace Logo_Manager2
 
         private void User_Dashboard_Load(object sender, System.EventArgs e)
         {
-            // TODO: This line of code loads data into the 'logo_managerDataSet.Insurances' table. You can move, or remove it, as needed.
-            this.insurancesTableAdapter.Fill(this.logo_managerDataSet.Insurances);
+            // TODO: This line of code loads data into the 'logo_managerDataSet.PatientsTests' table. You can move, or remove it, as needed.
+            this.patientsTestsTableAdapter.Fill(this.logo_managerDataSet.PatientsTests);
+          
             log_In.ShowDialog();
             username = log_In.username;
             is_connected = log_In.is_connected;
@@ -43,6 +44,8 @@ namespace Logo_Manager2
                 this.testsTableAdapter.Fill(this.logo_managerDataSet.Tests);
                 // TODO: This line of code loads data into the 'logo_managerDataSet.Patients' table. You can move, or remove it, as needed.
                 this.patientsTableAdapter.Fill(this.logo_managerDataSet.Patients);
+                // TODO: This line of code loads data into the 'logo_managerDataSet.Insurances' table. You can move, or remove it, as needed.
+                this.insurancesTableAdapter.Fill(this.logo_managerDataSet.Insurances);
 
             }
 
@@ -118,6 +121,11 @@ namespace Logo_Manager2
         private void btn_dashboard_addInsurance_Click(object sender, EventArgs e)
         {
             create_Insurance.ShowDialog();
+
+            if (create_Insurance.DialogResult == DialogResult.OK)
+            {
+                this.insurancesTableAdapter.Fill(this.logo_managerDataSet.Insurances);
+            }
         }
     }
 }

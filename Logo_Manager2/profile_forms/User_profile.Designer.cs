@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.title_profile_patient = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.input_paztient_insurance = new System.Windows.Forms.TextBox();
             this.profile_info_followBy = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.profile_info_lastname = new System.Windows.Forms.TextBox();
@@ -44,17 +46,28 @@
             this.input_patient_remove = new System.Windows.Forms.NumericUpDown();
             this.input_patient_add = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.testsList = new System.Windows.Forms.ListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.logo_managerDataSet = new Logo_Manager2.Logo_managerDataSet();
+            this.btn_add_test_to_patient = new System.Windows.Forms.Button();
+            this.testsTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.TestsTableAdapter();
+            this.testsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // title_profile_patient
             // 
             this.title_profile_patient.AutoSize = true;
             this.title_profile_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.title_profile_patient.Location = new System.Drawing.Point(389, 40);
+            this.title_profile_patient.Location = new System.Drawing.Point(270, 40);
             this.title_profile_patient.Name = "title_profile_patient";
             this.title_profile_patient.Size = new System.Drawing.Size(104, 26);
             this.title_profile_patient.TabIndex = 26;
@@ -63,18 +76,29 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBox1.Controls.Add(this.input_paztient_insurance);
             this.groupBox1.Controls.Add(this.profile_info_followBy);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.profile_info_lastname);
             this.groupBox1.Controls.Add(this.profile_info_birthday);
             this.groupBox1.Controls.Add(this.profile_info_firstname);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(266, 89);
+            this.groupBox1.Location = new System.Drawing.Point(134, 90);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 161);
+            this.groupBox1.Size = new System.Drawing.Size(359, 174);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal information";
+            // 
+            // input_paztient_insurance
+            // 
+            this.input_paztient_insurance.BackColor = System.Drawing.SystemColors.Menu;
+            this.input_paztient_insurance.Enabled = false;
+            this.input_paztient_insurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.input_paztient_insurance.Location = new System.Drawing.Point(15, 128);
+            this.input_paztient_insurance.Name = "input_paztient_insurance";
+            this.input_paztient_insurance.Size = new System.Drawing.Size(146, 26);
+            this.input_paztient_insurance.TabIndex = 5;
             // 
             // profile_info_followBy
             // 
@@ -137,7 +161,7 @@
             this.groupBox2.Controls.Add(this.input_patient_remove);
             this.groupBox2.Controls.Add(this.input_patient_add);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox2.Location = new System.Drawing.Point(266, 364);
+            this.groupBox2.Location = new System.Drawing.Point(134, 363);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(359, 201);
             this.groupBox2.TabIndex = 28;
@@ -161,7 +185,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(149, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Actual";
             // 
@@ -181,7 +205,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(234, 98);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.Size = new System.Drawing.Size(66, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Remove";
             // 
@@ -191,41 +215,112 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(66, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Add";
             // 
             // input_patient_remove
             // 
             this.input_patient_remove.Location = new System.Drawing.Point(209, 117);
+            this.input_patient_remove.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.input_patient_remove.Name = "input_patient_remove";
             this.input_patient_remove.Size = new System.Drawing.Size(120, 23);
             this.input_patient_remove.TabIndex = 1;
-            this.input_patient_remove.ValueChanged += new System.EventHandler(this.input_patient_remove_ValueChanged);
             // 
             // input_patient_add
             // 
             this.input_patient_add.Location = new System.Drawing.Point(27, 117);
+            this.input_patient_add.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.input_patient_add.Name = "input_patient_add";
             this.input_patient_add.Size = new System.Drawing.Size(120, 23);
             this.input_patient_add.TabIndex = 0;
-            this.input_patient_add.ValueChanged += new System.EventHandler(this.input_patient_add_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(389, 314);
+            this.label2.Location = new System.Drawing.Point(270, 318);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 26);
             this.label2.TabIndex = 29;
             this.label2.Text = "Manager";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label6.Location = new System.Drawing.Point(655, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 26);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Passed tests";
+            // 
+            // testsList
+            // 
+            this.testsList.FormattingEnabled = true;
+            this.testsList.Location = new System.Drawing.Point(622, 174);
+            this.testsList.Name = "testsList";
+            this.testsList.Size = new System.Drawing.Size(212, 303);
+            this.testsList.TabIndex = 31;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.testsBindingSource, "Name", true));
+            this.comboBox1.DataSource = this.testsBindingSource1;
+            this.comboBox1.DisplayMember = "Name";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(622, 493);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(212, 21);
+            this.comboBox1.TabIndex = 32;
+            this.comboBox1.ValueMember = "Name";
+            // 
+            // testsBindingSource
+            // 
+            this.testsBindingSource.DataMember = "Tests";
+            this.testsBindingSource.DataSource = this.logo_managerDataSet;
+            // 
+            // logo_managerDataSet
+            // 
+            this.logo_managerDataSet.DataSetName = "Logo_managerDataSet";
+            this.logo_managerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btn_add_test_to_patient
+            // 
+            this.btn_add_test_to_patient.Location = new System.Drawing.Point(684, 530);
+            this.btn_add_test_to_patient.Name = "btn_add_test_to_patient";
+            this.btn_add_test_to_patient.Size = new System.Drawing.Size(75, 23);
+            this.btn_add_test_to_patient.TabIndex = 33;
+            this.btn_add_test_to_patient.Text = "button1";
+            this.btn_add_test_to_patient.UseVisualStyleBackColor = true;
+            this.btn_add_test_to_patient.Click += new System.EventHandler(this.btn_add_test_to_patient_Click);
+            // 
+            // testsTableAdapter
+            // 
+            this.testsTableAdapter.ClearBeforeFill = true;
+            // 
+            // testsBindingSource1
+            // 
+            this.testsBindingSource1.DataMember = "Tests";
+            this.testsBindingSource1.DataSource = this.logo_managerDataSet;
             // 
             // User_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 601);
+            this.Controls.Add(this.btn_add_test_to_patient);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.testsList);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -240,6 +335,9 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +361,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown input_patient_remove;
         private System.Windows.Forms.NumericUpDown input_patient_add;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListBox testsList;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btn_add_test_to_patient;
+        private Logo_managerDataSet logo_managerDataSet;
+        private System.Windows.Forms.BindingSource testsBindingSource;
+        private Logo_managerDataSetTableAdapters.TestsTableAdapter testsTableAdapter;
+        private System.Windows.Forms.TextBox input_paztient_insurance;
+        private System.Windows.Forms.BindingSource testsBindingSource1;
     }
 }

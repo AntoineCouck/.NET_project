@@ -35,9 +35,9 @@
             this.btn_new_patient = new System.Windows.Forms.Button();
             this.input_test_name = new System.Windows.Forms.TextBox();
             this.input_test_age = new System.Windows.Forms.TextBox();
-            this.input_test_followup = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.input_tests_maxage = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label5
@@ -110,13 +110,6 @@
             this.input_test_age.Size = new System.Drawing.Size(122, 20);
             this.input_test_age.TabIndex = 14;
             // 
-            // input_test_followup
-            // 
-            this.input_test_followup.Location = new System.Drawing.Point(260, 292);
-            this.input_test_followup.Name = "input_test_followup";
-            this.input_test_followup.Size = new System.Drawing.Size(122, 20);
-            this.input_test_followup.TabIndex = 26;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -134,14 +127,40 @@
             this.input_tests_maxage.Size = new System.Drawing.Size(122, 20);
             this.input_tests_maxage.TabIndex = 28;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "a: Handicap poursuite profession ",
+            "b1: Aphasie ",
+            "b2: Langage oral ",
+            "b3: Dyslexie, dysorthographie, dyscalculie ",
+            "b4: Fentes ",
+            "b5: Radiothérapie/chirurgie ",
+            "b6.1: Dysglossies ",
+            "b6.2: Dysarthries ",
+            "b6.3: Troubles chroniques de la parole ",
+            "b6.4: Bégaiement ",
+            "b6.5: Troubles myofonctionnels ",
+            "c1: Laryngectomie ",
+            "c2: Troubles organiques (voix)",
+            "d: Troubles de l’ouïe ",
+            "e: Dysphagie ",
+            "f: Dysphasie ",
+            "g: Locked-in syndrome "});
+            this.comboBox1.Location = new System.Drawing.Point(260, 293);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 29;
+            // 
             // Create_tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 414);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.input_tests_maxage);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.input_test_followup);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -165,8 +184,8 @@
         private System.Windows.Forms.Button btn_new_patient;
         private System.Windows.Forms.TextBox input_test_name;
         private System.Windows.Forms.TextBox input_test_age;
-        private System.Windows.Forms.TextBox input_test_followup;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox input_tests_maxage;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

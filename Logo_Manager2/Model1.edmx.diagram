@@ -8,8 +8,8 @@
         <EntityTypeShape EntityType="Logo_managerModel.Insurance" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Logo_managerModel.Patient" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Logo_managerModel.PatientsTest" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Logo_managerModel.Test" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Logo_managerModel.User" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logo_managerModel.Test" Width="1.5" PointX="10.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logo_managerModel.User" Width="1.5" PointX="3.375" PointY="6.25" IsExpanded="true" />
         <AssociationConnector Association="Logo_managerModel.FK_Insurance" ManuallyRouted="false" />
         <AssociationConnector Association="Logo_managerModel.FK_PatientsToTest" ManuallyRouted="false" />
         <AssociationConnector Association="Logo_managerModel.FK_Users" ManuallyRouted="false" />

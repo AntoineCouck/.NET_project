@@ -94,6 +94,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="create_forms\create_insurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_forms\create_insurance.Designer.cs">
+      <DependentUpon>create_insurance.cs</DependentUpon>
+    </Compile>
     <Compile Include="create_forms\create_new_user.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
       <DependentUpon>Sign_in.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="create_forms\create_insurance.resx">
+      <DependentUpon>create_insurance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="create_forms\create_new_user.resx">
       <DependentUpon>create_new_user.cs</DependentUpon>
     </EmbeddedResource>

@@ -25,7 +25,8 @@ namespace Logo_Manager2.create_forms
                 test.MinAge = 0;
                 input_test_age.Text = null;
                 input_test_age.Text = null;
-                input_test_followup.Text = null;
+                
+                
 
                 MessageBox.Show("the given number for age is not a digit , this will be set at age 0");
             }
@@ -34,7 +35,7 @@ namespace Logo_Manager2.create_forms
                 test.MaxAge = 0;
                 input_test_age.Text = null;
                 input_test_age.Text = null;
-                input_test_followup.Text = null;
+                
 
                 MessageBox.Show("the given number for age is not a digit , this will be set at age 0");
             }
@@ -44,7 +45,7 @@ namespace Logo_Manager2.create_forms
                 test.MaxAge = int.Parse(input_tests_maxage.Text);
             }
 
-            test.TypefollowUp = input_test_followup.Text;
+            test.TypefollowUp = comboBox1.Text;
 
             db.Tests.Add(test);
 
