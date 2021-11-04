@@ -33,7 +33,6 @@ namespace Logo_Manager2.create_forms
             this.components = new System.ComponentModel.Container();
             this.input_patient_lastname = new System.Windows.Forms.TextBox();
             this.input_patient_firstname = new System.Windows.Forms.TextBox();
-            this.input_patient_followup = new System.Windows.Forms.TextBox();
             this.input_patient_user = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.logo_managerDataSet = new Logo_Manager2.Logo_managerDataSet();
@@ -47,6 +46,7 @@ namespace Logo_Manager2.create_forms
             this.label6 = new System.Windows.Forms.Label();
             this.usersTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.UsersTableAdapter();
             this.label5 = new System.Windows.Forms.Label();
+            this.input_patient_followup = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
@@ -65,13 +65,6 @@ namespace Logo_Manager2.create_forms
             this.input_patient_firstname.Name = "input_patient_firstname";
             this.input_patient_firstname.Size = new System.Drawing.Size(122, 20);
             this.input_patient_firstname.TabIndex = 2;
-            // 
-            // input_patient_followup
-            // 
-            this.input_patient_followup.Location = new System.Drawing.Point(466, 166);
-            this.input_patient_followup.Name = "input_patient_followup";
-            this.input_patient_followup.Size = new System.Drawing.Size(122, 20);
-            this.input_patient_followup.TabIndex = 3;
             // 
             // input_patient_user
             // 
@@ -190,11 +183,38 @@ namespace Logo_Manager2.create_forms
             this.label5.TabIndex = 13;
             this.label5.Text = "Create a new patient";
             // 
+            // input_patient_followup
+            // 
+            this.input_patient_followup.FormattingEnabled = true;
+            this.input_patient_followup.Items.AddRange(new object[] {
+            "a: Handicap poursuite profession 55",
+            "b1: Aphasie 288",
+            "b2: Langage oral ",
+            "b3: Dyslexie, dysorthographie, dyscalculie ",
+            "b4: Fentes 3",
+            "b5: Radiothérapie/chirurgie ",
+            "b6.1: Dysglossies ",
+            "b6.2: Dysarthries ",
+            "b6.3: Troubles chroniques de la parole ",
+            "b6.4: Bégaiement ",
+            "b6.5: Troubles myofonctionnels ",
+            "c1: Laryngectomie ",
+            "c2: Troubles organiques (voix) ",
+            "d: Troubles de l’ouïe",
+            "e: Dysphagie ",
+            "f: Dysphasie ",
+            "g: Locked-in syndrome (30min)"});
+            this.input_patient_followup.Location = new System.Drawing.Point(452, 169);
+            this.input_patient_followup.Name = "input_patient_followup";
+            this.input_patient_followup.Size = new System.Drawing.Size(152, 21);
+            this.input_patient_followup.TabIndex = 14;
+            // 
             // create_new_patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 455);
+            this.Controls.Add(this.input_patient_followup);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -204,7 +224,6 @@ namespace Logo_Manager2.create_forms
             this.Controls.Add(this.btn_new_patient);
             this.Controls.Add(this.input_patient_birthday);
             this.Controls.Add(this.input_patient_user);
-            this.Controls.Add(this.input_patient_followup);
             this.Controls.Add(this.input_patient_firstname);
             this.Controls.Add(this.input_patient_lastname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -223,7 +242,6 @@ namespace Logo_Manager2.create_forms
 
         private System.Windows.Forms.TextBox input_patient_lastname;
         private System.Windows.Forms.TextBox input_patient_firstname;
-        private System.Windows.Forms.TextBox input_patient_followup;
         private System.Windows.Forms.ComboBox input_patient_user;
         private System.Windows.Forms.DateTimePicker input_patient_birthday;
         private System.Windows.Forms.Button btn_new_patient;
@@ -237,5 +255,6 @@ namespace Logo_Manager2.create_forms
         private Logo_managerDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
         private BindingSource usersBindingSource1;
         private Label label5;
+        private ComboBox input_patient_followup;
     }
 }

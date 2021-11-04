@@ -12,26 +12,19 @@ namespace Logo_Manager2
     using System;
     using System.Collections.Generic;
     
-    public partial class Patient
+    public partial class Insurance
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Patient()
+        public Insurance()
         {
-            this.PatientsTests = new HashSet<PatientsTest>();
+            this.Patients = new HashSet<Patient>();
         }
     
-        public int Id { get; set; }
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
-        public System.DateTime Birthday { get; set; }
-        public string Followup { get; set; }
-        public int LeftSessions { get; set; }
-        public string UserName { get; set; }
-        public string InsuranceName { get; set; }
+        public string Name { get; set; }
+        public string TelNr { get; set; }
+        public string Adres { get; set; }
     
-        public virtual Insurance Insurance { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PatientsTest> PatientsTests { get; set; }
-        public virtual User User { get; set; }
+        public virtual ICollection<Patient> Patients { get; set; }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -50,18 +49,21 @@ namespace Logo_Manager2.profile_forms
         private void button_save_Click(object sender, EventArgs e)
         {
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
+
+
             int Add = int.Parse(input_patient_add.Value.ToString());
             int remove = int.Parse(input_patient_remove.Value.ToString());
 
 
-            foreach (var patient in Patient)
-            { 
 
-                   patient.LeftSessions = patient.LeftSessions + Add - remove;
-                   patient_total.Text = patient.LeftSessions.ToString();
+            foreach (var patient in Patient)
+            {
+
+                patient.LeftSessions = patient.LeftSessions + Add - remove;
+                patient_total.Text = patient.LeftSessions.ToString();
             }
 
-                db.SaveChanges();
+            db.SaveChanges();
 
 
 
@@ -73,7 +75,7 @@ namespace Logo_Manager2.profile_forms
 
         private void input_patient_add_ValueChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void input_patient_remove_ValueChanged(object sender, EventArgs e)

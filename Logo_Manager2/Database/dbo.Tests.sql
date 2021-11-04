@@ -2,6 +2,8 @@
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [Name] NVARCHAR(50) NOT NULL, 
-    [Age] INT NOT NULL, 
+    [MinAge] INT NOT NULL DEFAULT(0), 
+    [MaxAge] INT NOT NULL DEFAULT(99) ,
     [TypefollowUp] NVARCHAR(50) NOT NULL
+
 )

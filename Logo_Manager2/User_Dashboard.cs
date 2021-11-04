@@ -15,6 +15,7 @@ namespace Logo_Manager2
         public static create_new_patient create_patient = new create_new_patient();
         public static Create_tests create_Tests = new Create_tests();
         public static User_profile profile = new User_profile();
+        public static create_insurance create_Insurance = new create_insurance();
         public static bool is_connected = false;
         public static string username;
         public static int currentPatientId { get; set; }
@@ -28,6 +29,8 @@ namespace Logo_Manager2
 
         private void User_Dashboard_Load(object sender, System.EventArgs e)
         {
+            // TODO: This line of code loads data into the 'logo_managerDataSet.Insurances' table. You can move, or remove it, as needed.
+            this.insurancesTableAdapter.Fill(this.logo_managerDataSet.Insurances);
             log_In.ShowDialog();
             username = log_In.username;
             is_connected = log_In.is_connected;
@@ -97,8 +100,6 @@ namespace Logo_Manager2
             {
                 if (teller == currentData)
                 {
-
-                    
                     currentPatientId = test.Id;
                 }
 
@@ -107,11 +108,16 @@ namespace Logo_Manager2
 
             profile.ShowDialog();
 
-            if(profile.DialogResult == DialogResult.OK)
+            if (profile.DialogResult == DialogResult.OK)
             {
                 this.patientsTableAdapter.Fill(this.logo_managerDataSet.Patients);
             }
 
+        }
+
+        private void btn_dashboard_addInsurance_Click(object sender, EventArgs e)
+        {
+            create_Insurance.ShowDialog();
         }
     }
 }

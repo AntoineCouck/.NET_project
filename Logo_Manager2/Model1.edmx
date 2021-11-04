@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Logo_managerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Insurances">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TelNr" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Patients">
           <Key>
             <PropertyRef Name="Id" />
@@ -16,6 +24,15 @@
           <Property Name="Followup" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LeftSessions" Type="int" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="InsuranceName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PatientsTests">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PatientId" Type="int" Nullable="false" />
+          <Property Name="TestId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Tests">
           <Key>
@@ -23,7 +40,8 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="MinAge" Type="int" Nullable="false" />
+          <Property Name="MaxAge" Type="int" Nullable="false" />
           <Property Name="TypefollowUp" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
@@ -34,6 +52,30 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="12" />
         </EntityType>
+        <Association Name="FK_Insurance">
+          <End Role="Insurances" Type="Self.Insurances" Multiplicity="1" />
+          <End Role="Patients" Type="Self.Patients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Insurances">
+              <PropertyRef Name="Name" />
+            </Principal>
+            <Dependent Role="Patients">
+              <PropertyRef Name="InsuranceName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PatientsToTest">
+          <End Role="Patients" Type="Self.Patients" Multiplicity="1" />
+          <End Role="PatientsTests" Type="Self.PatientsTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PatientsTests">
+              <PropertyRef Name="PatientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Users">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="Patients" Type="Self.Patients" Multiplicity="*" />
@@ -46,13 +88,39 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="TestsToPatients">
+          <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+          <End Role="PatientsTests" Type="Self.PatientsTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PatientsTests">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Logo_managerModelStoreContainer">
+          <EntitySet Name="Insurances" EntityType="Self.Insurances" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PatientsTests" EntityType="Self.PatientsTests" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tests" EntityType="Self.Tests" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Insurance" Association="Self.FK_Insurance">
+            <End Role="Insurances" EntitySet="Insurances" />
+            <End Role="Patients" EntitySet="Patients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PatientsToTest" Association="Self.FK_PatientsToTest">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="PatientsTests" EntitySet="PatientsTests" />
+          </AssociationSet>
           <AssociationSet Name="FK_Users" Association="Self.FK_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="Patients" EntitySet="Patients" />
+          </AssociationSet>
+          <AssociationSet Name="TestsToPatients" Association="Self.TestsToPatients">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="PatientsTests" EntitySet="PatientsTests" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -60,6 +128,15 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Logo_managerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Insurance">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TelNr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Insurance" FromRole="Insurances" ToRole="Patients" />
+        </EntityType>
         <EntityType Name="Patient">
           <Key>
             <PropertyRef Name="Id" />
@@ -71,7 +148,20 @@
           <Property Name="Followup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LeftSessions" Type="Int32" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InsuranceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Insurance" Relationship="Self.FK_Insurance" FromRole="Patients" ToRole="Insurances" />
+          <NavigationProperty Name="PatientsTests" Relationship="Self.FK_PatientsToTest" FromRole="Patients" ToRole="PatientsTests" />
           <NavigationProperty Name="User" Relationship="Self.FK_Users" FromRole="Patients" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="PatientsTest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PatientId" Type="Int32" Nullable="false" />
+          <Property Name="TestId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Patient" Relationship="Self.FK_PatientsToTest" FromRole="PatientsTests" ToRole="Patients" />
+          <NavigationProperty Name="Test" Relationship="Self.TestsToPatients" FromRole="PatientsTests" ToRole="Tests" />
         </EntityType>
         <EntityType Name="Test">
           <Key>
@@ -79,8 +169,10 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="MinAge" Type="Int32" Nullable="false" />
+          <Property Name="MaxAge" Type="Int32" Nullable="false" />
           <Property Name="TypefollowUp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PatientsTests" Relationship="Self.TestsToPatients" FromRole="Tests" ToRole="PatientsTests" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -91,6 +183,30 @@
           <Property Name="Password" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Patients" Relationship="Self.FK_Users" FromRole="Users" ToRole="Patients" />
         </EntityType>
+        <Association Name="FK_Insurance">
+          <End Role="Insurances" Type="Self.Insurance" Multiplicity="1" />
+          <End Role="Patients" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Insurances">
+              <PropertyRef Name="Name" />
+            </Principal>
+            <Dependent Role="Patients">
+              <PropertyRef Name="InsuranceName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PatientsToTest">
+          <End Role="Patients" Type="Self.Patient" Multiplicity="1" />
+          <End Role="PatientsTests" Type="Self.PatientsTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PatientsTests">
+              <PropertyRef Name="PatientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Users">
           <End Role="Users" Type="Self.User" Multiplicity="0..1" />
           <End Role="Patients" Type="Self.Patient" Multiplicity="*" />
@@ -103,13 +219,39 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="TestsToPatients">
+          <End Role="Tests" Type="Self.Test" Multiplicity="1" />
+          <End Role="PatientsTests" Type="Self.PatientsTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tests">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PatientsTests">
+              <PropertyRef Name="TestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Logo_managerEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Insurances" EntityType="Self.Insurance" />
           <EntitySet Name="Patients" EntityType="Self.Patient" />
+          <EntitySet Name="PatientsTests" EntityType="Self.PatientsTest" />
           <EntitySet Name="Tests" EntityType="Self.Test" />
           <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_Insurance" Association="Self.FK_Insurance">
+            <End Role="Insurances" EntitySet="Insurances" />
+            <End Role="Patients" EntitySet="Patients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PatientsToTest" Association="Self.FK_PatientsToTest">
+            <End Role="Patients" EntitySet="Patients" />
+            <End Role="PatientsTests" EntitySet="PatientsTests" />
+          </AssociationSet>
           <AssociationSet Name="FK_Users" Association="Self.FK_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="Patients" EntitySet="Patients" />
+          </AssociationSet>
+          <AssociationSet Name="TestsToPatients" Association="Self.TestsToPatients">
+            <End Role="Tests" EntitySet="Tests" />
+            <End Role="PatientsTests" EntitySet="PatientsTests" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -118,6 +260,15 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Logo_managerModelStoreContainer" CdmEntityContainer="Logo_managerEntities1">
+          <EntitySetMapping Name="Insurances">
+            <EntityTypeMapping TypeName="Logo_managerModel.Insurance">
+              <MappingFragment StoreEntitySet="Insurances">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TelNr" ColumnName="TelNr" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Patients">
             <EntityTypeMapping TypeName="Logo_managerModel.Patient">
               <MappingFragment StoreEntitySet="Patients">
@@ -128,6 +279,16 @@
                 <ScalarProperty Name="Followup" ColumnName="Followup" />
                 <ScalarProperty Name="LeftSessions" ColumnName="LeftSessions" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="InsuranceName" ColumnName="InsuranceName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PatientsTests">
+            <EntityTypeMapping TypeName="Logo_managerModel.PatientsTest">
+              <MappingFragment StoreEntitySet="PatientsTests">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -136,7 +297,8 @@
               <MappingFragment StoreEntitySet="Tests">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="MinAge" ColumnName="MinAge" />
+                <ScalarProperty Name="MaxAge" ColumnName="MaxAge" />
                 <ScalarProperty Name="TypefollowUp" ColumnName="TypefollowUp" />
               </MappingFragment>
             </EntityTypeMapping>

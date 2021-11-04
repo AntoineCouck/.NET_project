@@ -25,7 +25,9 @@ namespace Logo_Manager2
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Insurance> Insurances { get; set; }
         public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<PatientsTest> PatientsTests { get; set; }
         public virtual DbSet<Test> Tests { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }

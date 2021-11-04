@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Menu_dashboard = new System.Windows.Forms.MenuStrip();
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,8 +60,10 @@
             this.testsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.insurancesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.insurancesTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.InsurancesTableAdapter();
+            this.btn_dashboard_addInsurance = new System.Windows.Forms.Button();
             this.Menu_dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
@@ -69,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_dashboard
@@ -129,7 +132,9 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.InsurancesTableAdapter = null;
             this.tableAdapterManager.PatientsTableAdapter = null;
+            this.tableAdapterManager.PatientsTestsTableAdapter = null;
             this.tableAdapterManager.TestsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Logo_Manager2.Logo_managerDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
@@ -172,7 +177,7 @@
             this.btn_dashboard_add_test.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_dashboard_add_test.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_dashboard_add_test.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_dashboard_add_test.Location = new System.Drawing.Point(1004, 567);
+            this.btn_dashboard_add_test.Location = new System.Drawing.Point(766, 567);
             this.btn_dashboard_add_test.Name = "btn_dashboard_add_test";
             this.btn_dashboard_add_test.Size = new System.Drawing.Size(100, 39);
             this.btn_dashboard_add_test.TabIndex = 7;
@@ -206,7 +211,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(1032, 38);
+            this.label2.Location = new System.Drawing.Point(782, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 10;
@@ -233,8 +238,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -277,19 +282,18 @@
             this.testsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.testsDataGridView.DataSource = this.testsBindingSource;
-            this.testsDataGridView.Location = new System.Drawing.Point(864, 61);
+            this.testsDataGridView.Location = new System.Drawing.Point(614, 61);
             this.testsDataGridView.Name = "testsDataGridView";
-            this.testsDataGridView.Size = new System.Drawing.Size(370, 490);
+            this.testsDataGridView.Size = new System.Drawing.Size(370, 500);
             this.testsDataGridView.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn7.HeaderText = "Id";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -301,17 +305,33 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Name";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Age";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Age";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "TypefollowUp";
             this.dataGridViewTextBoxColumn10.HeaderText = "TypefollowUp";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // insurancesBindingSource
+            // 
+            this.insurancesBindingSource.DataMember = "Insurances";
+            this.insurancesBindingSource.DataSource = this.logo_managerDataSet;
+            // 
+            // insurancesTableAdapter
+            // 
+            this.insurancesTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_dashboard_addInsurance
+            // 
+            this.btn_dashboard_addInsurance.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_dashboard_addInsurance.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_dashboard_addInsurance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_dashboard_addInsurance.Location = new System.Drawing.Point(1106, 567);
+            this.btn_dashboard_addInsurance.Name = "btn_dashboard_addInsurance";
+            this.btn_dashboard_addInsurance.Size = new System.Drawing.Size(100, 39);
+            this.btn_dashboard_addInsurance.TabIndex = 14;
+            this.btn_dashboard_addInsurance.Text = "Add Insurance";
+            this.btn_dashboard_addInsurance.UseVisualStyleBackColor = true;
+            this.btn_dashboard_addInsurance.Click += new System.EventHandler(this.btn_dashboard_addInsurance_Click);
             // 
             // User_Dashboard
             // 
@@ -319,6 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1337, 758);
+            this.Controls.Add(this.btn_dashboard_addInsurance);
             this.Controls.Add(this.testsDataGridView);
             this.Controls.Add(this.patientsDataGridView);
             this.Controls.Add(this.label2);
@@ -343,6 +364,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,6 +403,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.ToolStripMenuItem refreshPageToolStripMenuItem;
+        private System.Windows.Forms.BindingSource insurancesBindingSource;
+        private Logo_managerDataSetTableAdapters.InsurancesTableAdapter insurancesTableAdapter;
+        private System.Windows.Forms.Button btn_dashboard_addInsurance;
     }
 }
 

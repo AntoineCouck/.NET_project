@@ -22,7 +22,16 @@ namespace Logo_Manager2.create_forms
 
             if (Utils.IsEveritingADigit(input_test_age.Text) != true)
             {
-                test.Age = 0;
+                test.MinAge = 0;
+                input_test_age.Text = null;
+                input_test_age.Text = null;
+                input_test_followup.Text = null;
+
+                MessageBox.Show("the given number for age is not a digit , this will be set at age 0");
+            }
+            if (Utils.IsEveritingADigit(input_tests_maxage.Text) != true)
+            {
+                test.MaxAge = 0;
                 input_test_age.Text = null;
                 input_test_age.Text = null;
                 input_test_followup.Text = null;
@@ -31,7 +40,8 @@ namespace Logo_Manager2.create_forms
             }
             else
             {
-                test.Age = int.Parse(input_test_age.Text);
+                test.MinAge = int.Parse(input_test_age.Text);
+                test.MaxAge = int.Parse(input_tests_maxage.Text);
             }
 
             test.TypefollowUp = input_test_followup.Text;
