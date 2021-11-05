@@ -39,6 +39,13 @@ namespace Logo_Manager2.create_forms
 
             db.SaveChanges();
 
+            input_patient_firstname.Text = null;
+            input_patient_lastname.Text = null;
+            input_patient_birthday.Value = DateTime.Now;
+            input_patient_followup.Text = null;
+            input_patient_user.Text = null;
+            input_patient_insurance.Text = null;  
+            
             this.Close();
 
         }

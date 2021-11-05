@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Logo_Manager2.create_forms
@@ -32,8 +25,11 @@ namespace Logo_Manager2.create_forms
 
             db.SaveChanges();
 
+            input_insurance_name.Text = null;
+            input_insurance_adres.Text = null;
+            input_insurance_telnr.Text = null;
 
-
+            this.Close();
         }
     }
 }

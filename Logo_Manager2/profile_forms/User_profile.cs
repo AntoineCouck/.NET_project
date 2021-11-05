@@ -25,7 +25,7 @@ namespace Logo_Manager2.profile_forms
             this.testsTableAdapter.Fill(this.logo_managerDataSet.Tests);
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
 
-            var ListTests = db.PatientsTests.Join( db.Patients, x => x.PatientId, y => y.Id, (x, y) => new
+            var ListTests = db.PatientsTests.Join(db.Patients, x => x.PatientId, y => y.Id, (x, y) => new
             {
                 patienttest = x,
                 patientId = y.Id
@@ -88,15 +88,12 @@ namespace Logo_Manager2.profile_forms
 
             db.SaveChanges();
 
-
-
-
             input_patient_add.Value = 0;
             input_patient_remove.Value = 0;
 
         }
 
-     
+
 
         private void btn_add_test_to_patient_Click(object sender, EventArgs e)
         {
@@ -105,20 +102,18 @@ namespace Logo_Manager2.profile_forms
             var list = db.Tests.Where(x => x.Name == comboBox1.Text);
             int testId = 0;
 
-            foreach(var element in list)
+            foreach (var element in list)
             {
                 testId = element.Id;
             }
 
-            
+
             var Patienttest = new PatientsTest();
             Patienttest.PatientId = User_Dashboard.currentPatientId;
             Patienttest.TestId = testId;
 
             db.PatientsTests.Add(Patienttest);
             db.SaveChanges();
-
-
 
 
             var ListTests = db.PatientsTests.Join(db.Patients, x => x.PatientId, y => y.Id, (x, y) => new

@@ -31,7 +31,7 @@ namespace Logo_Manager2
         {
             // TODO: This line of code loads data into the 'logo_managerDataSet.PatientsTests' table. You can move, or remove it, as needed.
             this.patientsTestsTableAdapter.Fill(this.logo_managerDataSet.PatientsTests);
-          
+
             log_In.ShowDialog();
             username = log_In.username;
             is_connected = log_In.is_connected;
@@ -125,6 +125,7 @@ namespace Logo_Manager2
             if (create_Insurance.DialogResult == DialogResult.OK)
             {
                 this.insurancesTableAdapter.Fill(this.logo_managerDataSet.Insurances);
+             
             }
         }
     }
