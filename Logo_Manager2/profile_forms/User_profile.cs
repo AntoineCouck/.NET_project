@@ -46,6 +46,7 @@ namespace Logo_Manager2.profile_forms
                 profile_info_birthday.Text = patient.Birthday.ToString();
                 profile_info_followBy.Text = patient.UserName;
                 input_paztient_insurance.Text = patient.InsuranceName;
+                textBox1.Text = patient.Followup;
 
                 if (patient.LeftSessions == 0)
                 {

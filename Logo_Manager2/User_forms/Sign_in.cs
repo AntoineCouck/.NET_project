@@ -28,8 +28,24 @@ namespace Logo_Manager2.User_forms
             if (input_email_register.Text == String.Empty || input_email_register.Text == String.Empty || input_password_register.Text == String.Empty)
             {
 
-                MessageBox.Show("unvalid input , try again");
+                MessageBox.Show("All fields must be completed");
+
+            } else if(input_email_register.Text.Length > 50)
+            {
+                MessageBox.Show("Email too large");
+                input_email_register.Text = null;
+
+            } else if(input_name_register.Text.Length > 50)
+            {
+                MessageBox.Show("Name too large");
+                input_name_register.Text = null;
+
+            } else if(input_password_register.Text.Length > 12)
+            {
+                MessageBox.Show("Password too large");
+                input_password_register.Text = null;
             }
+
             else
             {
 
