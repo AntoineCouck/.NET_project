@@ -49,14 +49,14 @@ namespace Logo_Manager2.create_forms
             this.input_patient_followup = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.input_patient_insurance = new System.Windows.Forms.ComboBox();
+            this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.insurancesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insurancesTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.InsurancesTableAdapter();
-            this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // input_patient_lastname
@@ -238,6 +238,11 @@ namespace Logo_Manager2.create_forms
             this.input_patient_insurance.TabIndex = 17;
             this.input_patient_insurance.ValueMember = "Name";
             // 
+            // insurancesBindingSource1
+            // 
+            this.insurancesBindingSource1.DataMember = "Insurances";
+            this.insurancesBindingSource1.DataSource = this.logo_managerDataSet;
+            // 
             // insurancesBindingSource
             // 
             this.insurancesBindingSource.DataMember = "Insurances";
@@ -246,11 +251,6 @@ namespace Logo_Manager2.create_forms
             // insurancesTableAdapter
             // 
             this.insurancesTableAdapter.ClearBeforeFill = true;
-            // 
-            // insurancesBindingSource1
-            // 
-            this.insurancesBindingSource1.DataMember = "Insurances";
-            this.insurancesBindingSource1.DataSource = this.logo_managerDataSet;
             // 
             // create_new_patient
             // 
@@ -278,8 +278,8 @@ namespace Logo_Manager2.create_forms
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
