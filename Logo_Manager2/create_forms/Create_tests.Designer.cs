@@ -34,10 +34,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_new_patient = new System.Windows.Forms.Button();
             this.input_test_name = new System.Windows.Forms.TextBox();
-            this.input_test_age = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.input_tests_maxage = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.input_test_age = new System.Windows.Forms.NumericUpDown();
+            this.input_tests_maxage = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.input_test_age)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.input_tests_maxage)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -103,13 +105,6 @@
             this.input_test_name.Size = new System.Drawing.Size(122, 20);
             this.input_test_name.TabIndex = 15;
             // 
-            // input_test_age
-            // 
-            this.input_test_age.Location = new System.Drawing.Point(381, 175);
-            this.input_test_age.Name = "input_test_age";
-            this.input_test_age.Size = new System.Drawing.Size(122, 20);
-            this.input_test_age.TabIndex = 14;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -119,13 +114,6 @@
             this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 27;
             this.label4.Text = "Max age";
-            // 
-            // input_tests_maxage
-            // 
-            this.input_tests_maxage.Location = new System.Drawing.Point(381, 234);
-            this.input_tests_maxage.Name = "input_tests_maxage";
-            this.input_tests_maxage.Size = new System.Drawing.Size(122, 20);
-            this.input_tests_maxage.TabIndex = 28;
             // 
             // comboBox1
             // 
@@ -153,13 +141,28 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 29;
             // 
+            // input_test_age
+            // 
+            this.input_test_age.Location = new System.Drawing.Point(381, 176);
+            this.input_test_age.Name = "input_test_age";
+            this.input_test_age.Size = new System.Drawing.Size(120, 20);
+            this.input_test_age.TabIndex = 30;
+            // 
+            // input_tests_maxage
+            // 
+            this.input_tests_maxage.Location = new System.Drawing.Point(381, 243);
+            this.input_tests_maxage.Name = "input_tests_maxage";
+            this.input_tests_maxage.Size = new System.Drawing.Size(120, 20);
+            this.input_tests_maxage.TabIndex = 31;
+            // 
             // Create_tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 414);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.input_tests_maxage);
+            this.Controls.Add(this.input_test_age);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -167,9 +170,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_new_patient);
             this.Controls.Add(this.input_test_name);
-            this.Controls.Add(this.input_test_age);
             this.Name = "Create_tests";
             this.Text = "Create_tests";
+            ((System.ComponentModel.ISupportInitialize)(this.input_test_age)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.input_tests_maxage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,9 +187,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_new_patient;
         private System.Windows.Forms.TextBox input_test_name;
-        private System.Windows.Forms.TextBox input_test_age;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox input_tests_maxage;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.NumericUpDown input_test_age;
+        private System.Windows.Forms.NumericUpDown input_tests_maxage;
     }
 }

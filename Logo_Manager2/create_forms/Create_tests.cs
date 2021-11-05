@@ -17,46 +17,55 @@ namespace Logo_Manager2.create_forms
         {
 
             var test = new Test();
-
-            test.Name = input_test_name.Text;
-
-            if (Utils.IsEveritingADigit(input_test_age.Text) != true)
+            bool createObj = true;
+            
+            
+           
+         
+            if (string.IsNullOrEmpty(input_test_name.Text))
             {
-                test.MinAge = 0;
-                input_test_age.Text = null;
-                input_test_age.Text = null;
-
-
-
-                MessageBox.Show("the given number for age is not a digit , this will be set at age 0");
+                MessageBox.Show("The name must be completed");
+                test.Name = "unknown";
+                createObj = false;
             }
-            if (Utils.IsEveritingADigit(input_tests_maxage.Text) != true)
+            else if (input_test_name.Text.Length > 50)
             {
-                test.MaxAge = 0;
-                input_test_age.Text = null;
-                input_test_age.Text = null;
-
-
-                MessageBox.Show("the given number for age is not a digit , this will be set at age 0");
+                MessageBox.Show("The name is too large, try another");
+                createObj = false;
             }
-            else
+           
+
+            if(!(input_test_age.Value < input_tests_maxage.Value))
             {
+                MessageBox.Show("Sorry but the max age must be higher then the min age");
+                createObj = false;
+               
+            }
+          
+            
+            if(createObj == true)
+            {
+                test.Name = input_test_name.Text;
                 test.MinAge = int.Parse(input_test_age.Text);
                 test.MaxAge = int.Parse(input_tests_maxage.Text);
+                test.TypefollowUp = comboBox1.Text;
+                db.Tests.Add(test);
+                db.SaveChanges();
+                this.Close();
+
             }
+               
 
-            test.TypefollowUp = comboBox1.Text;
-
-            db.Tests.Add(test);
-
-            db.SaveChanges();
+            
 
             input_test_name.Text = null;
             input_test_age.Text = null;
             input_tests_maxage.Text = null;
             comboBox1.Text = null;
+            
 
-            this.Close();
+
+
 
         }
     }

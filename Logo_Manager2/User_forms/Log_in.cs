@@ -53,7 +53,7 @@ namespace Logo_Manager2
                 {
                     Close();
                 }
-
+                MessageBox.Show("Email or password are incorrect , try again");
                 email_login_input.Text = null;
                 password_login_input.Text = null;
             }
