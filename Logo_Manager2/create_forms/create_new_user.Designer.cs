@@ -49,10 +49,19 @@ namespace Logo_Manager2.create_forms
             this.input_patient_insurance = new System.Windows.Forms.ComboBox();
             this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.insurancesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.logo_manager2DataSet = new Logo_Manager2.Logo_manager2DataSet();
+            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new Logo_Manager2.Logo_manager2DataSetTableAdapters.UsersTableAdapter();
+            this.tableAdapterManager = new Logo_Manager2.Logo_manager2DataSetTableAdapters.TableAdapterManager();
+            this.insurancesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.insurancesTableAdapter = new Logo_Manager2.Logo_manager2DataSetTableAdapters.InsurancesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // input_patient_lastname
@@ -84,9 +93,6 @@ namespace Logo_Manager2.create_forms
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "Users";
-            // 
-            // logo_managerDataSet
-            // 
             // 
             // usersBindingSource1
             // 
@@ -168,9 +174,6 @@ namespace Logo_Manager2.create_forms
             this.label6.TabIndex = 12;
             this.label6.Text = "DR";
             // 
-            // usersTableAdapter
-            // 
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -237,14 +240,44 @@ namespace Logo_Manager2.create_forms
             // 
             this.insurancesBindingSource.DataMember = "Insurances";
             // 
+            // logo_manager2DataSet
+            // 
+            this.logo_manager2DataSet.DataSetName = "Logo_manager2DataSet";
+            this.logo_manager2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource2
+            // 
+            this.usersBindingSource2.DataMember = "Users";
+            this.usersBindingSource2.DataSource = this.logo_manager2DataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.InsurancesTableAdapter = null;
+            this.tableAdapterManager.PatientsTableAdapter = null;
+            this.tableAdapterManager.PatientsTestsTableAdapter = null;
+            this.tableAdapterManager.TestsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Logo_Manager2.Logo_manager2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
+            // 
+            // insurancesBindingSource2
+            // 
+            this.insurancesBindingSource2.DataMember = "Insurances";
+            this.insurancesBindingSource2.DataSource = this.logo_manager2DataSet;
+            // 
             // insurancesTableAdapter
             // 
+            this.insurancesTableAdapter.ClearBeforeFill = true;
             // 
             // create_new_patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 455);
+            this.ClientSize = new System.Drawing.Size(903, 598);
             this.Controls.Add(this.input_patient_insurance);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.input_patient_followup);
@@ -267,6 +300,9 @@ namespace Logo_Manager2.create_forms
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +328,11 @@ namespace Logo_Manager2.create_forms
         private ComboBox input_patient_insurance;
         private BindingSource insurancesBindingSource;
         private BindingSource insurancesBindingSource1;
+        private Logo_manager2DataSet logo_manager2DataSet;
+        private BindingSource usersBindingSource2;
+        private Logo_manager2DataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private Logo_manager2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private BindingSource insurancesBindingSource2;
+        private Logo_manager2DataSetTableAdapters.InsurancesTableAdapter insurancesTableAdapter;
     }
 }

@@ -29,7 +29,8 @@ namespace Logo_Manager2
 
         private void User_Dashboard_Load(object sender, EventArgs e)
         {
-         
+       
+
             log_In.ShowDialog();
             username = log_In.username;
             is_connected = log_In.is_connected;
@@ -38,9 +39,12 @@ namespace Logo_Manager2
 
             if (is_connected)
             {
-                //this.patientsTableAdapter1.Fill(this.logo_manager2DataSet.Patients);
-                //this.insurancesTableAdapter1.Fill(this.logo_manager2DataSet.Insurances);
-                //this.testsTableAdapter1.Fill(this.logo_manager2DataSet.Tests);
+                // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
+                this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+                // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
+                this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+                // TODO: This line of code loads data into the 'logo_manager2DataSet.Patients' table. You can move, or remove it, as needed.
+                this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
             }
 
         }
@@ -61,7 +65,7 @@ namespace Logo_Manager2
             create_patient.ShowDialog();
             if (create_patient.DialogResult == DialogResult.OK)
             {
-                //this.patientsTableAdapter1.Fill(this.logo_manager2DataSet.Patients);
+                this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
             }
         }
 
@@ -73,7 +77,7 @@ namespace Logo_Manager2
 
             if (create_Tests.DialogResult == DialogResult.OK)
             {
-                //this.testsTableAdapter1.Fill(this.logo_manager2DataSet.Tests);
+                this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
             }
         }
 
@@ -100,7 +104,7 @@ namespace Logo_Manager2
 
             if (profile.DialogResult == DialogResult.OK)
             {
-                //this.patientsTableAdapter1.Fill(this.logo_manager2DataSet.Patients);
+                this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
             }
 
         }
@@ -111,8 +115,16 @@ namespace Logo_Manager2
 
             if (create_Insurance.DialogResult == DialogResult.OK)
             {
-                //this.insurancesTableAdapter1.Fill(this.logo_manager2DataSet.Insurances);
+                this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
             }
+        }
+
+        private void patientsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.patientsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.logo_manager2DataSet);
+
         }
     }
 }
