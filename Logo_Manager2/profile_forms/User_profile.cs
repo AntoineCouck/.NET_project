@@ -8,9 +8,9 @@ namespace Logo_Manager2.profile_forms
     public partial class User_profile : Form
     {
 
-        Logo_manager2Entities1 db = new Logo_manager2Entities1();
+        Logo_managerEntities1 db = new Logo_managerEntities1();
 
-       
+
 
 
         public User_profile()
@@ -24,7 +24,7 @@ namespace Logo_Manager2.profile_forms
             // TODO: This line of code loads data into the 'logo_managerDataSet.Tests' table. You can move, or remove it, as needed.
             this.testsTableAdapter.Fill(this.logo_managerDataSet.Tests);
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
-            
+
             var ListTests = db.PatientsTests.Join(db.Patients, x => x.PatientId, y => y.Id, (x, y) => new
             {
                 patienttest = x,
