@@ -20,7 +20,7 @@ namespace Logo_Manager2
         public static string username;
         public static int currentPatientId { get; set; }
 
-        Logo_managerEntities1 db = new Logo_managerEntities1();
+        Logo_manager2Entities1 db = new Logo_manager2Entities1();
 
         public User_Dashboard()
         {
@@ -128,5 +128,12 @@ namespace Logo_Manager2
              
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //delete a patient
+        }
+
+       
     }
 }

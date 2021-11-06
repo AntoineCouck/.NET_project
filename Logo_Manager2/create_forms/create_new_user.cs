@@ -6,7 +6,7 @@ namespace Logo_Manager2.create_forms
     public partial class create_new_patient : Form
     {
 
-        Logo_managerEntities1 db = new Logo_managerEntities1();
+        Logo_manager2Entities1 db = new Logo_manager2Entities1();
         User_Dashboard d = new User_Dashboard();
 
 

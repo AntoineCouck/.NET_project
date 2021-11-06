@@ -5,7 +5,7 @@ namespace Logo_Manager2.create_forms
 {
     public partial class Create_tests : Form
     {
-        Logo_managerEntities1 db = new Logo_managerEntities1();
+        Logo_manager2Entities1 db = new Logo_manager2Entities1();
         Utils utils = new Utils();
 
         public Create_tests()

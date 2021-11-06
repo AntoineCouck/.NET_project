@@ -5,7 +5,7 @@ namespace Logo_Manager2.User_forms
 {
     public partial class Sign_in : Form
     {
-        Logo_managerEntities1 context = new Logo_managerEntities1();
+        Logo_manager2Entities1 context = new Logo_manager2Entities1();
 
 
         public Sign_in()
