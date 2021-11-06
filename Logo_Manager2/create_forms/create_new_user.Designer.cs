@@ -35,7 +35,6 @@ namespace Logo_Manager2.create_forms
             this.input_patient_firstname = new System.Windows.Forms.TextBox();
             this.input_patient_user = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.logo_managerDataSet = new Logo_Manager2.Logo_managerDataSet();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.input_patient_birthday = new System.Windows.Forms.DateTimePicker();
             this.btn_new_patient = new System.Windows.Forms.Button();
@@ -44,16 +43,13 @@ namespace Logo_Manager2.create_forms
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.usersTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.UsersTableAdapter();
             this.label5 = new System.Windows.Forms.Label();
             this.input_patient_followup = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.input_patient_insurance = new System.Windows.Forms.ComboBox();
             this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.insurancesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.insurancesTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.InsurancesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).BeginInit();
@@ -88,17 +84,13 @@ namespace Logo_Manager2.create_forms
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.logo_managerDataSet;
             // 
             // logo_managerDataSet
             // 
-            this.logo_managerDataSet.DataSetName = "Logo_managerDataSet";
-            this.logo_managerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usersBindingSource1
             // 
             this.usersBindingSource1.DataMember = "Users";
-            this.usersBindingSource1.DataSource = this.logo_managerDataSet;
             // 
             // input_patient_birthday
             // 
@@ -178,7 +170,6 @@ namespace Logo_Manager2.create_forms
             // 
             // usersTableAdapter
             // 
-            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // label5
             // 
@@ -241,16 +232,13 @@ namespace Logo_Manager2.create_forms
             // insurancesBindingSource1
             // 
             this.insurancesBindingSource1.DataMember = "Insurances";
-            this.insurancesBindingSource1.DataSource = this.logo_managerDataSet;
             // 
             // insurancesBindingSource
             // 
             this.insurancesBindingSource.DataMember = "Insurances";
-            this.insurancesBindingSource.DataSource = this.logo_managerDataSet;
             // 
             // insurancesTableAdapter
             // 
-            this.insurancesTableAdapter.ClearBeforeFill = true;
             // 
             // create_new_patient
             // 
@@ -276,7 +264,6 @@ namespace Logo_Manager2.create_forms
             this.Text = "Create a new patient";
             this.Load += new System.EventHandler(this.create_new_patient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).EndInit();
@@ -297,16 +284,13 @@ namespace Logo_Manager2.create_forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private Logo_managerDataSet logo_managerDataSet;
         private BindingSource usersBindingSource;
-        private Logo_managerDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
         private BindingSource usersBindingSource1;
         private Label label5;
         private ComboBox input_patient_followup;
         private Label label7;
         private ComboBox input_patient_insurance;
         private BindingSource insurancesBindingSource;
-        private Logo_managerDataSetTableAdapters.InsurancesTableAdapter insurancesTableAdapter;
         private BindingSource insurancesBindingSource1;
     }
 }

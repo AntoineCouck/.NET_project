@@ -20,9 +20,9 @@ namespace Logo_Manager2 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Logo_managerDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Logo_manager2DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Logo_managerDataSet : global::System.Data.DataSet {
+    public partial class Logo_manager2DataSet : global::System.Data.DataSet {
         
         private InsurancesDataTable tableInsurances;
         
@@ -46,7 +46,7 @@ namespace Logo_Manager2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Logo_managerDataSet() {
+        public Logo_manager2DataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -57,7 +57,7 @@ namespace Logo_Manager2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected Logo_managerDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Logo_manager2DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -195,7 +195,7 @@ namespace Logo_Manager2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Logo_managerDataSet cln = ((Logo_managerDataSet)(base.Clone()));
+            Logo_manager2DataSet cln = ((Logo_manager2DataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -307,9 +307,9 @@ namespace Logo_Manager2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Logo_managerDataSet";
+            this.DataSetName = "Logo_manager2DataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Logo_managerDataSet.xsd";
+            this.Namespace = "http://tempuri.org/Logo_manager2DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableInsurances = new InsurancesDataTable();
@@ -381,7 +381,7 @@ namespace Logo_Manager2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Logo_managerDataSet ds = new Logo_managerDataSet();
+            Logo_manager2DataSet ds = new Logo_manager2DataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -672,7 +672,7 @@ namespace Logo_Manager2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Logo_managerDataSet ds = new Logo_managerDataSet();
+                Logo_manager2DataSet ds = new Logo_manager2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1049,7 +1049,7 @@ namespace Logo_Manager2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Logo_managerDataSet ds = new Logo_managerDataSet();
+                Logo_manager2DataSet ds = new Logo_manager2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1347,7 +1347,7 @@ namespace Logo_Manager2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Logo_managerDataSet ds = new Logo_managerDataSet();
+                Logo_manager2DataSet ds = new Logo_manager2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1671,7 +1671,7 @@ namespace Logo_Manager2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Logo_managerDataSet ds = new Logo_managerDataSet();
+                Logo_manager2DataSet ds = new Logo_manager2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1961,7 +1961,7 @@ namespace Logo_Manager2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Logo_managerDataSet ds = new Logo_managerDataSet();
+                Logo_manager2DataSet ds = new Logo_manager2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2630,7 +2630,7 @@ namespace Logo_Manager2 {
         }
     }
 }
-namespace Logo_Manager2.Logo_managerDataSetTableAdapters {
+namespace Logo_Manager2.Logo_manager2DataSetTableAdapters {
     
     
     /// <summary>
@@ -2793,7 +2793,7 @@ namespace Logo_Manager2.Logo_managerDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_managerConnectionString;
+            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_manager2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2810,7 +2810,7 @@ namespace Logo_Manager2.Logo_managerDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Logo_managerDataSet.InsurancesDataTable dataTable) {
+        public virtual int Fill(Logo_manager2DataSet.InsurancesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2823,9 +2823,9 @@ namespace Logo_Manager2.Logo_managerDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Logo_managerDataSet.InsurancesDataTable GetData() {
+        public virtual Logo_manager2DataSet.InsurancesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Logo_managerDataSet.InsurancesDataTable dataTable = new Logo_managerDataSet.InsurancesDataTable();
+            Logo_manager2DataSet.InsurancesDataTable dataTable = new Logo_manager2DataSet.InsurancesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2833,14 +2833,14 @@ namespace Logo_Manager2.Logo_managerDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet.InsurancesDataTable dataTable) {
+        public virtual int Update(Logo_manager2DataSet.InsurancesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet dataSet) {
+        public virtual int Update(Logo_manager2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Insurances");
         }
         
@@ -3186,7 +3186,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserName, Insu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_managerConnectionString;
+            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_manager2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3204,7 +3204,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserName, Insu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Logo_managerDataSet.PatientsDataTable dataTable) {
+        public virtual int Fill(Logo_manager2DataSet.PatientsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3217,9 +3217,9 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserName, Insu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Logo_managerDataSet.PatientsDataTable GetData() {
+        public virtual Logo_manager2DataSet.PatientsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Logo_managerDataSet.PatientsDataTable dataTable = new Logo_managerDataSet.PatientsDataTable();
+            Logo_manager2DataSet.PatientsDataTable dataTable = new Logo_manager2DataSet.PatientsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3227,14 +3227,14 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserName, Insu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet.PatientsDataTable dataTable) {
+        public virtual int Update(Logo_manager2DataSet.PatientsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet dataSet) {
+        public virtual int Update(Logo_manager2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Patients");
         }
         
@@ -3636,7 +3636,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserName, Insu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_managerConnectionString;
+            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_manager2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3653,7 +3653,7 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserName, Insu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Logo_managerDataSet.PatientsTestsDataTable dataTable) {
+        public virtual int Fill(Logo_manager2DataSet.PatientsTestsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3666,9 +3666,9 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserName, Insu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Logo_managerDataSet.PatientsTestsDataTable GetData() {
+        public virtual Logo_manager2DataSet.PatientsTestsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Logo_managerDataSet.PatientsTestsDataTable dataTable = new Logo_managerDataSet.PatientsTestsDataTable();
+            Logo_manager2DataSet.PatientsTestsDataTable dataTable = new Logo_manager2DataSet.PatientsTestsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3676,14 +3676,14 @@ SELECT Id, Firstname, Lastname, Birthday, Followup, LeftSessions, UserName, Insu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet.PatientsTestsDataTable dataTable) {
+        public virtual int Update(Logo_manager2DataSet.PatientsTestsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet dataSet) {
+        public virtual int Update(Logo_manager2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "PatientsTests");
         }
         
@@ -3954,7 +3954,7 @@ SELECT Id, Name, MinAge, MaxAge, TypefollowUp FROM Tests WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_managerConnectionString;
+            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_manager2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3971,7 +3971,7 @@ SELECT Id, Name, MinAge, MaxAge, TypefollowUp FROM Tests WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Logo_managerDataSet.TestsDataTable dataTable) {
+        public virtual int Fill(Logo_manager2DataSet.TestsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3984,9 +3984,9 @@ SELECT Id, Name, MinAge, MaxAge, TypefollowUp FROM Tests WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Logo_managerDataSet.TestsDataTable GetData() {
+        public virtual Logo_manager2DataSet.TestsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Logo_managerDataSet.TestsDataTable dataTable = new Logo_managerDataSet.TestsDataTable();
+            Logo_manager2DataSet.TestsDataTable dataTable = new Logo_manager2DataSet.TestsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3994,14 +3994,14 @@ SELECT Id, Name, MinAge, MaxAge, TypefollowUp FROM Tests WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet.TestsDataTable dataTable) {
+        public virtual int Update(Logo_manager2DataSet.TestsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet dataSet) {
+        public virtual int Update(Logo_manager2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Tests");
         }
         
@@ -4312,7 +4312,7 @@ SELECT Name, Email, Password FROM Users WHERE (Name = @Name)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_managerConnectionString;
+            this._connection.ConnectionString = global::Logo_Manager2.Properties.Settings.Default.Logo_manager2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4329,7 +4329,7 @@ SELECT Name, Email, Password FROM Users WHERE (Name = @Name)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Logo_managerDataSet.UsersDataTable dataTable) {
+        public virtual int Fill(Logo_manager2DataSet.UsersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4342,9 +4342,9 @@ SELECT Name, Email, Password FROM Users WHERE (Name = @Name)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Logo_managerDataSet.UsersDataTable GetData() {
+        public virtual Logo_manager2DataSet.UsersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Logo_managerDataSet.UsersDataTable dataTable = new Logo_managerDataSet.UsersDataTable();
+            Logo_manager2DataSet.UsersDataTable dataTable = new Logo_manager2DataSet.UsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4352,14 +4352,14 @@ SELECT Name, Email, Password FROM Users WHERE (Name = @Name)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet.UsersDataTable dataTable) {
+        public virtual int Update(Logo_manager2DataSet.UsersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Logo_managerDataSet dataSet) {
+        public virtual int Update(Logo_manager2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Users");
         }
         
@@ -4709,7 +4709,7 @@ SELECT Name, Email, Password FROM Users WHERE (Name = @Name)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(Logo_managerDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Logo_manager2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._insurancesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Insurances.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -4764,7 +4764,7 @@ SELECT Name, Email, Password FROM Users WHERE (Name = @Name)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(Logo_managerDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Logo_manager2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._insurancesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Insurances.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -4814,7 +4814,7 @@ SELECT Name, Email, Password FROM Users WHERE (Name = @Name)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(Logo_managerDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Logo_manager2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._patientsTestsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.PatientsTests.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -4888,7 +4888,7 @@ SELECT Name, Email, Password FROM Users WHERE (Name = @Name)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(Logo_managerDataSet dataSet) {
+        public virtual int UpdateAll(Logo_manager2DataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

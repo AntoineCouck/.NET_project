@@ -14,6 +14,10 @@ namespace Logo_Manager2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new User_Dashboard());
+
+
+
+
         }
     }
 }

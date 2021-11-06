@@ -52,17 +52,19 @@
             this.testsList = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.logo_managerDataSet = new Logo_Manager2.Logo_managerDataSet();
             this.testsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_add_test_to_patient = new System.Windows.Forms.Button();
-            this.testsTableAdapter = new Logo_Manager2.Logo_managerDataSetTableAdapters.TestsTableAdapter();
+            this.logo_manager2DataSet = new Logo_Manager2.Logo_manager2DataSet();
+            this.testsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.testsTableAdapter1 = new Logo_Manager2.Logo_manager2DataSetTableAdapters.TestsTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // title_profile_patient
@@ -209,7 +211,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(149, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Actual";
             // 
@@ -229,7 +231,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(234, 98);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.Size = new System.Drawing.Size(66, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Remove";
             // 
@@ -239,7 +241,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(66, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Add";
             // 
@@ -289,6 +291,7 @@
             // 
             // testsList
             // 
+            this.testsList.DataSource = this.testsBindingSource2;
             this.testsList.FormattingEnabled = true;
             this.testsList.Location = new System.Drawing.Point(622, 174);
             this.testsList.Name = "testsList";
@@ -310,17 +313,13 @@
             // testsBindingSource
             // 
             this.testsBindingSource.DataMember = "Tests";
-            this.testsBindingSource.DataSource = this.logo_managerDataSet;
             // 
             // logo_managerDataSet
             // 
-            this.logo_managerDataSet.DataSetName = "Logo_managerDataSet";
-            this.logo_managerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // testsBindingSource1
             // 
             this.testsBindingSource1.DataMember = "Tests";
-            this.testsBindingSource1.DataSource = this.logo_managerDataSet;
             // 
             // btn_add_test_to_patient
             // 
@@ -334,7 +333,20 @@
             // 
             // testsTableAdapter
             // 
-            this.testsTableAdapter.ClearBeforeFill = true;
+            // 
+            // logo_manager2DataSet
+            // 
+            this.logo_manager2DataSet.DataSetName = "Logo_manager2DataSet";
+            this.logo_manager2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // testsBindingSource2
+            // 
+            this.testsBindingSource2.DataMember = "Tests";
+            this.testsBindingSource2.DataSource = this.logo_manager2DataSet;
+            // 
+            // testsTableAdapter1
+            // 
+            this.testsTableAdapter1.ClearBeforeFill = true;
             // 
             // User_profile
             // 
@@ -360,8 +372,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_managerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,12 +402,13 @@
         private System.Windows.Forms.ListBox testsList;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_add_test_to_patient;
-        private Logo_managerDataSet logo_managerDataSet;
         private System.Windows.Forms.BindingSource testsBindingSource;
-        private Logo_managerDataSetTableAdapters.TestsTableAdapter testsTableAdapter;
         private System.Windows.Forms.TextBox input_paztient_insurance;
         private System.Windows.Forms.BindingSource testsBindingSource1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;
+        private Logo_manager2DataSet logo_manager2DataSet;
+        private System.Windows.Forms.BindingSource testsBindingSource2;
+        private Logo_manager2DataSetTableAdapters.TestsTableAdapter testsTableAdapter1;
     }
 }

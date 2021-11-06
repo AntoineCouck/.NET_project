@@ -20,9 +20,10 @@ namespace Logo_Manager2.profile_forms
 
         private void User_profile_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
             testsList.Items.Clear();
-            // TODO: This line of code loads data into the 'logo_managerDataSet.Tests' table. You can move, or remove it, as needed.
-            this.testsTableAdapter.Fill(this.logo_managerDataSet.Tests);
+            this.testsTableAdapter1.Fill(this.logo_manager2DataSet.Tests);
+           
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
 
             var ListTests = db.PatientsTests.Join(db.Patients, x => x.PatientId, y => y.Id, (x, y) => new

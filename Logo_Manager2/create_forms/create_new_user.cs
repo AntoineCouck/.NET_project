@@ -17,10 +17,11 @@ namespace Logo_Manager2.create_forms
 
         private void create_new_patient_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'logo_managerDataSet.Insurances' table. You can move, or remove it, as needed.
-            this.insurancesTableAdapter.Fill(this.logo_managerDataSet.Insurances);
-            // TODO: This line of code loads data into the 'logo_managerDataSet.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.logo_managerDataSet.Users);
+            //// TODO: This line of code loads data into the 'logo_managerDataSet.Insurances' table. You can move, or remove it, as needed.
+            //this.insurancesTableAdapter1.Fill(this.logo_managerDataSet2.Insurances);
+            //this.insurancesTableAdapter1.Fill(this.logo_manager2DataSet.Insurances);
+            //// TODO: This line of code loads data into the 'logo_managerDataSet.Users' table. You can move, or remove it, as needed.
+            //this.usersTableAdapter1.Fill(this.logo_managerDataSet2.Users);
 
         }
 
