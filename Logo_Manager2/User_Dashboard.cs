@@ -119,12 +119,5 @@ namespace Logo_Manager2
             }
         }
 
-        private void patientsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.patientsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.logo_manager2DataSet);
-
-        }
     }
 }
