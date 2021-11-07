@@ -50,14 +50,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.testsList = new System.Windows.Forms.ListBox();
-            this.testsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.testsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.logo_manager2DataSet = new Logo_Manager2.Logo_manager2DataSet();
+            this.testsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_add_test_to_patient = new System.Windows.Forms.Button();
             this.testsTableAdapter1 = new Logo_Manager2.Logo_manager2DataSetTableAdapters.TestsTableAdapter();
             this.testsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.testsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.testsBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.testsBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -67,12 +67,12 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource6)).BeginInit();
             this.SuspendLayout();
@@ -302,6 +302,7 @@
             // testsList
             // 
             this.testsList.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.testsBindingSource4, "Name", true));
+            this.testsList.DisplayMember = "Name";
             this.testsList.FormattingEnabled = true;
             this.testsList.Location = new System.Drawing.Point(622, 174);
             this.testsList.Name = "testsList";
@@ -309,15 +310,20 @@
             this.testsList.TabIndex = 31;
             this.testsList.ValueMember = "Name";
             // 
-            // testsBindingSource2
+            // testsBindingSource4
             // 
-            this.testsBindingSource2.DataMember = "Tests";
-            this.testsBindingSource2.DataSource = this.logo_manager2DataSet;
+            this.testsBindingSource4.DataMember = "Tests";
+            this.testsBindingSource4.DataSource = this.logo_manager2DataSet;
             // 
             // logo_manager2DataSet
             // 
             this.logo_manager2DataSet.DataSetName = "Logo_manager2DataSet";
             this.logo_manager2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // testsBindingSource2
+            // 
+            this.testsBindingSource2.DataMember = "Tests";
+            this.testsBindingSource2.DataSource = this.logo_manager2DataSet;
             // 
             // testsBindingSource
             // 
@@ -346,11 +352,6 @@
             this.testsBindingSource3.DataMember = "Tests";
             this.testsBindingSource3.DataSource = this.logo_manager2DataSet;
             // 
-            // testsBindingSource4
-            // 
-            this.testsBindingSource4.DataMember = "Tests";
-            this.testsBindingSource4.DataSource = this.logo_manager2DataSet;
-            // 
             // testsBindingSource5
             // 
             this.testsBindingSource5.DataMember = "Tests";
@@ -366,6 +367,7 @@
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.testsBindingSource6, "Name", true));
             this.comboBox1.DataSource = this.testsBindingSource6;
             this.comboBox1.DisplayMember = "Name";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(622, 492);
             this.comboBox1.Name = "comboBox1";
@@ -421,12 +423,12 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource6)).EndInit();
             this.ResumeLayout(false);

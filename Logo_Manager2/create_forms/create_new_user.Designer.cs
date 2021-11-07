@@ -34,6 +34,9 @@ namespace Logo_Manager2.create_forms
             this.input_patient_lastname = new System.Windows.Forms.TextBox();
             this.input_patient_firstname = new System.Windows.Forms.TextBox();
             this.input_patient_user = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.logo_manager2DataSet = new Logo_Manager2.Logo_manager2DataSet();
+            this.usersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.input_patient_birthday = new System.Windows.Forms.DateTimePicker();
@@ -47,9 +50,10 @@ namespace Logo_Manager2.create_forms
             this.input_patient_followup = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.input_patient_insurance = new System.Windows.Forms.ComboBox();
+            this.insurancesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.insurancesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.insurancesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.logo_manager2DataSet = new Logo_Manager2.Logo_manager2DataSet();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Logo_Manager2.Logo_manager2DataSetTableAdapters.UsersTableAdapter();
             this.tableAdapterManager = new Logo_Manager2.Logo_manager2DataSetTableAdapters.TableAdapterManager();
@@ -59,23 +63,19 @@ namespace Logo_Manager2.create_forms
             this.patientsTableAdapter = new Logo_Manager2.Logo_manager2DataSetTableAdapters.PatientsTableAdapter();
             this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testsTableAdapter = new Logo_Manager2.Logo_manager2DataSetTableAdapters.TestsTableAdapter();
-            this.insurancesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.insurancesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // input_patient_lastname
@@ -97,12 +97,28 @@ namespace Logo_Manager2.create_forms
             this.input_patient_user.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usersBindingSource4, "Name", true));
             this.input_patient_user.DataSource = this.usersBindingSource3;
             this.input_patient_user.DisplayMember = "Name";
+            this.input_patient_user.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.input_patient_user.FormattingEnabled = true;
             this.input_patient_user.Location = new System.Drawing.Point(453, 169);
             this.input_patient_user.Name = "input_patient_user";
             this.input_patient_user.Size = new System.Drawing.Size(152, 21);
             this.input_patient_user.TabIndex = 5;
             this.input_patient_user.ValueMember = "Name";
+            // 
+            // usersBindingSource4
+            // 
+            this.usersBindingSource4.DataMember = "Users";
+            this.usersBindingSource4.DataSource = this.logo_manager2DataSet;
+            // 
+            // logo_manager2DataSet
+            // 
+            this.logo_manager2DataSet.DataSetName = "Logo_manager2DataSet";
+            this.logo_manager2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource3
+            // 
+            this.usersBindingSource3.DataMember = "Users";
+            this.usersBindingSource3.DataSource = this.logo_manager2DataSet;
             // 
             // usersBindingSource
             // 
@@ -200,6 +216,7 @@ namespace Logo_Manager2.create_forms
             // 
             // input_patient_followup
             // 
+            this.input_patient_followup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.input_patient_followup.FormattingEnabled = true;
             this.input_patient_followup.Items.AddRange(new object[] {
             "a: Handicap poursuite profession 55",
@@ -239,12 +256,23 @@ namespace Logo_Manager2.create_forms
             this.input_patient_insurance.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.insurancesBindingSource4, "Name", true));
             this.input_patient_insurance.DataSource = this.insurancesBindingSource3;
             this.input_patient_insurance.DisplayMember = "Name";
+            this.input_patient_insurance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.input_patient_insurance.FormattingEnabled = true;
             this.input_patient_insurance.Location = new System.Drawing.Point(453, 240);
             this.input_patient_insurance.Name = "input_patient_insurance";
             this.input_patient_insurance.Size = new System.Drawing.Size(152, 21);
             this.input_patient_insurance.TabIndex = 17;
             this.input_patient_insurance.ValueMember = "Name";
+            // 
+            // insurancesBindingSource4
+            // 
+            this.insurancesBindingSource4.DataMember = "Insurances";
+            this.insurancesBindingSource4.DataSource = this.logo_manager2DataSet;
+            // 
+            // insurancesBindingSource3
+            // 
+            this.insurancesBindingSource3.DataMember = "Insurances";
+            this.insurancesBindingSource3.DataSource = this.logo_manager2DataSet;
             // 
             // insurancesBindingSource1
             // 
@@ -253,11 +281,6 @@ namespace Logo_Manager2.create_forms
             // insurancesBindingSource
             // 
             this.insurancesBindingSource.DataMember = "Insurances";
-            // 
-            // logo_manager2DataSet
-            // 
-            this.logo_manager2DataSet.DataSetName = "Logo_manager2DataSet";
-            this.logo_manager2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usersBindingSource2
             // 
@@ -305,26 +328,6 @@ namespace Logo_Manager2.create_forms
             // 
             this.testsTableAdapter.ClearBeforeFill = true;
             // 
-            // insurancesBindingSource3
-            // 
-            this.insurancesBindingSource3.DataMember = "Insurances";
-            this.insurancesBindingSource3.DataSource = this.logo_manager2DataSet;
-            // 
-            // insurancesBindingSource4
-            // 
-            this.insurancesBindingSource4.DataMember = "Insurances";
-            this.insurancesBindingSource4.DataSource = this.logo_manager2DataSet;
-            // 
-            // usersBindingSource3
-            // 
-            this.usersBindingSource3.DataMember = "Users";
-            this.usersBindingSource3.DataSource = this.logo_manager2DataSet;
-            // 
-            // usersBindingSource4
-            // 
-            this.usersBindingSource4.DataMember = "Users";
-            this.usersBindingSource4.DataSource = this.logo_manager2DataSet;
-            // 
             // create_new_patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,19 +351,19 @@ namespace Logo_Manager2.create_forms
             this.Name = "create_new_patient";
             this.Text = "Create a new patient";
             this.Load += new System.EventHandler(this.create_new_patient_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

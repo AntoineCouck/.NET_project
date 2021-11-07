@@ -9,7 +9,7 @@ namespace Logo_Manager2.profile_forms
     {
 
         Logo_manager2Entities1 db = new Logo_manager2Entities1();
-        delete_user delete_User = new delete_user();
+
 
 
 
@@ -88,7 +88,7 @@ namespace Logo_Manager2.profile_forms
                 patient_total.Text = patient.LeftSessions.ToString();
             }
 
-            db.SaveChanges();       
+            db.SaveChanges();
 
             input_patient_add.Value = 0;
             input_patient_remove.Value = 0;
@@ -140,7 +140,8 @@ namespace Logo_Manager2.profile_forms
 
         private void btn_del_user_Click(object sender, EventArgs e)
         {
-            delete_User.ShowDialog();
+            User_Dashboard.delete_User.ShowDialog();
+
         }
     }
 }

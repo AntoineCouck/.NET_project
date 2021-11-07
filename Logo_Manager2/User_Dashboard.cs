@@ -15,6 +15,7 @@ namespace Logo_Manager2
         public static create_new_patient create_patient = new create_new_patient();
         public static Create_tests create_Tests = new Create_tests();
         public static User_profile profile = new User_profile();
+        public static delete_user delete_User = new delete_user();
         public static create_insurance create_Insurance = new create_insurance();
         public static bool is_connected = false;
         public static string username;
@@ -29,7 +30,7 @@ namespace Logo_Manager2
 
         private void User_Dashboard_Load(object sender, EventArgs e)
         {
-           
+
 
 
             log_In.ShowDialog();
@@ -65,7 +66,7 @@ namespace Logo_Manager2
 
         private void btn_dashboard_add_patient_Click(object sender, System.EventArgs e)
         {
-            
+
             create_patient.ShowDialog();
             if (create_patient.DialogResult == DialogResult.OK)
             {
@@ -123,5 +124,17 @@ namespace Logo_Manager2
             }
         }
 
+
+        private void refreshPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
+            this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+            // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
+            this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+            // TODO: This line of code loads data into the 'logo_manager2DataSet.Patients' table. You can move, or remove it, as needed.
+            this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
+            // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
+        }
     }
 }

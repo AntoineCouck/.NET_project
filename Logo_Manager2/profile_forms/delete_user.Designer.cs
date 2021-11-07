@@ -37,11 +37,11 @@
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(40, 31);
+            this.name.Location = new System.Drawing.Point(33, 34);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(137, 20);
+            this.name.Size = new System.Drawing.Size(64, 20);
             this.name.TabIndex = 0;
-            this.name.Text = "Delete this user ? ";
+            this.name.Text = "Delete  ";
             // 
             // btn_confirm_delete
             // 
@@ -54,6 +54,7 @@
             this.btn_confirm_delete.TabIndex = 1;
             this.btn_confirm_delete.Text = "Delete";
             this.btn_confirm_delete.UseVisualStyleBackColor = false;
+            this.btn_confirm_delete.Click += new System.EventHandler(this.btn_confirm_delete_Click);
             // 
             // btn_notdelete
             // 
@@ -66,12 +67,13 @@
             this.btn_notdelete.TabIndex = 2;
             this.btn_notdelete.Text = "Back";
             this.btn_notdelete.UseVisualStyleBackColor = false;
+            this.btn_notdelete.Click += new System.EventHandler(this.btn_notdelete_Click);
             // 
             // delete_user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(230, 285);
+            this.ClientSize = new System.Drawing.Size(239, 333);
             this.ControlBox = false;
             this.Controls.Add(this.btn_notdelete);
             this.Controls.Add(this.btn_confirm_delete);
@@ -79,6 +81,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "delete_user";
             this.Text = "delete_user";
+            this.Load += new System.EventHandler(this.delete_user_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

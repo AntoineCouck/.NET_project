@@ -51,13 +51,14 @@ namespace Logo_Manager2
                 if (is_connected)
                 {
                     Close();
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Email or password are incorrect , try again");
                     email_login_input.Text = null;
                     password_login_input.Text = null;
                 }
-               
+
             }
 
 

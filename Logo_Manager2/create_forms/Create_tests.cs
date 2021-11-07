@@ -16,16 +16,16 @@ namespace Logo_Manager2.create_forms
         private void btn_new_patient_Click(object sender, EventArgs e)
         {
 
-        
+
             bool createObj = true;
-            
-            
-           
-         
+
+
+
+
             if (string.IsNullOrEmpty(input_test_name.Text))
             {
                 MessageBox.Show("The name must be completed");
-                
+
                 createObj = false;
             }
             else if (input_test_name.Text.Length > 50)
@@ -33,13 +33,13 @@ namespace Logo_Manager2.create_forms
                 MessageBox.Show("The name is too large, try another");
                 createObj = false;
             }
-           
 
-            if(!(input_test_age.Value < input_tests_maxage.Value))
+
+            if (!(input_test_age.Value < input_tests_maxage.Value))
             {
                 MessageBox.Show("Sorry but the max age must be higher then the min age");
                 createObj = false;
-               
+
             }
 
 
@@ -55,15 +55,15 @@ namespace Logo_Manager2.create_forms
                 this.Close();
 
             }
-               
 
-            
+
+
 
             input_test_name.Text = null;
             input_test_age.Text = null;
             input_tests_maxage.Text = null;
             comboBox1.Text = null;
-            
+
 
 
 

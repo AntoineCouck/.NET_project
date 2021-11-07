@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Logo_Manager2.User_forms
@@ -7,14 +6,14 @@ namespace Logo_Manager2.User_forms
     public partial class Sign_in : Form
     {
         Logo_manager2Entities1 context = new Logo_manager2Entities1();
-        
+
 
         public Sign_in()
         {
             InitializeComponent();
         }
 
-     
+
 
         private void login_submit_Click(object sender, System.EventArgs e)
         {
@@ -22,15 +21,15 @@ namespace Logo_Manager2.User_forms
 
             var element = context.Users;
 
-            foreach(var user in element)
+            foreach (var user in element)
             {
-                if(user.Name == input_name_register.Text)
+                if (user.Name == input_name_register.Text)
                 {
                     UserNotPresent = false;
                     MessageBox.Show("This name is already in use ");
 
-                } 
-                if(user.Email == input_email_register.Text)
+                }
+                if (user.Email == input_email_register.Text)
                 {
                     UserNotPresent = false;
                     MessageBox.Show("This email is already in use ");
@@ -61,9 +60,9 @@ namespace Logo_Manager2.User_forms
                 input_password_register.Text = null;
             }
 
-            else if(UserNotPresent)
+            else if (UserNotPresent)
             {
-              
+
                 var User = new User();
 
                 User.Name = input_name_register.Text;
@@ -72,7 +71,7 @@ namespace Logo_Manager2.User_forms
                 context.Users.Add(User);
                 context.SaveChanges();
 
-               
+
                 User_Dashboard.sign_in.Close();
 
 

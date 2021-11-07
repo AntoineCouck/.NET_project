@@ -25,14 +25,14 @@ namespace Logo_Manager2.create_forms
             this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
             this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
-    
+
 
 
         }
 
         private void btn_new_patient_Click(object sender, EventArgs e)
         {
-           
+
             bool createPatient = true;
 
             var result = db.Patients;
@@ -112,16 +112,16 @@ namespace Logo_Manager2.create_forms
 
             bool isNottrue = true;
 
-          
-            foreach(var element in input_patient_followup.Items)
+
+            foreach (var element in input_patient_followup.Items)
             {
-                if(element.ToString() == input_patient_followup.Text )
+                if (element.ToString() == input_patient_followup.Text)
                 {
                     isNottrue = false;
                 }
             }
 
-            if(isNottrue && !(string.IsNullOrEmpty(input_patient_firstname.Text)))
+            if (isNottrue && !(string.IsNullOrEmpty(input_patient_firstname.Text)))
             {
                 MessageBox.Show("the followUp must be part the list");
                 createPatient = false;
@@ -134,27 +134,6 @@ namespace Logo_Manager2.create_forms
                 isNottrue = false;
             }
 
-            //foreach(var user in input_patient_user.Items)
-            //{
-            //    if(input_patient_user.Text == user.ToString())
-            //    {
-            //        isNottrue = false;
-            //        MessageBox.Show("sedfezsdfq");
-            //    }
-            //}
-
-            //if(isNottrue && !(string.IsNullOrEmpty(input_patient_firstname.Text)))
-            //{
-            //    MessageBox.Show("the User must be part the list");
-            //    createPatient = false;
-            //    input_patient_firstname.Text = null;
-            //    input_patient_lastname.Text = null;
-            //    input_patient_birthday.Value = DateTime.Now;
-            //    input_patient_followup.Text = null;
-            //    input_patient_user.Text = null;
-            //    input_patient_insurance.Text = null;
-            //    isNottrue = false;
-            //}
 
 
             if (createPatient == true)
@@ -181,7 +160,7 @@ namespace Logo_Manager2.create_forms
                 this.Close();
             }
 
-        
+
 
         }
     }
