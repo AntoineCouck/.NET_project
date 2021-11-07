@@ -32,11 +32,17 @@ namespace Logo_Manager2.profile_forms
 
             var user = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
 
+            var patientTest = db.PatientsTests.Where(x => x.PatientId == User_Dashboard.currentPatientId);
+
             foreach (var element in user)
             {
                 db.Patients.Remove(element);
-                
             }
+            foreach(var element2 in patientTest)
+            {
+                db.PatientsTests.Remove(element2);
+            }
+
             db.SaveChanges();
             this.Close();
             User_Dashboard.profile.Close();
