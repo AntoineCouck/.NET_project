@@ -2,6 +2,7 @@
 using Logo_Manager2.profile_forms;
 using Logo_Manager2.User_forms;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Logo_Manager2
@@ -151,6 +152,69 @@ namespace Logo_Manager2
         private void createNewInsuranceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             create_Insurance.ShowDialog();
+        }
+
+        private void btn_delete_test_Click(object sender, EventArgs e)
+        {
+
+            if(comboBox1.Items.Count > 0)
+            {
+                string testName = comboBox1.Text;
+
+                var tests = db.Tests.Where(x => x.Name == testName);
+
+
+                foreach (var element in tests)
+                {
+
+                    db.Tests.Remove(element);
+
+                }
+
+                db.SaveChanges();
+                MessageBox.Show("The test was succesfull deleted");
+                this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+
+
+
+            } else
+            {
+
+                MessageBox.Show("Sorry but there are no tests at this moment");
+            }
+
+
+
+
+        }
+
+        private void btn_delete_insurance_Click(object sender, EventArgs e)
+        {
+
+            if(comboBox2.Items.Count > 0)
+            {
+
+                string insuranceName = comboBox2.Text;
+
+                var insurance = db.Insurances.Where(x => x.Name == insuranceName);
+
+
+                foreach (var element in insurance)
+                {
+
+                    db.Insurances.Remove(element);
+
+                }
+
+                db.SaveChanges();
+                MessageBox.Show("The insurance was succesfull deleted");
+                this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+            } else
+            {
+                MessageBox.Show("Sorry but there are no insurances at this moment");
+
+            }
+
         }
     }
 }
