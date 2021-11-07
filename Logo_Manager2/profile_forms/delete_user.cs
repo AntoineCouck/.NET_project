@@ -35,12 +35,12 @@ namespace Logo_Manager2.profile_forms
             foreach (var element in user)
             {
                 db.Patients.Remove(element);
-                db.SaveChanges();
-                this.Close();
-                User_Dashboard.profile.Close(); 
-                MessageBox.Show("The patient was deleted!");
+                
             }
-
+            db.SaveChanges();
+            this.Close();
+            User_Dashboard.profile.Close();
+            MessageBox.Show("The patient was deleted!");
         }
 
         private void btn_notdelete_Click(object sender, EventArgs e)

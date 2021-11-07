@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Menu_dashboard = new System.Windows.Forms.MenuStrip();
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.refreshPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disconnectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AccountName = new System.Windows.Forms.TextBox();
@@ -71,6 +70,11 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Logo_Manager2.Logo_manager2DataSetTableAdapters.UsersTableAdapter();
+            this.pageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewInsuranceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
@@ -85,6 +89,7 @@
             // Menu_dashboard
             // 
             this.Menu_dashboard.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pageToolStripMenuItem,
             this.managementToolStripMenuItem,
             this.accountToolStripMenuItem});
             this.Menu_dashboard.Location = new System.Drawing.Point(0, 0);
@@ -96,18 +101,13 @@
             // managementToolStripMenuItem
             // 
             this.managementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.refreshPageToolStripMenuItem});
+            this.createNewPatientToolStripMenuItem,
+            this.createNewTestToolStripMenuItem,
+            this.createNewInsuranceToolStripMenuItem});
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
             this.managementToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.managementToolStripMenuItem.Text = "Management";
             this.managementToolStripMenuItem.Click += new System.EventHandler(this.managementToolStripMenuItem_Click);
-            // 
-            // refreshPageToolStripMenuItem
-            // 
-            this.refreshPageToolStripMenuItem.Name = "refreshPageToolStripMenuItem";
-            this.refreshPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.refreshPageToolStripMenuItem.Text = "Refresh page";
-            this.refreshPageToolStripMenuItem.Click += new System.EventHandler(this.refreshPageToolStripMenuItem_Click);
             // 
             // accountToolStripMenuItem
             // 
@@ -249,9 +249,9 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Id";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewTextBoxColumn9.HeaderText = "Id";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -344,9 +344,9 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -404,6 +404,42 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // pageToolStripMenuItem
+            // 
+            this.pageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem});
+            this.pageToolStripMenuItem.Name = "pageToolStripMenuItem";
+            this.pageToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.pageToolStripMenuItem.Text = "Page";
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshPageToolStripMenuItem_Click);
+            // 
+            // createNewPatientToolStripMenuItem
+            // 
+            this.createNewPatientToolStripMenuItem.Name = "createNewPatientToolStripMenuItem";
+            this.createNewPatientToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.createNewPatientToolStripMenuItem.Text = "Create new Patient";
+            this.createNewPatientToolStripMenuItem.Click += new System.EventHandler(this.createNewPatientToolStripMenuItem_Click);
+            // 
+            // createNewTestToolStripMenuItem
+            // 
+            this.createNewTestToolStripMenuItem.Name = "createNewTestToolStripMenuItem";
+            this.createNewTestToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.createNewTestToolStripMenuItem.Text = "Create new Test";
+            this.createNewTestToolStripMenuItem.Click += new System.EventHandler(this.createNewTestToolStripMenuItem_Click);
+            // 
+            // createNewInsuranceToolStripMenuItem
+            // 
+            this.createNewInsuranceToolStripMenuItem.Name = "createNewInsuranceToolStripMenuItem";
+            this.createNewInsuranceToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.createNewInsuranceToolStripMenuItem.Text = "Create new Insurance";
+            this.createNewInsuranceToolStripMenuItem.Click += new System.EventHandler(this.createNewInsuranceToolStripMenuItem_Click);
+            // 
             // User_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,7 +489,6 @@
         private System.Windows.Forms.Button btn_dashboard_add_test;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem refreshPageToolStripMenuItem;
         private System.Windows.Forms.Button btn_dashboard_addInsurance;
         private Logo_manager2DataSet logo_manager2DataSet;
         private System.Windows.Forms.BindingSource patientsBindingSource;
@@ -485,6 +520,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.ToolStripMenuItem pageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createNewPatientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createNewTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createNewInsuranceToolStripMenuItem;
     }
 }
 

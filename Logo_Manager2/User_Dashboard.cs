@@ -136,5 +136,21 @@ namespace Logo_Manager2
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
         }
+
+        private void createNewPatientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            create_patient.ShowDialog();
+        }
+
+        private void createNewTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            create_Tests.ShowDialog();
+
+        }
+
+        private void createNewInsuranceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            create_Insurance.ShowDialog();
+        }
     }
 }
