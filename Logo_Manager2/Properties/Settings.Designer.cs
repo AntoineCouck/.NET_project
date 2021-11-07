@@ -26,17 +26,6 @@ namespace Logo_Manager2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Logo_manager." +
-            "mdf;Integrated Security=True;Integrated Security=True")]
-        public string Logo_managerConnectionString {
-            get {
-                return ((string)(this["Logo_managerConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=antoinecouck.database.windows.net;Initial Catalog=Logo_manager2;User " +
             "ID=antoinecouck;Password=Dotnetexamen9")]
         public string Logo_manager2ConnectionString {

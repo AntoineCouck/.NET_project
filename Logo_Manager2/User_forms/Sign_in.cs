@@ -1,17 +1,20 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Logo_Manager2.User_forms
 {
     public partial class Sign_in : Form
     {
-        Logo_managerEntities1 context = new Logo_managerEntities1();
-
+        Logo_manager2Entities1 context = new Logo_manager2Entities1();
+        
 
         public Sign_in()
         {
             InitializeComponent();
         }
+
+     
 
         private void login_submit_Click(object sender, System.EventArgs e)
         {
@@ -60,6 +63,7 @@ namespace Logo_Manager2.User_forms
 
             else if(UserNotPresent)
             {
+              
                 var User = new User();
 
                 User.Name = input_name_register.Text;
@@ -68,6 +72,7 @@ namespace Logo_Manager2.User_forms
                 context.Users.Add(User);
                 context.SaveChanges();
 
+               
                 User_Dashboard.sign_in.Close();
 
 

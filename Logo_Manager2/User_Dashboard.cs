@@ -20,7 +20,7 @@ namespace Logo_Manager2
         public static string username;
         public static int currentPatientId { get; set; }
 
-        Logo_managerEntities1 db = new Logo_managerEntities1();
+        Logo_manager2Entities1 db = new Logo_manager2Entities1();
 
         public User_Dashboard()
         {
@@ -29,7 +29,8 @@ namespace Logo_Manager2
 
         private void User_Dashboard_Load(object sender, EventArgs e)
         {
-       
+           
+
 
             log_In.ShowDialog();
             username = log_In.username;
@@ -45,6 +46,8 @@ namespace Logo_Manager2
                 this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
                 // TODO: This line of code loads data into the 'logo_manager2DataSet.Patients' table. You can move, or remove it, as needed.
                 this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
+                // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
+                this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
             }
 
         }
@@ -62,6 +65,7 @@ namespace Logo_Manager2
 
         private void btn_dashboard_add_patient_Click(object sender, System.EventArgs e)
         {
+            
             create_patient.ShowDialog();
             if (create_patient.DialogResult == DialogResult.OK)
             {

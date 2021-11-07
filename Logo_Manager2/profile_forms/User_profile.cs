@@ -8,8 +8,8 @@ namespace Logo_Manager2.profile_forms
     public partial class User_profile : Form
     {
 
-        Logo_managerEntities1 db = new Logo_managerEntities1();
-
+        Logo_manager2Entities1 db = new Logo_manager2Entities1();
+        delete_user delete_User = new delete_user();
 
 
 
@@ -20,10 +20,11 @@ namespace Logo_Manager2.profile_forms
 
         private void User_profile_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
             testsList.Items.Clear();
+
+
             this.testsTableAdapter1.Fill(this.logo_manager2DataSet.Tests);
-           
+
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
 
             var ListTests = db.PatientsTests.Join(db.Patients, x => x.PatientId, y => y.Id, (x, y) => new
@@ -87,7 +88,7 @@ namespace Logo_Manager2.profile_forms
                 patient_total.Text = patient.LeftSessions.ToString();
             }
 
-            db.SaveChanges();
+            db.SaveChanges();       
 
             input_patient_add.Value = 0;
             input_patient_remove.Value = 0;
@@ -135,6 +136,11 @@ namespace Logo_Manager2.profile_forms
 
 
 
+        }
+
+        private void btn_del_user_Click(object sender, EventArgs e)
+        {
+            delete_User.ShowDialog();
         }
     }
 }

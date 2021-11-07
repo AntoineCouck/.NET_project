@@ -5,7 +5,7 @@ namespace Logo_Manager2.create_forms
 {
     public partial class Create_tests : Form
     {
-        Logo_managerEntities1 db = new Logo_managerEntities1();
+        Logo_manager2Entities1 db = new Logo_manager2Entities1();
         Utils utils = new Utils();
 
         public Create_tests()
@@ -16,7 +16,7 @@ namespace Logo_Manager2.create_forms
         private void btn_new_patient_Click(object sender, EventArgs e)
         {
 
-            var test = new Test();
+        
             bool createObj = true;
             
             
@@ -25,7 +25,7 @@ namespace Logo_Manager2.create_forms
             if (string.IsNullOrEmpty(input_test_name.Text))
             {
                 MessageBox.Show("The name must be completed");
-                test.Name = "unknown";
+                
                 createObj = false;
             }
             else if (input_test_name.Text.Length > 50)
@@ -41,10 +41,11 @@ namespace Logo_Manager2.create_forms
                 createObj = false;
                
             }
-          
-            
-            if(createObj == true)
+
+
+            else if (createObj == true)
             {
+                var test = new Test();
                 test.Name = input_test_name.Text;
                 test.MinAge = int.Parse(input_test_age.Text);
                 test.MaxAge = int.Parse(input_tests_maxage.Text);

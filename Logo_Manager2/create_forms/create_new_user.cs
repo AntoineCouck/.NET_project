@@ -6,7 +6,7 @@ namespace Logo_Manager2.create_forms
     public partial class create_new_patient : Form
     {
 
-        Logo_managerEntities1 db = new Logo_managerEntities1();
+        Logo_manager2Entities1 db = new Logo_manager2Entities1();
         User_Dashboard d = new User_Dashboard();
 
 
@@ -17,17 +17,22 @@ namespace Logo_Manager2.create_forms
 
         private void create_new_patient_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
-            this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+            // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
+            this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+            // TODO: This line of code loads data into the 'logo_manager2DataSet.Patients' table. You can move, or remove it, as needed.
+            this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
+            // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
+            this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+    
 
-           
+
         }
 
         private void btn_new_patient_Click(object sender, EventArgs e)
         {
-            var patient = new Patient();
+           
             bool createPatient = true;
 
             var result = db.Patients;
@@ -154,6 +159,7 @@ namespace Logo_Manager2.create_forms
 
             if (createPatient == true)
             {
+                var patient = new Patient();
                 patient.Firstname = input_patient_firstname.Text;
                 patient.Lastname = input_patient_lastname.Text;
                 patient.Birthday = input_patient_birthday.Value;

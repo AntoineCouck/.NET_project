@@ -50,21 +50,31 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.testsList = new System.Windows.Forms.ListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.testsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.logo_manager2DataSet = new Logo_Manager2.Logo_manager2DataSet();
             this.testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_add_test_to_patient = new System.Windows.Forms.Button();
-            this.logo_manager2DataSet = new Logo_Manager2.Logo_manager2DataSet();
-            this.testsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.testsTableAdapter1 = new Logo_Manager2.Logo_manager2DataSetTableAdapters.TestsTableAdapter();
+            this.testsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.testsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.testsBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.testsBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tableAdapterManager = new Logo_Manager2.Logo_manager2DataSetTableAdapters.TableAdapterManager();
+            this.btn_del_user = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource6)).BeginInit();
             this.SuspendLayout();
             // 
             // title_profile_patient
@@ -291,31 +301,27 @@
             // 
             // testsList
             // 
-            this.testsList.DataSource = this.testsBindingSource2;
+            this.testsList.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.testsBindingSource4, "Name", true));
             this.testsList.FormattingEnabled = true;
             this.testsList.Location = new System.Drawing.Point(622, 174);
             this.testsList.Name = "testsList";
             this.testsList.Size = new System.Drawing.Size(212, 303);
             this.testsList.TabIndex = 31;
+            this.testsList.ValueMember = "Name";
             // 
-            // comboBox1
+            // testsBindingSource2
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.testsBindingSource, "Name", true));
-            this.comboBox1.DataSource = this.testsBindingSource1;
-            this.comboBox1.DisplayMember = "Name";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(622, 493);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 21);
-            this.comboBox1.TabIndex = 32;
-            this.comboBox1.ValueMember = "Name";
+            this.testsBindingSource2.DataMember = "Tests";
+            this.testsBindingSource2.DataSource = this.logo_manager2DataSet;
+            // 
+            // logo_manager2DataSet
+            // 
+            this.logo_manager2DataSet.DataSetName = "Logo_manager2DataSet";
+            this.logo_manager2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // testsBindingSource
             // 
             this.testsBindingSource.DataMember = "Tests";
-            // 
-            // logo_managerDataSet
-            // 
             // 
             // testsBindingSource1
             // 
@@ -331,30 +337,74 @@
             this.btn_add_test_to_patient.UseVisualStyleBackColor = true;
             this.btn_add_test_to_patient.Click += new System.EventHandler(this.btn_add_test_to_patient_Click);
             // 
-            // testsTableAdapter
-            // 
-            // 
-            // logo_manager2DataSet
-            // 
-            this.logo_manager2DataSet.DataSetName = "Logo_manager2DataSet";
-            this.logo_manager2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // testsBindingSource2
-            // 
-            this.testsBindingSource2.DataMember = "Tests";
-            this.testsBindingSource2.DataSource = this.logo_manager2DataSet;
-            // 
             // testsTableAdapter1
             // 
             this.testsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // testsBindingSource3
+            // 
+            this.testsBindingSource3.DataMember = "Tests";
+            this.testsBindingSource3.DataSource = this.logo_manager2DataSet;
+            // 
+            // testsBindingSource4
+            // 
+            this.testsBindingSource4.DataMember = "Tests";
+            this.testsBindingSource4.DataSource = this.logo_manager2DataSet;
+            // 
+            // testsBindingSource5
+            // 
+            this.testsBindingSource5.DataMember = "Tests";
+            this.testsBindingSource5.DataSource = this.logo_manager2DataSet;
+            // 
+            // testsBindingSource6
+            // 
+            this.testsBindingSource6.DataMember = "Tests";
+            this.testsBindingSource6.DataSource = this.logo_manager2DataSet;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.testsBindingSource6, "Name", true));
+            this.comboBox1.DataSource = this.testsBindingSource6;
+            this.comboBox1.DisplayMember = "Name";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(622, 492);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(212, 21);
+            this.comboBox1.TabIndex = 34;
+            this.comboBox1.ValueMember = "Name";
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.InsurancesTableAdapter = null;
+            this.tableAdapterManager.PatientsTableAdapter = null;
+            this.tableAdapterManager.PatientsTestsTableAdapter = null;
+            this.tableAdapterManager.TestsTableAdapter = this.testsTableAdapter1;
+            this.tableAdapterManager.UpdateOrder = Logo_Manager2.Logo_manager2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsersTableAdapter = null;
+            // 
+            // btn_del_user
+            // 
+            this.btn_del_user.BackColor = System.Drawing.Color.Red;
+            this.btn_del_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_del_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_del_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_del_user.Location = new System.Drawing.Point(257, 589);
+            this.btn_del_user.Name = "btn_del_user";
+            this.btn_del_user.Size = new System.Drawing.Size(99, 23);
+            this.btn_del_user.TabIndex = 35;
+            this.btn_del_user.Text = "Delete user";
+            this.btn_del_user.UseVisualStyleBackColor = false;
+            this.btn_del_user.Click += new System.EventHandler(this.btn_del_user_Click);
             // 
             // User_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 601);
-            this.Controls.Add(this.btn_add_test_to_patient);
+            this.ClientSize = new System.Drawing.Size(919, 643);
+            this.Controls.Add(this.btn_del_user);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btn_add_test_to_patient);
             this.Controls.Add(this.testsList);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
@@ -371,10 +421,14 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,7 +454,6 @@
         private System.Windows.Forms.NumericUpDown input_patient_add;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox testsList;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_add_test_to_patient;
         private System.Windows.Forms.BindingSource testsBindingSource;
         private System.Windows.Forms.TextBox input_paztient_insurance;
@@ -410,5 +463,12 @@
         private Logo_manager2DataSet logo_manager2DataSet;
         private System.Windows.Forms.BindingSource testsBindingSource2;
         private Logo_manager2DataSetTableAdapters.TestsTableAdapter testsTableAdapter1;
+        private System.Windows.Forms.BindingSource testsBindingSource4;
+        private System.Windows.Forms.BindingSource testsBindingSource3;
+        private System.Windows.Forms.BindingSource testsBindingSource6;
+        private System.Windows.Forms.BindingSource testsBindingSource5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private Logo_manager2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Button btn_del_user;
     }
 }

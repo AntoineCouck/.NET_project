@@ -6,7 +6,7 @@ namespace Logo_Manager2.create_forms
     public partial class create_insurance : Form
     {
 
-        Logo_managerEntities1 db = new Logo_managerEntities1();
+        Logo_manager2Entities1 db = new Logo_manager2Entities1();
         public create_insurance()
         {
             InitializeComponent();
@@ -22,7 +22,6 @@ namespace Logo_Manager2.create_forms
             insurance.TelNr = input_insurance_telnr.Text;
 
             db.Insurances.Add(insurance);
-
             db.SaveChanges();
 
             input_insurance_name.Text = null;
