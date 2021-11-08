@@ -37,14 +37,12 @@ namespace Logo_Manager2.profile_forms
         {
             User_Dashboard.modify_Insurance.ShowDialog();
 
-            //if (User_Dashboard.modify_Test.DialogResult == DialogResult.OK)
-            //{
-            //    title_profile_test.Text = "Test:" + " " + User_Dashboard.modify_Test.Name;
-            //    profile_test_name.Text = User_Dashboard.modify_Test.Name;
-            //    profile_test_minage.Text = User_Dashboard.modify_Test.minAge.ToString();
-            //    profile_test_maxage.Text = User_Dashboard.modify_Test.maxage.ToString();
-            //    profile_test_followup.Text = User_Dashboard.modify_Test.followUp;
-            //}
+            if (User_Dashboard.modify_Insurance.DialogResult == DialogResult.OK)
+            {
+                profile_insurance_name.Text = User_Dashboard.modify_Insurance.Name;
+                profile_insurance_adres.Text = User_Dashboard.modify_Insurance.Adres;
+                profile_insurance_telnr.Text = User_Dashboard.modify_Insurance.Telnr;
+            }
 
 
 
