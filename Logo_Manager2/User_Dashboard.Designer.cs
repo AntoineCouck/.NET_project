@@ -294,6 +294,7 @@
             this.testsDataGridView.Name = "testsDataGridView";
             this.testsDataGridView.Size = new System.Drawing.Size(408, 445);
             this.testsDataGridView.TabIndex = 16;
+            this.testsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.testsDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn9
             // 

@@ -56,5 +56,9 @@ namespace Logo_Manager2.profile_forms
 
         }
 
+        private void name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

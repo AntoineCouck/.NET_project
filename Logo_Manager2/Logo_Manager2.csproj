@@ -142,6 +142,12 @@
     <Compile Include="PatientsTest.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="profile_forms\delete_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile_forms\delete_test.Designer.cs">
+      <DependentUpon>delete_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="profile_forms\delete_user.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,12 @@
     </Compile>
     <Compile Include="profile_forms\modify_patient.Designer.cs">
       <DependentUpon>modify_patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profile_forms\test_profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile_forms\test_profile.Designer.cs">
+      <DependentUpon>test_profile.cs</DependentUpon>
     </Compile>
     <Compile Include="profile_forms\User_profile.cs">
       <SubType>Form</SubType>
@@ -196,11 +208,17 @@
     <EmbeddedResource Include="create_forms\Create_tests.resx">
       <DependentUpon>Create_tests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="profile_forms\delete_test.resx">
+      <DependentUpon>delete_test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="profile_forms\delete_user.resx">
       <DependentUpon>delete_user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profile_forms\modify_patient.resx">
       <DependentUpon>modify_patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile_forms\test_profile.resx">
+      <DependentUpon>test_profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profile_forms\User_profile.resx">
       <DependentUpon>User_profile.cs</DependentUpon>

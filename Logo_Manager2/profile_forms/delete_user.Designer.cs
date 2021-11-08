@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.name = new System.Windows.Forms.Label();
-            this.btn_confirm_delete = new System.Windows.Forms.Button();
-            this.btn_notdelete = new System.Windows.Forms.Button();
+            this.btn_confirm_deletetest = new System.Windows.Forms.Button();
+            this.btn_notdeleteTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // name
@@ -42,32 +42,33 @@
             this.name.Size = new System.Drawing.Size(64, 20);
             this.name.TabIndex = 0;
             this.name.Text = "Delete  ";
+            this.name.Click += new System.EventHandler(this.name_Click);
             // 
-            // btn_confirm_delete
+            // btn_confirm_deletetest
             // 
-            this.btn_confirm_delete.BackColor = System.Drawing.Color.Green;
-            this.btn_confirm_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_confirm_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_confirm_delete.Location = new System.Drawing.Point(22, 90);
-            this.btn_confirm_delete.Name = "btn_confirm_delete";
-            this.btn_confirm_delete.Size = new System.Drawing.Size(75, 23);
-            this.btn_confirm_delete.TabIndex = 1;
-            this.btn_confirm_delete.Text = "Delete";
-            this.btn_confirm_delete.UseVisualStyleBackColor = false;
-            this.btn_confirm_delete.Click += new System.EventHandler(this.btn_confirm_delete_Click);
+            this.btn_confirm_deletetest.BackColor = System.Drawing.Color.Green;
+            this.btn_confirm_deletetest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_confirm_deletetest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_confirm_deletetest.Location = new System.Drawing.Point(22, 90);
+            this.btn_confirm_deletetest.Name = "btn_confirm_deletetest";
+            this.btn_confirm_deletetest.Size = new System.Drawing.Size(75, 23);
+            this.btn_confirm_deletetest.TabIndex = 1;
+            this.btn_confirm_deletetest.Text = "Delete";
+            this.btn_confirm_deletetest.UseVisualStyleBackColor = false;
+            this.btn_confirm_deletetest.Click += new System.EventHandler(this.btn_confirm_delete_Click);
             // 
-            // btn_notdelete
+            // btn_notdeleteTest
             // 
-            this.btn_notdelete.BackColor = System.Drawing.Color.Red;
-            this.btn_notdelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_notdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_notdelete.Location = new System.Drawing.Point(116, 90);
-            this.btn_notdelete.Name = "btn_notdelete";
-            this.btn_notdelete.Size = new System.Drawing.Size(75, 23);
-            this.btn_notdelete.TabIndex = 2;
-            this.btn_notdelete.Text = "Back";
-            this.btn_notdelete.UseVisualStyleBackColor = false;
-            this.btn_notdelete.Click += new System.EventHandler(this.btn_notdelete_Click);
+            this.btn_notdeleteTest.BackColor = System.Drawing.Color.Red;
+            this.btn_notdeleteTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_notdeleteTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_notdeleteTest.Location = new System.Drawing.Point(116, 90);
+            this.btn_notdeleteTest.Name = "btn_notdeleteTest";
+            this.btn_notdeleteTest.Size = new System.Drawing.Size(75, 23);
+            this.btn_notdeleteTest.TabIndex = 2;
+            this.btn_notdeleteTest.Text = "Back";
+            this.btn_notdeleteTest.UseVisualStyleBackColor = false;
+            this.btn_notdeleteTest.Click += new System.EventHandler(this.btn_notdelete_Click);
             // 
             // delete_user
             // 
@@ -75,8 +76,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(239, 333);
             this.ControlBox = false;
-            this.Controls.Add(this.btn_notdelete);
-            this.Controls.Add(this.btn_confirm_delete);
+            this.Controls.Add(this.btn_notdeleteTest);
+            this.Controls.Add(this.btn_confirm_deletetest);
             this.Controls.Add(this.name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "delete_user";
@@ -90,7 +91,7 @@
         #endregion
 
         private System.Windows.Forms.Label name;
-        private System.Windows.Forms.Button btn_confirm_delete;
-        private System.Windows.Forms.Button btn_notdelete;
+        private System.Windows.Forms.Button btn_confirm_deletetest;
+        private System.Windows.Forms.Button btn_notdeleteTest;
     }
 }

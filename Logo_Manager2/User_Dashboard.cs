@@ -17,11 +17,15 @@ namespace Logo_Manager2
         public static Create_tests create_Tests = new Create_tests();
         public static User_profile profile = new User_profile();
         public static delete_user delete_User = new delete_user();
+        public static test_profile test_Profile= new test_profile();
+        public static delete_test delete_Test = new delete_test();  
         public static modify_patient modify_profile = new modify_patient(); 
         public static create_insurance create_Insurance = new create_insurance();
+        
         public static bool is_connected = false;
         public static string username;
         public static int currentPatientId { get; set; }
+        public static int currentTestId {  get; set; }
 
         Logo_manager2Entities1 db = new Logo_manager2Entities1();
 
@@ -221,6 +225,37 @@ namespace Logo_Manager2
 
             }
 
+        }
+
+        private void testsDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView data = (DataGridView)sender;
+            int currentData = data.CurrentCell.RowIndex;
+            int teller = 0;
+
+            var result = db.Tests;
+
+            foreach (var test in result)
+            {
+                if (teller == currentData)
+                {
+                    currentTestId = test.Id;
+                }
+
+                teller++;
+            }
+
+            test_Profile.ShowDialog();
+
+            if (delete_Test.DialogResult == DialogResult.OK)
+            {
+                this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+            }
+
+            if (test_Profile.DialogResult == DialogResult.OK)
+            {
+                this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+            }
         }
     }
 }
