@@ -3,6 +3,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
+
 namespace Logo_Manager2.profile_forms
 {
     public partial class User_profile : Form
@@ -142,6 +143,38 @@ namespace Logo_Manager2.profile_forms
         {
             User_Dashboard.delete_User.ShowDialog();
 
+        }
+
+        private void btn_modify_user_Click(object sender, EventArgs e)
+        {
+            User_Dashboard.modify_profile.ShowDialog();
+
+            if(User_Dashboard.modify_profile.DialogResult == DialogResult.OK)
+            {
+               
+
+
+
+                    title_profile_patient.Text = "profile of:" + "" + User_Dashboard.modify_profile.LastName + " " + User_Dashboard.modify_profile.FirstName;
+                    profile_info_firstname.Text = User_Dashboard.modify_profile.FirstName;
+                    profile_info_lastname.Text = User_Dashboard.modify_profile.LastName;
+                    profile_info_birthday.Text = User_Dashboard.modify_profile.birthday;
+                    profile_info_followBy.Text = User_Dashboard.modify_profile.followup;
+                    input_paztient_insurance.Text = User_Dashboard.modify_profile.insurance;
+                    
+
+                  
+                    //if (patient.LeftSessions == 0)
+                    //{
+                    //    patient_total.Text = "0";
+                    //}
+                    //else
+                    //{
+                    //    patient_total.Text = patient.LeftSessions.ToString();
+                    //}
+
+
+            }
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Logo_Manager2.profile_forms
             {
                 db.Patients.Remove(element);
             }
-            foreach(var element2 in patientTest)
+            foreach (var element2 in patientTest)
             {
                 db.PatientsTests.Remove(element2);
             }

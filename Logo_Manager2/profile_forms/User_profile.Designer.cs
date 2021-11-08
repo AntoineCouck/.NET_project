@@ -63,6 +63,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableAdapterManager = new Logo_Manager2.Logo_manager2DataSetTableAdapters.TableAdapterManager();
             this.btn_del_user = new System.Windows.Forms.Button();
+            this.btn_modify_user = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).BeginInit();
@@ -90,6 +91,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBox1.Controls.Add(this.btn_del_user);
+            this.groupBox1.Controls.Add(this.btn_modify_user);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.input_paztient_insurance);
@@ -101,7 +104,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(134, 90);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 174);
+            this.groupBox1.Size = new System.Drawing.Size(359, 225);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal information";
@@ -199,7 +202,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox2.Location = new System.Drawing.Point(134, 363);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(359, 201);
+            this.groupBox2.Size = new System.Drawing.Size(359, 218);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sessions manager";
@@ -221,7 +224,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(149, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.Size = new System.Drawing.Size(50, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Actual";
             // 
@@ -241,7 +244,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(234, 98);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 16);
+            this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Remove";
             // 
@@ -251,7 +254,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(66, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 16);
+            this.label3.Size = new System.Drawing.Size(35, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Add";
             // 
@@ -391,7 +394,7 @@
             this.btn_del_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_del_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_del_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_del_user.Location = new System.Drawing.Point(257, 589);
+            this.btn_del_user.Location = new System.Drawing.Point(177, 181);
             this.btn_del_user.Name = "btn_del_user";
             this.btn_del_user.Size = new System.Drawing.Size(99, 23);
             this.btn_del_user.TabIndex = 35;
@@ -399,12 +402,25 @@
             this.btn_del_user.UseVisualStyleBackColor = false;
             this.btn_del_user.Click += new System.EventHandler(this.btn_del_user_Click);
             // 
+            // btn_modify_user
+            // 
+            this.btn_modify_user.BackColor = System.Drawing.Color.Turquoise;
+            this.btn_modify_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_modify_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_modify_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modify_user.Location = new System.Drawing.Point(72, 181);
+            this.btn_modify_user.Name = "btn_modify_user";
+            this.btn_modify_user.Size = new System.Drawing.Size(99, 23);
+            this.btn_modify_user.TabIndex = 36;
+            this.btn_modify_user.Text = "Modify user";
+            this.btn_modify_user.UseVisualStyleBackColor = false;
+            this.btn_modify_user.Click += new System.EventHandler(this.btn_modify_user_Click);
+            // 
             // User_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 643);
-            this.Controls.Add(this.btn_del_user);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_add_test_to_patient);
             this.Controls.Add(this.testsList);
@@ -472,5 +488,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private Logo_manager2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button btn_del_user;
+        private System.Windows.Forms.Button btn_modify_user;
     }
 }

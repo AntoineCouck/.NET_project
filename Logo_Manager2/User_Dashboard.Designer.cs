@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Menu_dashboard = new System.Windows.Forms.MenuStrip();
             this.pageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,9 +81,9 @@
             this.testsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_delete_test = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.btn_delete_insurance = new System.Windows.Forms.Button();
-            this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.insurancesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_delete_insurance = new System.Windows.Forms.Button();
             this.Menu_dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
@@ -95,8 +95,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_dashboard
@@ -298,9 +298,9 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Id";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn9.HeaderText = "Id";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -393,9 +393,9 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -512,6 +512,16 @@
             this.comboBox2.TabIndex = 23;
             this.comboBox2.ValueMember = "Name";
             // 
+            // insurancesBindingSource2
+            // 
+            this.insurancesBindingSource2.DataMember = "Insurances";
+            this.insurancesBindingSource2.DataSource = this.logo_manager2DataSet;
+            // 
+            // insurancesBindingSource1
+            // 
+            this.insurancesBindingSource1.DataMember = "Insurances";
+            this.insurancesBindingSource1.DataSource = this.logo_manager2DataSet;
+            // 
             // btn_delete_insurance
             // 
             this.btn_delete_insurance.BackColor = System.Drawing.Color.Red;
@@ -524,16 +534,6 @@
             this.btn_delete_insurance.Text = "Delete";
             this.btn_delete_insurance.UseVisualStyleBackColor = false;
             this.btn_delete_insurance.Click += new System.EventHandler(this.btn_delete_insurance_Click);
-            // 
-            // insurancesBindingSource1
-            // 
-            this.insurancesBindingSource1.DataMember = "Insurances";
-            this.insurancesBindingSource1.DataSource = this.logo_manager2DataSet;
-            // 
-            // insurancesBindingSource2
-            // 
-            this.insurancesBindingSource2.DataMember = "Insurances";
-            this.insurancesBindingSource2.DataSource = this.logo_manager2DataSet;
             // 
             // User_Dashboard
             // 
@@ -561,7 +561,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "User_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.User_Dashboard_Load);
             this.Menu_dashboard.ResumeLayout(false);
@@ -576,8 +575,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

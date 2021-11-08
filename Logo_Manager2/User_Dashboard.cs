@@ -17,6 +17,7 @@ namespace Logo_Manager2
         public static Create_tests create_Tests = new Create_tests();
         public static User_profile profile = new User_profile();
         public static delete_user delete_User = new delete_user();
+        public static modify_patient modify_profile = new modify_patient();
         public static create_insurance create_Insurance = new create_insurance();
         public static bool is_connected = false;
         public static string username;
@@ -157,7 +158,7 @@ namespace Logo_Manager2
         private void btn_delete_test_Click(object sender, EventArgs e)
         {
 
-            if(comboBox1.Items.Count > 0)
+            if (comboBox1.Items.Count > 0)
             {
                 string testName = comboBox1.Text;
 
@@ -177,7 +178,8 @@ namespace Logo_Manager2
 
 
 
-            } else
+            }
+            else
             {
 
                 MessageBox.Show("Sorry but there are no tests at this moment");
@@ -191,7 +193,7 @@ namespace Logo_Manager2
         private void btn_delete_insurance_Click(object sender, EventArgs e)
         {
 
-            if(comboBox2.Items.Count > 0)
+            if (comboBox2.Items.Count > 0)
             {
 
                 string insuranceName = comboBox2.Text;
@@ -209,7 +211,8 @@ namespace Logo_Manager2
                 db.SaveChanges();
                 MessageBox.Show("The insurance was succesfull deleted");
                 this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Sorry but there are no insurances at this moment");
 
