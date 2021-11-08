@@ -159,8 +159,9 @@ namespace Logo_Manager2.profile_forms
                     profile_info_firstname.Text = User_Dashboard.modify_profile.FirstName;
                     profile_info_lastname.Text = User_Dashboard.modify_profile.LastName;
                     profile_info_birthday.Text = User_Dashboard.modify_profile.birthday;
-                    profile_info_followBy.Text = User_Dashboard.modify_profile.followup;
+                    profile_info_followBy.Text = User_Dashboard.modify_profile.UserName;
                     input_paztient_insurance.Text = User_Dashboard.modify_profile.insurance;
+                     textBox1.Text = User_Dashboard.modify_profile.followup;
                     
 
                   

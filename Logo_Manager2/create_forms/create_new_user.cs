@@ -25,9 +25,6 @@ namespace Logo_Manager2.create_forms
             this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
             this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
-
-
-
         }
 
         private void btn_new_patient_Click(object sender, EventArgs e)
@@ -36,8 +33,7 @@ namespace Logo_Manager2.create_forms
             bool createPatient = true;
 
             var result = db.Patients;
-            //var Users = db.Users;
-            //var insurances = db.Insurances;
+          
 
             if (string.IsNullOrEmpty(input_patient_firstname.Text) == true)
             {

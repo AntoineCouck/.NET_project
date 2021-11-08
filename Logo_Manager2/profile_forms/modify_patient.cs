@@ -25,6 +25,8 @@ namespace Logo_Manager2.profile_forms
         }
         private void modify_patient_Load(object sender, EventArgs e)
         {
+            
+
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
             this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
@@ -79,26 +81,18 @@ namespace Logo_Manager2.profile_forms
 
             if (edit_Patient)
             {
-                var patientTest = db.PatientsTests.Where(x => x.PatientId == User_Dashboard.currentPatientId);
+
+                
 
                 foreach (var patient in Patient)
                 {
-                    db.Patients.Remove(patient);
 
-                    foreach (var element2 in patientTest)
-                    {
-                        db.PatientsTests.Remove(element2);
-                    }
-
-                    Patient patient1 = new Patient();
-
-
-                    patient1.Firstname = input_edit_name.Text;
-                    patient1.Lastname = input_edit_lastname.Text;
-                    patient1.Birthday = profile_edit_birthday.Value;
-                    patient1.UserName = profile_edit_followby.Text;
-                    patient1.Followup = profile_edit_following_for.Text;
-                    patient1.InsuranceName = input_edit_insurance.Text;
+                    patient.Firstname = input_edit_name.Text;
+                    patient.Lastname = input_edit_lastname.Text;
+                    patient.Birthday = profile_edit_birthday.Value;
+                    patient.UserName = profile_edit_followby.Text;
+                    patient.Followup = profile_edit_following_for.Text;
+                    patient.InsuranceName = input_edit_insurance.Text;
 
                 }
 

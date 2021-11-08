@@ -18,38 +18,38 @@ namespace Logo_Manager2.create_forms
             bool createInsurance = true;
             var result = db.Insurances;
 
-            if (input_insurance_name.Text.Length > 50 || (string.IsNullOrEmpty(input_insurance_name.Text) == true))
+            if(input_insurance_name.Text.Length > 50 || (string.IsNullOrEmpty(input_insurance_name.Text) == true))
             {
                 MessageBox.Show("the name is too large  or empty , try again ");
                 input_insurance_name.Text = null;
                 createInsurance = false;
             }
-            else if (input_insurance_adres.Text.Length > 50 || (string.IsNullOrEmpty(input_insurance_adres.Text) == true))
+            else if(input_insurance_adres.Text.Length > 50 || (string.IsNullOrEmpty(input_insurance_adres.Text) == true))
             {
                 MessageBox.Show("the adres is too large  or empty , try again ");
                 input_insurance_adres.Text = null;
                 createInsurance = false;
             }
-            else if (input_insurance_telnr.Text.Length > 50 || (string.IsNullOrEmpty(input_insurance_telnr.Text) == true))
+            else if(input_insurance_telnr.Text.Length > 50 || (string.IsNullOrEmpty(input_insurance_telnr.Text) == true ))
             {
                 MessageBox.Show("the telnr is too large  or empty , try again ");
                 input_insurance_telnr.Text = null;
                 createInsurance = false;
-            }
+            } 
 
-
-            foreach (var element in result)
+           
+            foreach(var element in result)
             {
-                if (element.Name == input_insurance_name.Text)
+                if(element.Name == input_insurance_name.Text)
                 {
                     MessageBox.Show("Sorry but this name is already in use , try again please");
 
                     createInsurance = false;
                     input_insurance_name.Text = null;
-
+                  
                 }
             }
-
+            
 
 
 

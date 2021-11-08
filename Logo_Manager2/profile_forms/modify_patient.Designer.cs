@@ -46,10 +46,18 @@
             this.input_edit_insurance = new System.Windows.Forms.ComboBox();
             this.insurancesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insurancesTableAdapter = new Logo_Manager2.Logo_manager2DataSetTableAdapters.InsurancesTableAdapter();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.insurancesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -149,7 +157,7 @@
             // 
             this.title_edit_patient.AutoSize = true;
             this.title_edit_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.title_edit_patient.Location = new System.Drawing.Point(351, 74);
+            this.title_edit_patient.Location = new System.Drawing.Point(216, 72);
             this.title_edit_patient.Name = "title_edit_patient";
             this.title_edit_patient.Size = new System.Drawing.Size(104, 26);
             this.title_edit_patient.TabIndex = 29;
@@ -157,8 +165,8 @@
             // 
             // profile_edit_followby
             // 
-            this.profile_edit_followby.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usersBindingSource, "Name", true));
-            this.profile_edit_followby.DataSource = this.usersBindingSource;
+            this.profile_edit_followby.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usersBindingSource2, "Name", true));
+            this.profile_edit_followby.DataSource = this.usersBindingSource1;
             this.profile_edit_followby.DisplayMember = "Name";
             this.profile_edit_followby.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.profile_edit_followby.FormattingEnabled = true;
@@ -211,8 +219,8 @@
             // 
             // input_edit_insurance
             // 
-            this.input_edit_insurance.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.insurancesBindingSource, "Name", true));
-            this.input_edit_insurance.DataSource = this.insurancesBindingSource;
+            this.input_edit_insurance.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.insurancesBindingSource2, "Name", true));
+            this.input_edit_insurance.DataSource = this.insurancesBindingSource1;
             this.input_edit_insurance.DisplayMember = "Name";
             this.input_edit_insurance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.input_edit_insurance.FormattingEnabled = true;
@@ -231,6 +239,26 @@
             // 
             this.insurancesTableAdapter.ClearBeforeFill = true;
             // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.logo_manager2DataSet;
+            // 
+            // usersBindingSource2
+            // 
+            this.usersBindingSource2.DataMember = "Users";
+            this.usersBindingSource2.DataSource = this.logo_manager2DataSet;
+            // 
+            // insurancesBindingSource1
+            // 
+            this.insurancesBindingSource1.DataMember = "Insurances";
+            this.insurancesBindingSource1.DataSource = this.logo_manager2DataSet;
+            // 
+            // insurancesBindingSource2
+            // 
+            this.insurancesBindingSource2.DataMember = "Insurances";
+            this.insurancesBindingSource2.DataSource = this.logo_manager2DataSet;
+            // 
             // modify_patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +274,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancesBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +302,9 @@
         private System.Windows.Forms.ComboBox input_edit_insurance;
         private System.Windows.Forms.BindingSource insurancesBindingSource;
         private Logo_manager2DataSetTableAdapters.InsurancesTableAdapter insurancesTableAdapter;
+        private System.Windows.Forms.BindingSource insurancesBindingSource2;
+        private System.Windows.Forms.BindingSource insurancesBindingSource1;
+        private System.Windows.Forms.BindingSource usersBindingSource2;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
     }
 }
