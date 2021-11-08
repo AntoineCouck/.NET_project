@@ -352,6 +352,7 @@
             this.insurancesDataGridView.Name = "insurancesDataGridView";
             this.insurancesDataGridView.Size = new System.Drawing.Size(345, 445);
             this.insurancesDataGridView.TabIndex = 16;
+            this.insurancesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.insurancesDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn14
             // 

@@ -57,18 +57,21 @@ namespace Logo_Manager2.profile_forms
             {
 
                 MessageBox.Show("The Firstname is too large or empty , try again please");
+                input_edit_name.Text = null;
                 edit_Patient = false;
 
             }
             else if (input_edit_lastname.Text.Length > 50 || (string.IsNullOrEmpty(input_edit_lastname.Text) == true))
             {
                 MessageBox.Show("The Lastname is too large or empty , try again please");
+                input_edit_lastname.Text = null;
                 edit_Patient = false;
 
             }
             else if (profile_edit_birthday.Value > DateTime.Now)
             {
                 MessageBox.Show("This date is in the future , try again");
+                profile_edit_birthday.Value = DateTime.Now;
                 edit_Patient = false;
             }
             else

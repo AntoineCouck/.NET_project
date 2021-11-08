@@ -162,17 +162,7 @@ namespace Logo_Manager2.profile_forms
                     profile_info_followBy.Text = User_Dashboard.modify_profile.UserName;
                     input_paztient_insurance.Text = User_Dashboard.modify_profile.insurance;
                     textBox1.Text = User_Dashboard.modify_profile.followup;
-                    
-
-                  
-                    //if (patient.LeftSessions == 0)
-                    //{
-                    //    patient_total.Text = "0";
-                    //}
-                    //else
-                    //{
-                    //    patient_total.Text = patient.LeftSessions.ToString();
-                    //}
+                   
 
 
             }

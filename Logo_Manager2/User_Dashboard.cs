@@ -19,6 +19,10 @@ namespace Logo_Manager2
         public static delete_user delete_User = new delete_user();
         public static test_profile test_Profile= new test_profile();
         public static delete_test delete_Test = new delete_test();  
+        public static modify_test modify_Test = new modify_test();  
+        public static modify_insurance modify_Insurance = new modify_insurance();
+        public static delete_insurance delete_Insurance = new delete_insurance();
+        public static Insurance_profile insurance_Profile= new Insurance_profile();
         public static modify_patient modify_profile = new modify_patient(); 
         public static create_insurance create_Insurance = new create_insurance();
         
@@ -26,6 +30,8 @@ namespace Logo_Manager2
         public static string username;
         public static int currentPatientId { get; set; }
         public static int currentTestId {  get; set; }
+
+        public static string currentInsuranceId {  get; set; }
 
         Logo_manager2Entities1 db = new Logo_manager2Entities1();
 
@@ -256,6 +262,47 @@ namespace Logo_Manager2
             {
                 this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
             }
+
+            if(modify_Test.DialogResult == DialogResult.OK)
+            {
+                this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+            }
+        }
+
+        private void insurancesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView data = (DataGridView)sender;
+            int currentData = data.CurrentCell.RowIndex;
+            int teller = 0;
+
+            var result = db.Insurances;
+
+            foreach (var test in result)
+            {
+                if (teller == currentData)
+                {
+                    currentInsuranceId = test.Name;
+                }
+
+                teller++;
+            }
+
+            insurance_Profile.ShowDialog();
+
+            //    if (delete_Test.DialogResult == DialogResult.OK)
+            //    {
+            //        this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+            //    }
+
+            //    if (test_Profile.DialogResult == DialogResult.OK)
+            //    {
+            //        this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+            //    }
+
+            //    if (modify_Test.DialogResult == DialogResult.OK)
+            //    {
+            //        this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+            //    }
         }
     }
 }

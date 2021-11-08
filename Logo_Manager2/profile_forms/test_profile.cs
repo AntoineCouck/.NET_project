@@ -46,8 +46,8 @@ namespace Logo_Manager2.profile_forms
             {
                 title_profile_test.Text = "Test:" + " " + User_Dashboard.modify_Test.Name;
                 profile_test_name.Text = User_Dashboard.modify_Test.Name;
-                profile_test_minage.Text = User_Dashboard.modify_Test.minAge;
-                profile_test_maxage.Text = User_Dashboard.modify_Test.maxage;
+                profile_test_minage.Text = User_Dashboard.modify_Test.minAge.ToString();
+                profile_test_maxage.Text = User_Dashboard.modify_Test.maxage.ToString();
                 profile_test_followup.Text = User_Dashboard.modify_Test.followUp;
             }
 

@@ -14,9 +14,9 @@ namespace Logo_Manager2.profile_forms
     {
         Logo_manager2Entities1 db = new Logo_manager2Entities1();
        public string Name {  get; set; }
-        public string minAge {  get; set; }
+        public int minAge {  get; set; }
 
-        public string maxage {  get; set; }
+        public int maxage {  get; set; }
 
         public string followUp {  get; set; }
 
@@ -54,12 +54,13 @@ namespace Logo_Manager2.profile_forms
             if (string.IsNullOrEmpty(profile_test_name.Text))
             {
                 MessageBox.Show("The name must be completed");
-
+                profile_test_name.Text = null;
                 edit_test = false;
             }
             else if (profile_test_name.Text.Length > 50)
             {
                 MessageBox.Show("The name is too large, try another");
+                profile_test_name.Text = null;
                 edit_test = false;
             }
 
@@ -67,6 +68,9 @@ namespace Logo_Manager2.profile_forms
             else if (!(profile_test_minage.Value < profile_test_maxage.Value))
             {
                 MessageBox.Show("Sorry but the max age must be higher then the min age");
+                profile_test_minage.Value = 0;
+                profile_test_maxage.Value = 0;
+
                 edit_test = false;
 
             } else
@@ -87,14 +91,12 @@ namespace Logo_Manager2.profile_forms
                     test.TypefollowUp = profile_test_followup.Text;
 
 
-
-
                 }
                 
                 Name = profile_test_name.Text;
-                minAge = profile_test_minage.ToString();
-                maxage = profile_test_maxage.ToString();
-                followUp = profile_test_followup.ToString();
+                minAge = (int)profile_test_minage.Value;
+                maxage = (int)profile_test_maxage.Value;
+                followUp = profile_test_followup.Text;
 
                 db.SaveChanges();
                 MessageBox.Show("this test was succesfull modified");
