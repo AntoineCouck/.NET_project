@@ -35,7 +35,10 @@
             this.profile_insurance_adres = new System.Windows.Forms.TextBox();
             this.profile_insurance_name = new System.Windows.Forms.TextBox();
             this.title_profile_Insurance = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -123,11 +126,33 @@
             this.title_profile_Insurance.TabIndex = 30;
             this.title_profile_Insurance.Text = "Insurance:";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Salmon;
+            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(221, 411);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(359, 294);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Members";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(72, 35);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(204, 244);
+            this.listBox1.TabIndex = 0;
+            // 
             // Insurance_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(821, 717);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.title_profile_Insurance);
             this.Name = "Insurance_profile";
@@ -135,6 +160,7 @@
             this.Load += new System.EventHandler(this.Insurance_profile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +175,7 @@
         private System.Windows.Forms.TextBox profile_insurance_adres;
         private System.Windows.Forms.TextBox profile_insurance_name;
         private System.Windows.Forms.Label title_profile_Insurance;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

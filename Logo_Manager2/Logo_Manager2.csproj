@@ -142,6 +142,12 @@
     <Compile Include="PatientsTest.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="profile_forms\delete_insurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile_forms\delete_insurance.Designer.cs">
+      <DependentUpon>delete_insurance.cs</DependentUpon>
+    </Compile>
     <Compile Include="profile_forms\delete_test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,18 @@
     </Compile>
     <Compile Include="profile_forms\delete_user.Designer.cs">
       <DependentUpon>delete_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profile_forms\Insurance_profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile_forms\Insurance_profile.Designer.cs">
+      <DependentUpon>Insurance_profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profile_forms\modify_insurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile_forms\modify_insurance.Designer.cs">
+      <DependentUpon>modify_insurance.cs</DependentUpon>
     </Compile>
     <Compile Include="profile_forms\modify_patient.cs">
       <SubType>Form</SubType>
@@ -214,11 +232,20 @@
     <EmbeddedResource Include="create_forms\Create_tests.resx">
       <DependentUpon>Create_tests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="profile_forms\delete_insurance.resx">
+      <DependentUpon>delete_insurance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="profile_forms\delete_test.resx">
       <DependentUpon>delete_test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profile_forms\delete_user.resx">
       <DependentUpon>delete_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile_forms\Insurance_profile.resx">
+      <DependentUpon>Insurance_profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile_forms\modify_insurance.resx">
+      <DependentUpon>modify_insurance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profile_forms\modify_patient.resx">
       <DependentUpon>modify_patient.cs</DependentUpon>

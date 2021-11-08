@@ -50,20 +50,14 @@ namespace Logo_Manager2.profile_forms
             bool edit_insurance = true;
 
 
-            if(input_name_mod.Text.Length > 50 || string.IsNullOrEmpty(input_name_mod.Text))
-            {
-                
-                edit_insurance = false;
-                input_name_mod.Text = null;
-                MessageBox.Show("Name is too large or empty , try again please");
-
-            } else if(input_adres_mod.Text.Length > 50 || string.IsNullOrEmpty(input_adres_mod.Text))
+          if(input_adres_mod.Text.Length > 50 || string.IsNullOrEmpty(input_adres_mod.Text))
             {
                 edit_insurance = false;
                 input_adres_mod.Text = null;
                 MessageBox.Show("adres is too large or empty , try again please");
 
-            } else if(input_telnr_mod.Text.Length > 50 || string.IsNullOrEmpty(input_telnr_mod.Text))
+            } 
+            else if(input_telnr_mod.Text.Length > 50 || string.IsNullOrEmpty(input_telnr_mod.Text))
             {
                 edit_insurance = false;
                 input_telnr_mod.Text = null;
@@ -78,7 +72,7 @@ namespace Logo_Manager2.profile_forms
             {
                 foreach (var insurance in Insurances)
                 {
-                    insurance.Name = input_name_mod.Text;
+                    
                     insurance.TelNr = input_telnr_mod.Text;
                     insurance.Adres = input_adres_mod.Text;
                 }
@@ -86,7 +80,7 @@ namespace Logo_Manager2.profile_forms
 
             }
 
-               Name = input_name_mod.Text;
+               
                Telnr = input_telnr_mod.Text;
                Adres = input_adres_mod.Text;
 
@@ -100,4 +94,4 @@ namespace Logo_Manager2.profile_forms
 
         }
     }
-}
+

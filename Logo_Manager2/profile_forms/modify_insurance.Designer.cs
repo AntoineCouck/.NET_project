@@ -70,6 +70,7 @@
             // 
             // input_name_mod
             // 
+            this.input_name_mod.Enabled = false;
             this.input_name_mod.Location = new System.Drawing.Point(26, 72);
             this.input_name_mod.Name = "input_name_mod";
             this.input_name_mod.Size = new System.Drawing.Size(131, 23);

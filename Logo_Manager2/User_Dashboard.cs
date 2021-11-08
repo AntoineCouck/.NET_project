@@ -17,21 +17,21 @@ namespace Logo_Manager2
         public static Create_tests create_Tests = new Create_tests();
         public static User_profile profile = new User_profile();
         public static delete_user delete_User = new delete_user();
-        public static test_profile test_Profile= new test_profile();
-        public static delete_test delete_Test = new delete_test();  
-        public static modify_test modify_Test = new modify_test();  
+        public static test_profile test_Profile = new test_profile();
+        public static delete_test delete_Test = new delete_test();
+        public static modify_test modify_Test = new modify_test();
         public static modify_insurance modify_Insurance = new modify_insurance();
         public static delete_insurance delete_Insurance = new delete_insurance();
-        public static Insurance_profile insurance_Profile= new Insurance_profile();
-        public static modify_patient modify_profile = new modify_patient(); 
+        public static Insurance_profile insurance_Profile = new Insurance_profile();
+        public static modify_patient modify_profile = new modify_patient();
         public static create_insurance create_Insurance = new create_insurance();
-        
+
         public static bool is_connected = false;
         public static string username;
         public static int currentPatientId { get; set; }
-        public static int currentTestId {  get; set; }
+        public static int currentTestId { get; set; }
 
-        public static string currentInsuranceId {  get; set; }
+        public static string currentInsuranceId { get; set; }
 
         Logo_manager2Entities1 db = new Logo_manager2Entities1();
 
@@ -124,7 +124,7 @@ namespace Logo_Manager2
                 this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
             }
 
-            if(modify_profile.DialogResult == DialogResult.OK)
+            if (modify_profile.DialogResult == DialogResult.OK)
             {
                 this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
             }
@@ -173,7 +173,7 @@ namespace Logo_Manager2
         private void btn_delete_test_Click(object sender, EventArgs e)
         {
 
-            if(comboBox1.Items.Count > 0)
+            if (comboBox1.Items.Count > 0)
             {
                 string testName = comboBox1.Text;
 
@@ -193,7 +193,8 @@ namespace Logo_Manager2
 
 
 
-            } else
+            }
+            else
             {
 
                 MessageBox.Show("Sorry but there are no tests at this moment");
@@ -207,7 +208,7 @@ namespace Logo_Manager2
         private void btn_delete_insurance_Click(object sender, EventArgs e)
         {
 
-            if(comboBox2.Items.Count > 0)
+            if (comboBox2.Items.Count > 0)
             {
 
                 string insuranceName = comboBox2.Text;
@@ -225,7 +226,8 @@ namespace Logo_Manager2
                 db.SaveChanges();
                 MessageBox.Show("The insurance was succesfull deleted");
                 this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Sorry but there are no insurances at this moment");
 
@@ -263,7 +265,7 @@ namespace Logo_Manager2
                 this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
             }
 
-            if(modify_Test.DialogResult == DialogResult.OK)
+            if (modify_Test.DialogResult == DialogResult.OK)
             {
                 this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
             }
@@ -289,20 +291,20 @@ namespace Logo_Manager2
 
             insurance_Profile.ShowDialog();
 
-            //    if (delete_Test.DialogResult == DialogResult.OK)
-            //    {
-            //        this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
-            //    }
+            if (delete_Insurance.DialogResult == DialogResult.OK)
+            {
+                this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+            }
 
-            //    if (test_Profile.DialogResult == DialogResult.OK)
-            //    {
-            //        this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
-            //    }
+            if (insurance_Profile.DialogResult == DialogResult.OK)
+            {
+                this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+            }
 
-            //    if (modify_Test.DialogResult == DialogResult.OK)
-            //    {
-            //        this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
-            //    }
+            if (modify_Insurance.DialogResult == DialogResult.OK)
+            {
+                this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+            }
         }
     }
 }
