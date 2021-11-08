@@ -114,6 +114,11 @@ namespace Logo_Manager2
                 this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
             }
 
+            if(modify_profile.DialogResult == DialogResult.OK)
+            {
+                this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
+            }
+
         }
 
         private void btn_dashboard_addInsurance_Click(object sender, EventArgs e)
