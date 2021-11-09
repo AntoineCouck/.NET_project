@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Logo_Manager2.profile_forms
@@ -13,12 +8,12 @@ namespace Logo_Manager2.profile_forms
     public partial class modify_test : Form
     {
         Logo_manager2Entities1 db = new Logo_manager2Entities1();
-       public string Name {  get; set; }
-        public int minAge {  get; set; }
+        public string Name { get; set; }
+        public int minAge { get; set; }
 
-        public int maxage {  get; set; }
+        public int maxage { get; set; }
 
-        public string followUp {  get; set; }
+        public string followUp { get; set; }
 
         public modify_test()
         {
@@ -30,7 +25,7 @@ namespace Logo_Manager2.profile_forms
             this.Close();
         }
 
-      
+
         private void modify_test_Load(object sender, EventArgs e)
         {
             var tests = db.Tests.Where(x => x.Id == User_Dashboard.currentTestId);
@@ -73,7 +68,8 @@ namespace Logo_Manager2.profile_forms
 
                 edit_test = false;
 
-            } else
+            }
+            else
             {
                 edit_test = true;
             }
@@ -82,7 +78,7 @@ namespace Logo_Manager2.profile_forms
             if (edit_test)
             {
 
-                foreach(var test in tests)
+                foreach (var test in tests)
                 {
 
                     test.Name = profile_test_name.Text;
@@ -92,7 +88,7 @@ namespace Logo_Manager2.profile_forms
 
 
                 }
-                
+
                 Name = profile_test_name.Text;
                 minAge = (int)profile_test_minage.Value;
                 maxage = (int)profile_test_maxage.Value;

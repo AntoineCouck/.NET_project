@@ -33,7 +33,7 @@ namespace Logo_Manager2.create_forms
             bool createPatient = true;
 
             var result = db.Patients;
-          
+
 
             if (string.IsNullOrEmpty(input_patient_firstname.Text) == true)
             {

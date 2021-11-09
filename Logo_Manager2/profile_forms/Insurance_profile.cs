@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Logo_Manager2.profile_forms
@@ -34,14 +29,14 @@ namespace Logo_Manager2.profile_forms
 
             foreach (var insurance in insurances)
             {
-                title_profile_Insurance.Text= "Insurance:" + " " + insurance.Name;
+                title_profile_Insurance.Text = "Insurance:" + " " + insurance.Name;
                 profile_insurance_name.Text = insurance.Name;
                 profile_insurance_adres.Text = insurance.Adres;
                 profile_insurance_telnr.Text = insurance.TelNr;
 
             }
 
-            foreach(var element in patientsInsurances)
+            foreach (var element in patientsInsurances)
             {
                 listBox1.Items.Add(element.pName + " " + element.pLastname);
             }

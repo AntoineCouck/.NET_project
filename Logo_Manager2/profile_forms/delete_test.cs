@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Logo_Manager2.profile_forms
@@ -24,7 +19,7 @@ namespace Logo_Manager2.profile_forms
             foreach (var element in test)
             {
 
-                name.Text = name.Text + " " + element.Name  + "?";
+                name.Text = name.Text + " " + element.Name + "?";
 
             }
         }

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.title_profile_patient = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_del_user = new System.Windows.Forms.Button();
+            this.btn_modify_user = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.input_paztient_insurance = new System.Windows.Forms.TextBox();
@@ -62,8 +64,6 @@
             this.testsBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableAdapterManager = new Logo_Manager2.Logo_manager2DataSetTableAdapters.TableAdapterManager();
-            this.btn_del_user = new System.Windows.Forms.Button();
-            this.btn_modify_user = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_patient_remove)).BeginInit();
@@ -81,10 +81,10 @@
             // title_profile_patient
             // 
             this.title_profile_patient.AutoSize = true;
-            this.title_profile_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.title_profile_patient.Location = new System.Drawing.Point(270, 40);
+            this.title_profile_patient.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title_profile_patient.Location = new System.Drawing.Point(366, 24);
             this.title_profile_patient.Name = "title_profile_patient";
-            this.title_profile_patient.Size = new System.Drawing.Size(104, 26);
+            this.title_profile_patient.Size = new System.Drawing.Size(111, 30);
             this.title_profile_patient.TabIndex = 26;
             this.title_profile_patient.Text = "Profile of ";
             // 
@@ -101,7 +101,7 @@
             this.groupBox1.Controls.Add(this.profile_info_lastname);
             this.groupBox1.Controls.Add(this.profile_info_birthday);
             this.groupBox1.Controls.Add(this.profile_info_firstname);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(134, 90);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(359, 225);
@@ -109,15 +109,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal information";
             // 
+            // btn_del_user
+            // 
+            this.btn_del_user.BackColor = System.Drawing.Color.Red;
+            this.btn_del_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_del_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_del_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_del_user.Location = new System.Drawing.Point(177, 181);
+            this.btn_del_user.Name = "btn_del_user";
+            this.btn_del_user.Size = new System.Drawing.Size(99, 23);
+            this.btn_del_user.TabIndex = 35;
+            this.btn_del_user.Text = "Delete user";
+            this.btn_del_user.UseVisualStyleBackColor = false;
+            this.btn_del_user.Click += new System.EventHandler(this.btn_del_user_Click);
+            // 
+            // btn_modify_user
+            // 
+            this.btn_modify_user.BackColor = System.Drawing.Color.Turquoise;
+            this.btn_modify_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_modify_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_modify_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modify_user.Location = new System.Drawing.Point(72, 181);
+            this.btn_modify_user.Name = "btn_modify_user";
+            this.btn_modify_user.Size = new System.Drawing.Size(99, 23);
+            this.btn_modify_user.TabIndex = 36;
+            this.btn_modify_user.Text = "Modify user";
+            this.btn_modify_user.UseVisualStyleBackColor = false;
+            this.btn_modify_user.Click += new System.EventHandler(this.btn_modify_user_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label7.Location = new System.Drawing.Point(248, 45);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(212, 41);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 13);
+            this.label7.Size = new System.Drawing.Size(110, 17);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Follow by";
+            this.label7.Text = "Speech therapist";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBox1
             // 
@@ -152,10 +181,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label1.Location = new System.Drawing.Point(233, 109);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(212, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.Size = new System.Drawing.Size(91, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Following for";
             // 
@@ -199,7 +228,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.input_patient_remove);
             this.groupBox2.Controls.Add(this.input_patient_add);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(134, 363);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(359, 218);
@@ -234,7 +263,7 @@
             this.patient_total.Enabled = false;
             this.patient_total.Location = new System.Drawing.Point(152, 67);
             this.patient_total.Name = "patient_total";
-            this.patient_total.Size = new System.Drawing.Size(47, 23);
+            this.patient_total.Size = new System.Drawing.Size(47, 29);
             this.patient_total.TabIndex = 8;
             this.patient_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -267,7 +296,7 @@
             0,
             0});
             this.input_patient_remove.Name = "input_patient_remove";
-            this.input_patient_remove.Size = new System.Drawing.Size(120, 23);
+            this.input_patient_remove.Size = new System.Drawing.Size(120, 29);
             this.input_patient_remove.TabIndex = 1;
             // 
             // input_patient_add
@@ -279,14 +308,14 @@
             0,
             0});
             this.input_patient_add.Name = "input_patient_add";
-            this.input_patient_add.Size = new System.Drawing.Size(120, 23);
+            this.input_patient_add.Size = new System.Drawing.Size(120, 29);
             this.input_patient_add.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(270, 318);
+            this.label2.Location = new System.Drawing.Point(270, 334);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 26);
             this.label2.TabIndex = 29;
@@ -295,21 +324,24 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label6.Location = new System.Drawing.Point(655, 135);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(655, 57);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 26);
+            this.label6.Size = new System.Drawing.Size(129, 30);
             this.label6.TabIndex = 30;
             this.label6.Text = "Passed tests";
             // 
             // testsList
             // 
+            this.testsList.BackColor = System.Drawing.Color.Honeydew;
             this.testsList.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.testsBindingSource4, "Name", true));
             this.testsList.DisplayMember = "Name";
+            this.testsList.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testsList.FormattingEnabled = true;
-            this.testsList.Location = new System.Drawing.Point(622, 174);
+            this.testsList.ItemHeight = 21;
+            this.testsList.Location = new System.Drawing.Point(622, 90);
             this.testsList.Name = "testsList";
-            this.testsList.Size = new System.Drawing.Size(212, 303);
+            this.testsList.Size = new System.Drawing.Size(212, 424);
             this.testsList.TabIndex = 31;
             this.testsList.ValueMember = "Name";
             // 
@@ -338,12 +370,14 @@
             // 
             // btn_add_test_to_patient
             // 
-            this.btn_add_test_to_patient.Location = new System.Drawing.Point(684, 530);
+            this.btn_add_test_to_patient.BackColor = System.Drawing.Color.MintCream;
+            this.btn_add_test_to_patient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_add_test_to_patient.Location = new System.Drawing.Point(676, 557);
             this.btn_add_test_to_patient.Name = "btn_add_test_to_patient";
-            this.btn_add_test_to_patient.Size = new System.Drawing.Size(75, 23);
+            this.btn_add_test_to_patient.Size = new System.Drawing.Size(118, 35);
             this.btn_add_test_to_patient.TabIndex = 33;
             this.btn_add_test_to_patient.Text = "button1";
-            this.btn_add_test_to_patient.UseVisualStyleBackColor = true;
+            this.btn_add_test_to_patient.UseVisualStyleBackColor = false;
             this.btn_add_test_to_patient.Click += new System.EventHandler(this.btn_add_test_to_patient_Click);
             // 
             // testsTableAdapter1
@@ -372,7 +406,7 @@
             this.comboBox1.DisplayMember = "Name";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(622, 492);
+            this.comboBox1.Location = new System.Drawing.Point(622, 530);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(212, 21);
             this.comboBox1.TabIndex = 34;
@@ -387,34 +421,6 @@
             this.tableAdapterManager.TestsTableAdapter = this.testsTableAdapter1;
             this.tableAdapterManager.UpdateOrder = Logo_Manager2.Logo_manager2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = null;
-            // 
-            // btn_del_user
-            // 
-            this.btn_del_user.BackColor = System.Drawing.Color.Red;
-            this.btn_del_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_del_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_del_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_del_user.Location = new System.Drawing.Point(177, 181);
-            this.btn_del_user.Name = "btn_del_user";
-            this.btn_del_user.Size = new System.Drawing.Size(99, 23);
-            this.btn_del_user.TabIndex = 35;
-            this.btn_del_user.Text = "Delete user";
-            this.btn_del_user.UseVisualStyleBackColor = false;
-            this.btn_del_user.Click += new System.EventHandler(this.btn_del_user_Click);
-            // 
-            // btn_modify_user
-            // 
-            this.btn_modify_user.BackColor = System.Drawing.Color.Turquoise;
-            this.btn_modify_user.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_modify_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_modify_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modify_user.Location = new System.Drawing.Point(72, 181);
-            this.btn_modify_user.Name = "btn_modify_user";
-            this.btn_modify_user.Size = new System.Drawing.Size(99, 23);
-            this.btn_modify_user.TabIndex = 36;
-            this.btn_modify_user.Text = "Modify user";
-            this.btn_modify_user.UseVisualStyleBackColor = false;
-            this.btn_modify_user.Click += new System.EventHandler(this.btn_modify_user_Click);
             // 
             // User_profile
             // 

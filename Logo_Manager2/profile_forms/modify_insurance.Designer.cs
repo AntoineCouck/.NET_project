@@ -124,6 +124,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.title_profile_test);
             this.Name = "modify_insurance";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "modify_insurance";
             this.Load += new System.EventHandler(this.modify_insurance_Load);
             this.groupBox1.ResumeLayout(false);

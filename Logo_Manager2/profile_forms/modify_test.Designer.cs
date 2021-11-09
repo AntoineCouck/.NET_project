@@ -51,23 +51,25 @@
             this.groupBox1.Controls.Add(this.btn_modify_test_confirm);
             this.groupBox1.Controls.Add(this.profile_test_name);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(221, 147);
+            this.groupBox1.Location = new System.Drawing.Point(202, 131);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 225);
+            this.groupBox1.Size = new System.Drawing.Size(377, 243);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Test information";
             // 
             // profile_test_maxage
             // 
-            this.profile_test_maxage.Location = new System.Drawing.Point(177, 100);
+            this.profile_test_maxage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_test_maxage.Location = new System.Drawing.Point(232, 100);
             this.profile_test_maxage.Name = "profile_test_maxage";
-            this.profile_test_maxage.Size = new System.Drawing.Size(120, 23);
+            this.profile_test_maxage.Size = new System.Drawing.Size(120, 29);
             this.profile_test_maxage.TabIndex = 33;
             // 
             // profile_test_followup
             // 
             this.profile_test_followup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.profile_test_followup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profile_test_followup.FormattingEnabled = true;
             this.profile_test_followup.Items.AddRange(new object[] {
             "a: Handicap poursuite profession ",
@@ -89,14 +91,15 @@
             "g: Locked-in syndrome "});
             this.profile_test_followup.Location = new System.Drawing.Point(26, 100);
             this.profile_test_followup.Name = "profile_test_followup";
-            this.profile_test_followup.Size = new System.Drawing.Size(145, 24);
+            this.profile_test_followup.Size = new System.Drawing.Size(184, 29);
             this.profile_test_followup.TabIndex = 37;
             // 
             // profile_test_minage
             // 
-            this.profile_test_minage.Location = new System.Drawing.Point(178, 65);
+            this.profile_test_minage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_test_minage.Location = new System.Drawing.Point(232, 65);
             this.profile_test_minage.Name = "profile_test_minage";
-            this.profile_test_minage.Size = new System.Drawing.Size(120, 23);
+            this.profile_test_minage.Size = new System.Drawing.Size(120, 29);
             this.profile_test_minage.TabIndex = 32;
             // 
             // btn_del_test
@@ -106,7 +109,7 @@
             this.btn_del_test.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_del_test.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_del_test.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_del_test.Location = new System.Drawing.Point(177, 181);
+            this.btn_del_test.Location = new System.Drawing.Point(194, 164);
             this.btn_del_test.Name = "btn_del_test";
             this.btn_del_test.Size = new System.Drawing.Size(99, 23);
             this.btn_del_test.TabIndex = 35;
@@ -121,7 +124,7 @@
             this.btn_modify_test_confirm.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_modify_test_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_modify_test_confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modify_test_confirm.Location = new System.Drawing.Point(72, 181);
+            this.btn_modify_test_confirm.Location = new System.Drawing.Point(89, 164);
             this.btn_modify_test_confirm.Name = "btn_modify_test_confirm";
             this.btn_modify_test_confirm.Size = new System.Drawing.Size(99, 23);
             this.btn_modify_test_confirm.TabIndex = 36;
@@ -132,17 +135,17 @@
             // profile_test_name
             // 
             this.profile_test_name.BackColor = System.Drawing.SystemColors.Menu;
-            this.profile_test_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.profile_test_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profile_test_name.Location = new System.Drawing.Point(26, 65);
             this.profile_test_name.Name = "profile_test_name";
-            this.profile_test_name.Size = new System.Drawing.Size(146, 26);
+            this.profile_test_name.Size = new System.Drawing.Size(185, 29);
             this.profile_test_name.TabIndex = 0;
             // 
             // title_profile_test
             // 
             this.title_profile_test.AutoSize = true;
             this.title_profile_test.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.title_profile_test.Location = new System.Drawing.Point(300, 79);
+            this.title_profile_test.Location = new System.Drawing.Point(197, 86);
             this.title_profile_test.Name = "title_profile_test";
             this.title_profile_test.Size = new System.Drawing.Size(59, 26);
             this.title_profile_test.TabIndex = 30;
@@ -156,6 +159,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.title_profile_test);
             this.Name = "modify_test";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "modify_test";
             this.Load += new System.EventHandler(this.modify_test_Load);
             this.groupBox1.ResumeLayout(false);

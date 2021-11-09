@@ -49,10 +49,10 @@
             this.groupBox1.Controls.Add(this.profile_insurance_telnr);
             this.groupBox1.Controls.Add(this.profile_insurance_adres);
             this.groupBox1.Controls.Add(this.profile_insurance_name);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(221, 147);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(202, 93);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 225);
+            this.groupBox1.Size = new System.Drawing.Size(395, 246);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insurance information";
@@ -64,7 +64,7 @@
             this.btn_del_inusrance.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_del_inusrance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_del_inusrance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_del_inusrance.Location = new System.Drawing.Point(177, 181);
+            this.btn_del_inusrance.Location = new System.Drawing.Point(200, 184);
             this.btn_del_inusrance.Name = "btn_del_inusrance";
             this.btn_del_inusrance.Size = new System.Drawing.Size(99, 23);
             this.btn_del_inusrance.TabIndex = 35;
@@ -78,7 +78,7 @@
             this.btn_modify_insurance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_modify_insurance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_modify_insurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modify_insurance.Location = new System.Drawing.Point(72, 181);
+            this.btn_modify_insurance.Location = new System.Drawing.Point(95, 184);
             this.btn_modify_insurance.Name = "btn_modify_insurance";
             this.btn_modify_insurance.Size = new System.Drawing.Size(99, 23);
             this.btn_modify_insurance.TabIndex = 36;
@@ -90,37 +90,37 @@
             // 
             this.profile_insurance_telnr.BackColor = System.Drawing.SystemColors.Menu;
             this.profile_insurance_telnr.Enabled = false;
-            this.profile_insurance_telnr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.profile_insurance_telnr.Location = new System.Drawing.Point(111, 109);
+            this.profile_insurance_telnr.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_insurance_telnr.Location = new System.Drawing.Point(111, 115);
             this.profile_insurance_telnr.Name = "profile_insurance_telnr";
-            this.profile_insurance_telnr.Size = new System.Drawing.Size(146, 26);
+            this.profile_insurance_telnr.Size = new System.Drawing.Size(165, 29);
             this.profile_insurance_telnr.TabIndex = 2;
             // 
             // profile_insurance_adres
             // 
             this.profile_insurance_adres.BackColor = System.Drawing.SystemColors.Menu;
             this.profile_insurance_adres.Enabled = false;
-            this.profile_insurance_adres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.profile_insurance_adres.Location = new System.Drawing.Point(187, 65);
+            this.profile_insurance_adres.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_insurance_adres.Location = new System.Drawing.Point(208, 65);
             this.profile_insurance_adres.Name = "profile_insurance_adres";
-            this.profile_insurance_adres.Size = new System.Drawing.Size(146, 26);
+            this.profile_insurance_adres.Size = new System.Drawing.Size(165, 29);
             this.profile_insurance_adres.TabIndex = 1;
             // 
             // profile_insurance_name
             // 
             this.profile_insurance_name.BackColor = System.Drawing.SystemColors.Menu;
             this.profile_insurance_name.Enabled = false;
-            this.profile_insurance_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.profile_insurance_name.Location = new System.Drawing.Point(26, 65);
+            this.profile_insurance_name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profile_insurance_name.Location = new System.Drawing.Point(6, 65);
             this.profile_insurance_name.Name = "profile_insurance_name";
-            this.profile_insurance_name.Size = new System.Drawing.Size(146, 26);
+            this.profile_insurance_name.Size = new System.Drawing.Size(184, 29);
             this.profile_insurance_name.TabIndex = 0;
             // 
             // title_profile_Insurance
             // 
             this.title_profile_Insurance.AutoSize = true;
             this.title_profile_Insurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.title_profile_Insurance.Location = new System.Drawing.Point(300, 79);
+            this.title_profile_Insurance.Location = new System.Drawing.Point(197, 46);
             this.title_profile_Insurance.Name = "title_profile_Insurance";
             this.title_profile_Insurance.Size = new System.Drawing.Size(113, 26);
             this.title_profile_Insurance.TabIndex = 30;
@@ -131,20 +131,21 @@
             this.groupBox2.BackColor = System.Drawing.Color.Salmon;
             this.groupBox2.Controls.Add(this.listBox1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(221, 411);
+            this.groupBox2.Location = new System.Drawing.Point(202, 354);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(359, 294);
+            this.groupBox2.Size = new System.Drawing.Size(395, 339);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Members";
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(72, 35);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(95, 25);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(204, 244);
+            this.listBox1.Size = new System.Drawing.Size(204, 292);
             this.listBox1.TabIndex = 0;
             // 
             // Insurance_profile
@@ -156,6 +157,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.title_profile_Insurance);
             this.Name = "Insurance_profile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insurance_profile";
             this.Load += new System.EventHandler(this.Insurance_profile_Load);
             this.groupBox1.ResumeLayout(false);

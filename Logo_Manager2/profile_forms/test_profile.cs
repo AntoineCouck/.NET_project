@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Logo_Manager2.profile_forms
 {
     public partial class test_profile : Form
-   {
+    {
 
-        Logo_manager2Entities1 db = new Logo_manager2Entities1 ();
+        Logo_manager2Entities1 db = new Logo_manager2Entities1();
 
         public test_profile()
         {
@@ -25,7 +20,7 @@ namespace Logo_Manager2.profile_forms
             listBox1.Items.Clear();
             var tests = db.Tests.Where(x => x.Id == User_Dashboard.currentTestId);
 
-        
+
 
             var ListTests = db.PatientsTests.Join(db.Patients, x => x.PatientId, y => y.Id, (x, y) => new
             {
@@ -39,20 +34,20 @@ namespace Logo_Manager2.profile_forms
                 testName = y.Name
             }).Where(x => x.testId == User_Dashboard.currentTestId);
 
-            foreach (var element in  tests)
+            foreach (var element in tests)
             {
 
                 title_profile_test.Text = "Test:" + " " + element.Name;
                 profile_test_name.Text = element.Name;
-                profile_test_minage.Text =  element.MinAge.ToString();
+                profile_test_minage.Text = element.MinAge.ToString();
                 profile_test_maxage.Text = element.MaxAge.ToString();
                 profile_test_followup.Text = element.TypefollowUp;
 
             }
 
-            foreach(var element in ListTests)
+            foreach (var element in ListTests)
             {
-                listBox1.Items.Add(element.patientTest2.pfirstName + " " + element.patientTest2.plastName); 
+                listBox1.Items.Add(element.patientTest2.pfirstName + " " + element.patientTest2.plastName);
             }
 
         }
@@ -61,7 +56,7 @@ namespace Logo_Manager2.profile_forms
         {
             User_Dashboard.modify_Test.ShowDialog();
 
-            if(User_Dashboard.modify_Test.DialogResult == DialogResult.OK)
+            if (User_Dashboard.modify_Test.DialogResult == DialogResult.OK)
             {
                 title_profile_test.Text = "Test:" + " " + User_Dashboard.modify_Test.Name;
                 profile_test_name.Text = User_Dashboard.modify_Test.Name;
@@ -74,7 +69,7 @@ namespace Logo_Manager2.profile_forms
 
         private void btn_del_test_Click(object sender, EventArgs e)
         {
-            User_Dashboard.delete_Test.ShowDialog();    
+            User_Dashboard.delete_Test.ShowDialog();
         }
     }
 }

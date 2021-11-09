@@ -31,6 +31,8 @@
             this.btn_notdelete = new System.Windows.Forms.Button();
             this.btn_confirm_delete = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_notdelete
@@ -39,7 +41,7 @@
             this.btn_notdelete.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_notdelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_notdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_notdelete.Location = new System.Drawing.Point(410, 242);
+            this.btn_notdelete.Location = new System.Drawing.Point(87, 41);
             this.btn_notdelete.Name = "btn_notdelete";
             this.btn_notdelete.Size = new System.Drawing.Size(75, 23);
             this.btn_notdelete.TabIndex = 5;
@@ -52,7 +54,7 @@
             this.btn_confirm_delete.BackColor = System.Drawing.Color.Green;
             this.btn_confirm_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_confirm_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_confirm_delete.Location = new System.Drawing.Point(316, 242);
+            this.btn_confirm_delete.Location = new System.Drawing.Point(6, 41);
             this.btn_confirm_delete.Name = "btn_confirm_delete";
             this.btn_confirm_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_confirm_delete.TabIndex = 4;
@@ -64,23 +66,38 @@
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(312, 167);
+            this.name.Location = new System.Drawing.Point(20, 74);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(64, 20);
             this.name.TabIndex = 3;
             this.name.Text = "Delete  ";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.SeaShell;
+            this.groupBox1.Controls.Add(this.btn_confirm_delete);
+            this.groupBox1.Controls.Add(this.btn_notdelete);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(24, 112);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(183, 123);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Operations";
+            // 
             // delete_test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_notdelete);
-            this.Controls.Add(this.btn_confirm_delete);
+            this.ClientSize = new System.Drawing.Size(240, 338);
+            this.ControlBox = false;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.name);
             this.Name = "delete_test";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "delete_test";
             this.Load += new System.EventHandler(this.delete_test_Load);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,5 +108,6 @@
         private System.Windows.Forms.Button btn_notdelete;
         private System.Windows.Forms.Button btn_confirm_delete;
         private System.Windows.Forms.Label name;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
