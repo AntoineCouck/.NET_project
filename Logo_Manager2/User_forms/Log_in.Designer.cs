@@ -81,6 +81,7 @@
             this.login_submit.TabIndex = 4;
             this.login_submit.Text = "Submit";
             this.login_submit.UseVisualStyleBackColor = false;
+            this.login_submit.Click += new System.EventHandler(this.login_submit_Click_1);
             // 
             // link_sign_in
             // 
@@ -93,6 +94,7 @@
             this.link_sign_in.TabIndex = 6;
             this.link_sign_in.TabStop = true;
             this.link_sign_in.Text = "Sign-in";
+            this.link_sign_in.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_sign_in_LinkClicked_1);
             // 
             // label3
             // 

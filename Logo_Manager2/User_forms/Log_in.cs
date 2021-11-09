@@ -22,7 +22,7 @@ namespace Logo_Manager2
         }
 
 
-        private void login_submit_Click(object sender, EventArgs e)
+        private void login_submit_Click_1(object sender, EventArgs e)
         {
 
             string email = email_login_input.Text;
@@ -64,14 +64,19 @@ namespace Logo_Manager2
 
         }
 
-        private void link_sign_in_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        //private void link_sign_in_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        //{
+        //    // in log-in → sign in 
+
+        //    User_Dashboard.sign_in.ShowDialog();
+
+        //}
+
+        private void link_sign_in_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // in log-in → sign in 
-
             User_Dashboard.sign_in.ShowDialog();
-
         }
 
-
+      
     }
 }
