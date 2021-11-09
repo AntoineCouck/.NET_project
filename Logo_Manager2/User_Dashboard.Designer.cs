@@ -65,14 +65,6 @@
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Logo_Manager2.Logo_manager2DataSetTableAdapters.UsersTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
@@ -84,6 +76,14 @@
             this.insurancesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.insurancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_delete_insurance = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Menu_dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_manager2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
@@ -175,71 +175,77 @@
             // 
             // AccountName
             // 
-            this.AccountName.BackColor = System.Drawing.Color.LightBlue;
+            this.AccountName.BackColor = System.Drawing.Color.Azure;
             this.AccountName.Enabled = false;
             this.AccountName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.AccountName.Location = new System.Drawing.Point(834, -2);
+            this.AccountName.Location = new System.Drawing.Point(202, 0);
             this.AccountName.Name = "AccountName";
-            this.AccountName.Size = new System.Drawing.Size(100, 26);
+            this.AccountName.Size = new System.Drawing.Size(159, 26);
             this.AccountName.TabIndex = 3;
             this.AccountName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_dashboard_add_test
             // 
+            this.btn_dashboard_add_test.BackColor = System.Drawing.Color.MintCream;
             this.btn_dashboard_add_test.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_dashboard_add_test.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_dashboard_add_test.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_dashboard_add_test.Location = new System.Drawing.Point(916, 540);
+            this.btn_dashboard_add_test.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_dashboard_add_test.Location = new System.Drawing.Point(1010, 522);
             this.btn_dashboard_add_test.Name = "btn_dashboard_add_test";
             this.btn_dashboard_add_test.Size = new System.Drawing.Size(100, 39);
             this.btn_dashboard_add_test.TabIndex = 7;
             this.btn_dashboard_add_test.Text = "Add test";
-            this.btn_dashboard_add_test.UseVisualStyleBackColor = true;
+            this.btn_dashboard_add_test.UseVisualStyleBackColor = false;
             this.btn_dashboard_add_test.Click += new System.EventHandler(this.btn_dashboard_add_test_Click);
             // 
             // btn_dashboard_add_patient
             // 
+            this.btn_dashboard_add_patient.BackColor = System.Drawing.Color.MintCream;
             this.btn_dashboard_add_patient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_dashboard_add_patient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_dashboard_add_patient.Location = new System.Drawing.Point(363, 530);
+            this.btn_dashboard_add_patient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_dashboard_add_patient.Location = new System.Drawing.Point(387, 522);
             this.btn_dashboard_add_patient.Name = "btn_dashboard_add_patient";
             this.btn_dashboard_add_patient.Size = new System.Drawing.Size(100, 39);
             this.btn_dashboard_add_patient.TabIndex = 8;
             this.btn_dashboard_add_patient.Text = "Add patient";
-            this.btn_dashboard_add_patient.UseVisualStyleBackColor = true;
+            this.btn_dashboard_add_patient.UseVisualStyleBackColor = false;
             this.btn_dashboard_add_patient.Click += new System.EventHandler(this.btn_dashboard_add_patient_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(359, 38);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(327, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(72, 21);
             this.label1.TabIndex = 9;
             this.label1.Text = "Patients";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(1002, 38);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1101, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.Size = new System.Drawing.Size(47, 21);
             this.label2.TabIndex = 10;
             this.label2.Text = "Tests";
             // 
             // btn_dashboard_addInsurance
             // 
+            this.btn_dashboard_addInsurance.BackColor = System.Drawing.Color.MintCream;
             this.btn_dashboard_addInsurance.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_dashboard_addInsurance.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_dashboard_addInsurance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_dashboard_addInsurance.Location = new System.Drawing.Point(1356, 540);
+            this.btn_dashboard_addInsurance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_dashboard_addInsurance.Location = new System.Drawing.Point(1389, 522);
             this.btn_dashboard_addInsurance.Name = "btn_dashboard_addInsurance";
             this.btn_dashboard_addInsurance.Size = new System.Drawing.Size(100, 39);
             this.btn_dashboard_addInsurance.TabIndex = 14;
             this.btn_dashboard_addInsurance.Text = "Add Insurance";
-            this.btn_dashboard_addInsurance.UseVisualStyleBackColor = true;
+            this.btn_dashboard_addInsurance.UseVisualStyleBackColor = false;
             this.btn_dashboard_addInsurance.Click += new System.EventHandler(this.btn_dashboard_addInsurance_Click);
             // 
             // logo_manager2DataSet
@@ -290,7 +296,7 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.testsDataGridView.DataSource = this.testsBindingSource;
-            this.testsDataGridView.Location = new System.Drawing.Point(834, 72);
+            this.testsDataGridView.Location = new System.Drawing.Point(932, 71);
             this.testsDataGridView.Name = "testsDataGridView";
             this.testsDataGridView.Size = new System.Drawing.Size(408, 445);
             this.testsDataGridView.TabIndex = 16;
@@ -348,7 +354,7 @@
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
             this.insurancesDataGridView.DataSource = this.insurancesBindingSource;
-            this.insurancesDataGridView.Location = new System.Drawing.Point(1317, 72);
+            this.insurancesDataGridView.Location = new System.Drawing.Point(1338, 71);
             this.insurancesDataGridView.Name = "insurancesDataGridView";
             this.insurancesDataGridView.Size = new System.Drawing.Size(345, 445);
             this.insurancesDataGridView.TabIndex = 16;
@@ -386,65 +392,11 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.patientsDataGridView.DataSource = this.patientsBindingSource;
-            this.patientsDataGridView.Location = new System.Drawing.Point(70, 72);
+            this.patientsDataGridView.Location = new System.Drawing.Point(-15, 71);
             this.patientsDataGridView.Name = "patientsDataGridView";
-            this.patientsDataGridView.Size = new System.Drawing.Size(719, 438);
+            this.patientsDataGridView.Size = new System.Drawing.Size(941, 445);
             this.patientsDataGridView.TabIndex = 17;
             this.patientsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientsDataGridView_CellClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 25;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Firstname";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Firstname";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Lastname";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Lastname";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Birthday";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Birthday";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Followup";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Followup";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "LeftSessions";
-            this.dataGridViewTextBoxColumn6.HeaderText = "LeftSessions";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "UserName";
-            this.dataGridViewTextBoxColumn7.HeaderText = "UserName";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "InsuranceName";
-            this.dataGridViewTextBoxColumn8.HeaderText = "InsuranceName";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // usersBindingSource
             // 
@@ -458,10 +410,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1456, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.Size = new System.Drawing.Size(84, 21);
             this.label3.TabIndex = 19;
             this.label3.Text = "Insurance";
             // 
@@ -472,7 +424,7 @@
             this.comboBox1.DisplayMember = "Name";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1049, 543);
+            this.comboBox1.Location = new System.Drawing.Point(1143, 525);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 20;
@@ -493,7 +445,7 @@
             this.btn_delete_test.BackColor = System.Drawing.Color.Red;
             this.btn_delete_test.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_delete_test.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_test.Location = new System.Drawing.Point(1049, 567);
+            this.btn_delete_test.Location = new System.Drawing.Point(1143, 549);
             this.btn_delete_test.Name = "btn_delete_test";
             this.btn_delete_test.Size = new System.Drawing.Size(121, 39);
             this.btn_delete_test.TabIndex = 21;
@@ -508,7 +460,7 @@
             this.comboBox2.DisplayMember = "Name";
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1496, 540);
+            this.comboBox2.Location = new System.Drawing.Point(1529, 522);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 23;
@@ -529,7 +481,7 @@
             this.btn_delete_insurance.BackColor = System.Drawing.Color.Red;
             this.btn_delete_insurance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_delete_insurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_insurance.Location = new System.Drawing.Point(1496, 567);
+            this.btn_delete_insurance.Location = new System.Drawing.Point(1529, 549);
             this.btn_delete_insurance.Name = "btn_delete_insurance";
             this.btn_delete_insurance.Size = new System.Drawing.Size(121, 39);
             this.btn_delete_insurance.TabIndex = 24;
@@ -537,12 +489,71 @@
             this.btn_delete_insurance.UseVisualStyleBackColor = false;
             this.btn_delete_insurance.Click += new System.EventHandler(this.btn_delete_insurance_Click);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 25;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Firstname";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Firstname";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Lastname";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Lastname";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Birthday";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Birthday";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Followup";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Followup";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "LeftSessions";
+            this.dataGridViewTextBoxColumn6.HeaderText = "LeftSessions";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "UserName";
+            this.dataGridViewTextBoxColumn7.HeaderText = "UserName";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "InsuranceName";
+            this.dataGridViewTextBoxColumn8.HeaderText = "InsuranceName";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
             // User_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1732, 856);
+            this.BackColor = System.Drawing.Color.MintCream;
+            this.ClientSize = new System.Drawing.Size(1732, 720);
             this.Controls.Add(this.btn_delete_insurance);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.btn_delete_test);
@@ -617,14 +628,6 @@
         public System.Windows.Forms.DataGridView patientsDataGridView;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private Logo_manager2DataSetTableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.ToolStripMenuItem pageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createNewPatientToolStripMenuItem;
@@ -639,6 +642,14 @@
         private System.Windows.Forms.Button btn_delete_insurance;
         private System.Windows.Forms.BindingSource insurancesBindingSource2;
         private System.Windows.Forms.BindingSource insurancesBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }
 
