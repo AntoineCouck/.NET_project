@@ -64,7 +64,7 @@
             this.password_login_input.Location = new System.Drawing.Point(36, 139);
             this.password_login_input.Margin = new System.Windows.Forms.Padding(2);
             this.password_login_input.Name = "password_login_input";
-            this.password_login_input.PasswordChar = '*';
+            this.password_login_input.PasswordChar = '•';
             this.password_login_input.Size = new System.Drawing.Size(205, 29);
             this.password_login_input.TabIndex = 3;
             // 

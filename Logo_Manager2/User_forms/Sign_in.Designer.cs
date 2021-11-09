@@ -63,7 +63,7 @@
             this.input_password_register.Location = new System.Drawing.Point(74, 181);
             this.input_password_register.Margin = new System.Windows.Forms.Padding(2);
             this.input_password_register.Name = "input_password_register";
-            this.input_password_register.PasswordChar = '*';
+            this.input_password_register.PasswordChar = '•';
             this.input_password_register.Size = new System.Drawing.Size(170, 29);
             this.input_password_register.TabIndex = 8;
             // 

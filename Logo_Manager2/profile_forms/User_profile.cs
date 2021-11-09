@@ -10,14 +10,24 @@ namespace Logo_Manager2.profile_forms
     {
 
         Logo_manager2Entities1 db = new Logo_manager2Entities1();
-
+        public delegate int leftSessionsdelegate(int total  , int remove);
+        public event leftSessionsdelegate NomoreSessions;
 
 
 
         public User_profile()
         {
             InitializeComponent();
+            NomoreSessions += new leftSessionsdelegate(this.CheckNoMoreSessions);
         }
+
+        public int CheckNoMoreSessions(int total, int remove)
+        {
+        
+            return total - remove;
+
+        }
+
 
         private void User_profile_Load(object sender, EventArgs e)
         {
@@ -84,13 +94,19 @@ namespace Logo_Manager2.profile_forms
 
             foreach (var patient in Patient)
             {
-
                 patient.LeftSessions = patient.LeftSessions + Add - remove;
+
+                if (patient.LeftSessions + Add - remove < 0)
+                {
+                    patient.LeftSessions = 0;
+                } 
+
+              
                 patient_total.Text = patient.LeftSessions.ToString();
             }
 
             db.SaveChanges();
-
+             RemoveChange();
             input_patient_add.Value = 0;
             input_patient_remove.Value = 0;
 
@@ -170,6 +186,38 @@ namespace Logo_Manager2.profile_forms
 
         private void label7_Click(object sender, EventArgs e)
         {
+
+        }
+
+        //private void input_patient_remove_ValueChanged(object sender, EventArgs e)
+        //{
+        //    RemoveChange();
+
+        //}
+
+        public void RemoveChange()
+        {
+
+            User_profile user_Profile = new User_profile();
+            var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
+            int result = 0;
+
+            foreach (var element in Patient)
+            {
+
+                result = user_Profile.NomoreSessions(element.LeftSessions, (int)input_patient_remove.Value);
+            }
+
+            if (result <= 0)
+            {
+                input_patient_remove.Enabled = false;
+                MessageBox.Show("The patient has reached the max sessions , there are no sessions left");
+            }
+            else
+            {
+                input_patient_remove.Enabled = true;
+            }
+
 
         }
     }
