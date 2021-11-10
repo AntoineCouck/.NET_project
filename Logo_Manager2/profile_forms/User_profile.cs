@@ -54,26 +54,44 @@ namespace Logo_Manager2.profile_forms
 
 
 
-            foreach (var patient in Patient)
+            if (User_Dashboard.modify_profile.FirstName != null)
             {
-                title_profile_patient.Text = "profile of:" + "" + patient.Lastname + " " + patient.Firstname;
-                profile_info_firstname.Text = patient.Firstname;
-                profile_info_lastname.Text = patient.Lastname;
-                profile_info_birthday.Text = patient.Birthday.ToString();
-                profile_info_followBy.Text = patient.UserName;
-                input_paztient_insurance.Text = patient.InsuranceName;
-                textBox1.Text = patient.Followup;
 
-                if (patient.LeftSessions == 0)
+                title_profile_patient.Text = "profile of:" + "" + User_Dashboard.modify_profile.LastName + " " + User_Dashboard.modify_profile.FirstName;
+                profile_info_firstname.Text = User_Dashboard.modify_profile.FirstName;
+                profile_info_lastname.Text = User_Dashboard.modify_profile.LastName;
+                profile_info_birthday.Text = User_Dashboard.modify_profile.birthday;
+                profile_info_followBy.Text = User_Dashboard.modify_profile.UserName;
+                input_paztient_insurance.Text = User_Dashboard.modify_profile.insurance;
+                textBox1.Text = User_Dashboard.modify_profile.followup;
+            } else
+            {
+
+
+                foreach (var patient in Patient)
                 {
-                    patient_total.Text = "0";
-                }
-                else
-                {
-                    patient_total.Text = patient.LeftSessions.ToString();
+                    title_profile_patient.Text = "profile of:" + "" + patient.Lastname + " " + patient.Firstname;
+                    profile_info_firstname.Text = patient.Firstname;
+                    profile_info_lastname.Text = patient.Lastname;
+                    profile_info_birthday.Text = patient.Birthday.ToString();
+                    profile_info_followBy.Text = patient.UserName;
+                    input_paztient_insurance.Text = patient.InsuranceName;
+                    textBox1.Text = patient.Followup;
+
+                    if (patient.LeftSessions == 0)
+                    {
+                        patient_total.Text = "0";
+                    }
+                    else
+                    {
+                        patient_total.Text = patient.LeftSessions.ToString();
+                    }
+
                 }
 
             }
+
+
 
             foreach (var element in ListTests)
             {

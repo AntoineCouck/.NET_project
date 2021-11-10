@@ -26,25 +26,30 @@ namespace Logo_Manager2.profile_forms
         private void modify_patient_Load(object sender, EventArgs e)
         {
 
+            var insurances = db.Insurances.Select(x => x.Name).ToArray();
+            var users = db.Users.Select(x => x.Name).ToArray();
+            input_edit_insurance.DataSource = insurances;
+            profile_edit_followby.DataSource = users;
 
-            // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
-            this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
-            // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
 
-            foreach (var patient in Patient)
-            {
+                foreach (var patient in Patient)
+                {
+                    title_edit_patient.Text = "profile of:" + "" + patient.Lastname + " " + patient.Firstname;
+                    input_edit_name.Text = patient.Firstname;
+                    input_edit_lastname.Text = patient.Lastname;
+                    profile_edit_birthday.Text = patient.Birthday.ToString();
+                     profile_edit_followby.Text = patient.UserName;
+                     input_edit_insurance.Text = patient.InsuranceName;
+                    profile_edit_following_for.Text = patient.Followup;
 
-                title_edit_patient.Text = "profile of:" + "" + patient.Lastname + " " + patient.Firstname;
-                input_edit_name.Text = patient.Firstname;
-                input_edit_lastname.Text = patient.Lastname;
-                profile_edit_birthday.Text = patient.Birthday.ToString();
-                profile_edit_followby.Text = patient.UserName;
-                input_edit_insurance.Text = patient.InsuranceName;
-                profile_edit_following_for.Text = patient.Followup;
+                  MessageBox.Show(profile_edit_followby.Text); 
 
-            }
+                }
+                
+                
+
+         
         }
 
         private void btn_modify_confirm_Click(object sender, EventArgs e)

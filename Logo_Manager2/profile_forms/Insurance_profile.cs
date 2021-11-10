@@ -27,14 +27,27 @@ namespace Logo_Manager2.profile_forms
 
             }).Where(x => x.i.Name == User_Dashboard.currentInsuranceId);
 
-            foreach (var insurance in insurances)
+            if(User_Dashboard.modify_Insurance.Adres != null)
             {
-                title_profile_Insurance.Text = "Insurance:" + " " + insurance.Name;
-                profile_insurance_name.Text = insurance.Name;
-                profile_insurance_adres.Text = insurance.Adres;
-                profile_insurance_telnr.Text = insurance.TelNr;
+                profile_insurance_adres.Text = User_Dashboard.modify_Insurance.Adres;
+                profile_insurance_telnr.Text = User_Dashboard.modify_Insurance.Telnr;
 
+            } else
+            {
+
+                foreach (var insurance in insurances)
+                {
+                    title_profile_Insurance.Text = "Insurance:" + " " + insurance.Name;
+                    profile_insurance_name.Text = insurance.Name;
+                    profile_insurance_adres.Text = insurance.Adres;
+                    profile_insurance_telnr.Text = insurance.TelNr;
+
+                }
+            
             }
+            
+
+         
 
             foreach (var element in patientsInsurances)
             {

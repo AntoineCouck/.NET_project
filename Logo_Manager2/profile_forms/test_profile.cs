@@ -18,6 +18,8 @@ namespace Logo_Manager2.profile_forms
         private void test_profile_Load(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+
+
             var tests = db.Tests.Where(x => x.Id == User_Dashboard.currentTestId);
 
 
@@ -34,16 +36,32 @@ namespace Logo_Manager2.profile_forms
                 testName = y.Name
             }).Where(x => x.testId == User_Dashboard.currentTestId);
 
-            foreach (var element in tests)
+
+            if(User_Dashboard.modify_Test.followUp != null)
+            {
+                title_profile_test.Text = "Test:" + " " + User_Dashboard.modify_Test.Name;
+                profile_test_name.Text = User_Dashboard.modify_Test.Name;
+                profile_test_minage.Text = User_Dashboard.modify_Test.minAge.ToString();
+                profile_test_maxage.Text = User_Dashboard.modify_Test.maxage.ToString();
+                profile_test_followup.Text = User_Dashboard.modify_Test.followUp;
+
+            } else
             {
 
-                title_profile_test.Text = "Test:" + " " + element.Name;
-                profile_test_name.Text = element.Name;
-                profile_test_minage.Text = element.MinAge.ToString();
-                profile_test_maxage.Text = element.MaxAge.ToString();
-                profile_test_followup.Text = element.TypefollowUp;
+                foreach (var element in tests)
+                {
+
+                    title_profile_test.Text = "Test:" + " " + element.Name;
+                    profile_test_name.Text = element.Name;
+                    profile_test_minage.Text = element.MinAge.ToString();
+                    profile_test_maxage.Text = element.MaxAge.ToString();
+                    profile_test_followup.Text = element.TypefollowUp;
+
+                }
 
             }
+
+
 
             foreach (var element in ListTests)
             {
