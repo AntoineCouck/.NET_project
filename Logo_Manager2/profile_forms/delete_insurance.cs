@@ -29,17 +29,16 @@ namespace Logo_Manager2.profile_forms
         private void btn_confirm_delete_insurance_Click(object sender, EventArgs e)
         {
             var insurances = db.Insurances.Where(x => x.Name == User_Dashboard.currentInsuranceId);
-
-            //var patientTest = db.PatientsTests.Where(x => x.TestId == User_Dashboard.currentTestId);
+            var patients = db.Patients.Where(x => x.InsuranceName ==  User_Dashboard.currentInsuranceId);
 
             foreach (var insurance in insurances)
             {
                 db.Insurances.Remove(insurance);
             }
-            //foreach (var element2 in patientTest)
-            //{
-            //    db.PatientsTests.Remove(element2);
-            //}
+            foreach(var element2 in patients)
+            {
+                element2.InsuranceName = null;
+            }
 
             db.SaveChanges();
             this.Close();

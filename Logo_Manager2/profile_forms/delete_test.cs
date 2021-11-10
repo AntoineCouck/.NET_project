@@ -28,16 +28,16 @@ namespace Logo_Manager2.profile_forms
         {
             var tests = db.Tests.Where(x => x.Id == User_Dashboard.currentTestId);
 
-            //var patientTest = db.PatientsTests.Where(x => x.TestId == User_Dashboard.currentTestId);
+            var patientTest = db.PatientsTests.Where(x => x.TestId == User_Dashboard.currentTestId);
 
             foreach (var test in tests)
             {
                 db.Tests.Remove(test);
             }
-            //foreach (var element2 in patientTest)
-            //{
-            //    db.PatientsTests.Remove(element2);
-            //}
+            foreach (var element2 in patientTest)
+            {
+                db.PatientsTests.Remove(element2);
+            }
 
             db.SaveChanges();
             this.Close();

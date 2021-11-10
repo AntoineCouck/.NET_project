@@ -19,8 +19,7 @@ namespace Logo_Manager2.create_forms
         {
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
             this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
-            // TODO: This line of code loads data into the 'logo_manager2DataSet.Patients' table. You can move, or remove it, as needed.
-            this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
+            
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.

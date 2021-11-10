@@ -25,7 +25,7 @@ namespace Logo_Manager2
         public static Insurance_profile insurance_Profile = new Insurance_profile();
         public static modify_patient modify_profile = new modify_patient();
         public static create_insurance create_Insurance = new create_insurance();
-
+        public int id;
         public static bool is_connected = false;
         public static string username;
         public static int currentPatientId { get; set; }
@@ -42,6 +42,7 @@ namespace Logo_Manager2
 
         private void User_Dashboard_Load(object sender, EventArgs e)
         {
+          
 
 
 
@@ -58,7 +59,8 @@ namespace Logo_Manager2
                 // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
                 this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
                 // TODO: This line of code loads data into the 'logo_manager2DataSet.Patients' table. You can move, or remove it, as needed.
-                this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
+                // TODO: This line of code loads data into the 'logo_manager2DataSet1.Patients' table. You can move, or remove it, as needed.
+                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
                 // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
                 this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
             }
@@ -82,7 +84,7 @@ namespace Logo_Manager2
             create_patient.ShowDialog();
             if (create_patient.DialogResult == DialogResult.OK)
             {
-                this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
+                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
             }
         }
 
@@ -121,12 +123,12 @@ namespace Logo_Manager2
 
             if (profile.DialogResult == DialogResult.OK)
             {
-                this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
+                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
             }
 
             if (modify_profile.DialogResult == DialogResult.OK)
             {
-                this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
+                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
             }
 
         }
@@ -149,7 +151,7 @@ namespace Logo_Manager2
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
             this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Patients' table. You can move, or remove it, as needed.
-            this.patientsTableAdapter.Fill(this.logo_manager2DataSet.Patients);
+            this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
             // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
         }
@@ -178,13 +180,19 @@ namespace Logo_Manager2
                 string testName = comboBox1.Text;
 
                 var tests = db.Tests.Where(x => x.Name == testName);
-
+                var patientTest = db.PatientsTests.Where(x => x.TestId == id);
 
                 foreach (var element in tests)
                 {
 
                     db.Tests.Remove(element);
+                    id = element.Id;
 
+                }
+
+                foreach(var element2 in patientTest)
+                {
+                    db.PatientsTests.Remove(element2);
                 }
 
                 db.SaveChanges();
@@ -220,12 +228,27 @@ namespace Logo_Manager2
                 {
 
                     db.Insurances.Remove(element);
+                    //insuranceName = element.Name;
 
                 }
+                //var patient = db.Patients.Where(x => x.InsuranceName == insuranceName);
+
+                //foreach(var element2 in patient)
+                //{
+                //    element2.InsuranceName = null;
+                //}
 
                 db.SaveChanges();
                 MessageBox.Show("The insurance was succesfull deleted");
                 this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+                // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
+                this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+                // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
+                this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
+                // TODO: This line of code loads data into the 'logo_manager2DataSet.Patients' table. You can move, or remove it, as needed.
+                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
+                // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
+                this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
             }
             else
             {

@@ -26,11 +26,24 @@ namespace Logo_Manager2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=antoinecouck.database.windows.net;Initial Catalog=Logo_manager2;User " +
-            "ID=antoinecouck;Password=Dotnetexamen9")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=tcp:antoinecouck.database.windows.net,1433;Initial Catalog=Logo_manager2;P" +
+            "ersist Security Info=False;User ID=antoinecouck;Password=Dotnetexamen9;MultipleA" +
+            "ctiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeo" +
+            "ut=30;")]
         public string Logo_manager2ConnectionString {
             get {
                 return ((string)(this["Logo_manager2ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=antoinecouck.database.windows.net;Initial Catalog=Logo_manager2;User " +
+            "ID=antoinecouck;Password=Dotnetexamen9")]
+        public string Logo_manager2ConnectionString1 {
+            get {
+                return ((string)(this["Logo_manager2ConnectionString1"]));
             }
         }
     }

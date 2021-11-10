@@ -111,6 +111,7 @@ namespace Logo_Manager2.profile_forms
             int Add = int.Parse(input_patient_add.Value.ToString());
             int remove = int.Parse(input_patient_remove.Value.ToString());
 
+             RemoveChange();
 
 
             foreach (var patient in Patient)
@@ -130,7 +131,6 @@ namespace Logo_Manager2.profile_forms
             }
 
             db.SaveChanges();
-             RemoveChange();
             input_patient_add.Value = 0;
             input_patient_remove.Value = 0;
 
