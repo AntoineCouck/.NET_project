@@ -10,7 +10,7 @@ namespace Logo_Manager2.profile_forms
     {
 
         Logo_manager2Entities1 db = new Logo_manager2Entities1();
-        public delegate int leftSessionsdelegate(int total  , int remove);
+        public delegate int leftSessionsdelegate(int total  , int remove , int add);
         public event leftSessionsdelegate NomoreSessions;
 
 
@@ -21,10 +21,10 @@ namespace Logo_Manager2.profile_forms
             NomoreSessions += new leftSessionsdelegate(this.CheckNoMoreSessions);
         }
 
-        public int CheckNoMoreSessions(int total, int remove)
+        public int CheckNoMoreSessions(int total, int remove , int add)
         {
         
-            return total - remove;
+            return total + add - remove;
 
         }
 
@@ -94,12 +94,15 @@ namespace Logo_Manager2.profile_forms
 
             foreach (var patient in Patient)
             {
-                patient.LeftSessions = patient.LeftSessions + Add - remove;
 
-                if (patient.LeftSessions + Add - remove < 0)
+                if ((patient.LeftSessions + Add - remove )< 0)
                 {
                     patient.LeftSessions = 0;
-                } 
+                } else
+                {
+                  patient.LeftSessions = patient.LeftSessions + Add - remove;
+
+                }
 
               
                 patient_total.Text = patient.LeftSessions.ToString();
@@ -184,17 +187,8 @@ namespace Logo_Manager2.profile_forms
             }
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //private void input_patient_remove_ValueChanged(object sender, EventArgs e)
-        //{
-        //    RemoveChange();
-
-        //}
-
+    
+   
         public void RemoveChange()
         {
 
@@ -205,7 +199,7 @@ namespace Logo_Manager2.profile_forms
             foreach (var element in Patient)
             {
 
-                result = user_Profile.NomoreSessions(element.LeftSessions, (int)input_patient_remove.Value);
+                result = user_Profile.NomoreSessions(element.LeftSessions, (int)input_patient_remove.Value , (int)input_patient_add.Value);
             }
 
             if (result <= 0)

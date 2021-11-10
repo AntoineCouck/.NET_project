@@ -146,7 +146,6 @@
             this.label7.Size = new System.Drawing.Size(110, 17);
             this.label7.TabIndex = 7;
             this.label7.Text = "Speech therapist";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBox1
             // 
@@ -376,7 +375,7 @@
             this.btn_add_test_to_patient.Name = "btn_add_test_to_patient";
             this.btn_add_test_to_patient.Size = new System.Drawing.Size(118, 35);
             this.btn_add_test_to_patient.TabIndex = 33;
-            this.btn_add_test_to_patient.Text = "button1";
+            this.btn_add_test_to_patient.Text = "Add test";
             this.btn_add_test_to_patient.UseVisualStyleBackColor = false;
             this.btn_add_test_to_patient.Click += new System.EventHandler(this.btn_add_test_to_patient_Click);
             // 
