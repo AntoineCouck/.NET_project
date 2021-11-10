@@ -68,7 +68,7 @@ namespace Logo_Manager2.profile_forms
             {
                 foreach (var insurance in Insurances)
                 {
-
+                   
                     insurance.TelNr = input_telnr_mod.Text;
                     insurance.Adres = input_adres_mod.Text;
                 }

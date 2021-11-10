@@ -184,10 +184,10 @@
     <Compile Include="profile_forms\modify_test.Designer.cs">
       <DependentUpon>modify_test.cs</DependentUpon>
     </Compile>
-    <Compile Include="profile_forms\test.cs">
+    <Compile Include="tools\test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="profile_forms\test.Designer.cs">
+    <Compile Include="tools\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="profile_forms\test_profile.cs">
@@ -259,7 +259,7 @@
     <EmbeddedResource Include="profile_forms\modify_test.resx">
       <DependentUpon>modify_test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="profile_forms\test.resx">
+    <EmbeddedResource Include="tools\test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profile_forms\test_profile.resx">

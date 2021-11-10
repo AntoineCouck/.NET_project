@@ -93,7 +93,7 @@
             this.profile_test_followup.BackColor = System.Drawing.SystemColors.Menu;
             this.profile_test_followup.Enabled = false;
             this.profile_test_followup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profile_test_followup.Location = new System.Drawing.Point(218, 86);
+            this.profile_test_followup.Location = new System.Drawing.Point(22, 86);
             this.profile_test_followup.Name = "profile_test_followup";
             this.profile_test_followup.Size = new System.Drawing.Size(188, 29);
             this.profile_test_followup.TabIndex = 5;
@@ -103,7 +103,7 @@
             this.profile_test_minage.BackColor = System.Drawing.SystemColors.Menu;
             this.profile_test_minage.Enabled = false;
             this.profile_test_minage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profile_test_minage.Location = new System.Drawing.Point(22, 86);
+            this.profile_test_minage.Location = new System.Drawing.Point(220, 51);
             this.profile_test_minage.Name = "profile_test_minage";
             this.profile_test_minage.Size = new System.Drawing.Size(190, 29);
             this.profile_test_minage.TabIndex = 2;
@@ -113,7 +113,7 @@
             this.profile_test_maxage.BackColor = System.Drawing.SystemColors.Menu;
             this.profile_test_maxage.Enabled = false;
             this.profile_test_maxage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profile_test_maxage.Location = new System.Drawing.Point(218, 51);
+            this.profile_test_maxage.Location = new System.Drawing.Point(220, 86);
             this.profile_test_maxage.Name = "profile_test_maxage";
             this.profile_test_maxage.Size = new System.Drawing.Size(188, 29);
             this.profile_test_maxage.TabIndex = 1;

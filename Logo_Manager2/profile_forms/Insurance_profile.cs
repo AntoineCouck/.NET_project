@@ -49,7 +49,6 @@ namespace Logo_Manager2.profile_forms
 
             if (User_Dashboard.modify_Insurance.DialogResult == DialogResult.OK)
             {
-                profile_insurance_name.Text = User_Dashboard.modify_Insurance.Name;
                 profile_insurance_adres.Text = User_Dashboard.modify_Insurance.Adres;
                 profile_insurance_telnr.Text = User_Dashboard.modify_Insurance.Telnr;
             }
