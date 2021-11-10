@@ -231,12 +231,7 @@ namespace Logo_Manager2
                     //insuranceName = element.Name;
 
                 }
-                //var patient = db.Patients.Where(x => x.InsuranceName == insuranceName);
-
-                //foreach(var element2 in patient)
-                //{
-                //    element2.InsuranceName = null;
-                //}
+              
 
                 db.SaveChanges();
                 MessageBox.Show("The insurance was succesfull deleted");
