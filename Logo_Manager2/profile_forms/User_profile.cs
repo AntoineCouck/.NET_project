@@ -19,6 +19,7 @@ namespace Logo_Manager2.profile_forms
         {
             InitializeComponent();
             NomoreSessions += new leftSessionsdelegate(this.CheckNoMoreSessions);
+            
         }
 
         public int CheckNoMoreSessions(int total, int remove , int add)
@@ -31,6 +32,8 @@ namespace Logo_Manager2.profile_forms
 
         private void User_profile_Load(object sender, EventArgs e)
         {
+
+            
             testsList.Items.Clear();
 
 
