@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Menu_dashboard = new System.Windows.Forms.MenuStrip();
             this.pageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -191,7 +191,7 @@
             this.btn_dashboard_add_test.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_dashboard_add_test.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_dashboard_add_test.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_dashboard_add_test.Location = new System.Drawing.Point(206, 839);
+            this.btn_dashboard_add_test.Location = new System.Drawing.Point(206, 631);
             this.btn_dashboard_add_test.Name = "btn_dashboard_add_test";
             this.btn_dashboard_add_test.Size = new System.Drawing.Size(100, 39);
             this.btn_dashboard_add_test.TabIndex = 7;
@@ -205,7 +205,7 @@
             this.btn_dashboard_add_patient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_dashboard_add_patient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_dashboard_add_patient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_dashboard_add_patient.Location = new System.Drawing.Point(632, 431);
+            this.btn_dashboard_add_patient.Location = new System.Drawing.Point(632, 304);
             this.btn_dashboard_add_patient.Name = "btn_dashboard_add_patient";
             this.btn_dashboard_add_patient.Size = new System.Drawing.Size(100, 39);
             this.btn_dashboard_add_patient.TabIndex = 8;
@@ -227,7 +227,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(299, 430);
+            this.label2.Location = new System.Drawing.Point(304, 299);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 21);
             this.label2.TabIndex = 10;
@@ -240,7 +240,7 @@
             this.btn_dashboard_addInsurance.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_dashboard_addInsurance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_dashboard_addInsurance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_dashboard_addInsurance.Location = new System.Drawing.Point(898, 839);
+            this.btn_dashboard_addInsurance.Location = new System.Drawing.Point(909, 641);
             this.btn_dashboard_addInsurance.Name = "btn_dashboard_addInsurance";
             this.btn_dashboard_addInsurance.Size = new System.Drawing.Size(100, 39);
             this.btn_dashboard_addInsurance.TabIndex = 14;
@@ -296,18 +296,18 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.testsDataGridView.DataSource = this.testsBindingSource;
-            this.testsDataGridView.Location = new System.Drawing.Point(96, 454);
+            this.testsDataGridView.Location = new System.Drawing.Point(101, 323);
             this.testsDataGridView.Name = "testsDataGridView";
-            this.testsDataGridView.Size = new System.Drawing.Size(494, 379);
+            this.testsDataGridView.Size = new System.Drawing.Size(494, 302);
             this.testsDataGridView.TabIndex = 16;
             this.testsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.testsDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Id";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn9.HeaderText = "Id";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -355,9 +355,9 @@
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
             this.insurancesDataGridView.DataSource = this.insurancesBindingSource;
-            this.insurancesDataGridView.Location = new System.Drawing.Point(762, 454);
+            this.insurancesDataGridView.Location = new System.Drawing.Point(775, 323);
             this.insurancesDataGridView.Name = "insurancesDataGridView";
-            this.insurancesDataGridView.Size = new System.Drawing.Size(520, 379);
+            this.insurancesDataGridView.Size = new System.Drawing.Size(520, 302);
             this.insurancesDataGridView.TabIndex = 16;
             this.insurancesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.insurancesDataGridView_CellClick);
             // 
@@ -398,16 +398,16 @@
             this.patientsDataGridView.DataSource = this.patientsBindingSource;
             this.patientsDataGridView.Location = new System.Drawing.Point(206, 52);
             this.patientsDataGridView.Name = "patientsDataGridView";
-            this.patientsDataGridView.Size = new System.Drawing.Size(941, 357);
+            this.patientsDataGridView.Size = new System.Drawing.Size(941, 233);
             this.patientsDataGridView.TabIndex = 17;
             this.patientsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.patientsDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -474,7 +474,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1017, 430);
+            this.label3.Location = new System.Drawing.Point(1030, 299);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 21);
             this.label3.TabIndex = 19;
@@ -488,7 +488,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(323, 842);
+            this.comboBox1.Location = new System.Drawing.Point(323, 634);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(154, 29);
             this.comboBox1.TabIndex = 20;
@@ -509,7 +509,7 @@
             this.btn_delete_test.BackColor = System.Drawing.Color.Red;
             this.btn_delete_test.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_delete_test.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_test.Location = new System.Drawing.Point(342, 877);
+            this.btn_delete_test.Location = new System.Drawing.Point(342, 669);
             this.btn_delete_test.Name = "btn_delete_test";
             this.btn_delete_test.Size = new System.Drawing.Size(121, 39);
             this.btn_delete_test.TabIndex = 21;
@@ -525,7 +525,7 @@
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1021, 843);
+            this.comboBox2.Location = new System.Drawing.Point(1032, 645);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(154, 29);
             this.comboBox2.TabIndex = 23;
@@ -546,7 +546,7 @@
             this.btn_delete_insurance.BackColor = System.Drawing.Color.Red;
             this.btn_delete_insurance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_delete_insurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_insurance.Location = new System.Drawing.Point(1043, 878);
+            this.btn_delete_insurance.Location = new System.Drawing.Point(1054, 680);
             this.btn_delete_insurance.Name = "btn_delete_insurance";
             this.btn_delete_insurance.Size = new System.Drawing.Size(121, 39);
             this.btn_delete_insurance.TabIndex = 24;
@@ -559,7 +559,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1369, 972);
+            this.ClientSize = new System.Drawing.Size(1369, 763);
             this.Controls.Add(this.btn_delete_insurance);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.btn_delete_test);
