@@ -25,7 +25,7 @@ namespace Logo_Manager2.profile_forms
             var Insurances = db.Insurances.Where(x => x.Name == User_Dashboard.currentInsuranceId);
             foreach (var insurance in Insurances)
             {
-
+                title_profile_test.Text = "Insurance: " +  insurance.Name;
                 input_name_mod.Text = insurance.Name;
                 input_adres_mod.Text = insurance.Adres;
                 input_telnr_mod.Text = insurance.TelNr;

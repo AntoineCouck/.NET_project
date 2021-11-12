@@ -49,6 +49,7 @@
             // btn_confirm_deletetest
             // 
             this.btn_confirm_deletetest.BackColor = System.Drawing.Color.Green;
+            this.btn_confirm_deletetest.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_confirm_deletetest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_confirm_deletetest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirm_deletetest.Location = new System.Drawing.Point(6, 51);

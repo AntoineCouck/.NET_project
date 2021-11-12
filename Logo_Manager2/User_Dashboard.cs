@@ -26,6 +26,7 @@ namespace Logo_Manager2
         public static modify_patient modify_profile = new modify_patient();
         public static create_insurance create_Insurance = new create_insurance();
         public int id;
+
         public static bool is_connected = false;
         public static string username;
         public static int currentPatientId { get; set; }
@@ -130,6 +131,11 @@ namespace Logo_Manager2
             {
                 this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
             }
+            if(delete_User.DialogResult == DialogResult.OK)
+            {
+                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
+
+            }
 
         }
 
@@ -172,86 +178,7 @@ namespace Logo_Manager2
             create_Insurance.ShowDialog();
         }
 
-        private void btn_delete_test_Click(object sender, EventArgs e)
-        {
-
-            if (comboBox1.Items.Count > 0)
-            {
-                string testName = comboBox1.Text;
-
-                var tests = db.Tests.Where(x => x.Name == testName);
-                var patientTest = db.PatientsTests.Where(x => x.TestId == id);
-
-                foreach (var element in tests)
-                {
-
-                    db.Tests.Remove(element);
-                    id = element.Id;
-
-                }
-
-                foreach(var element2 in patientTest)
-                {
-                    db.PatientsTests.Remove(element2);
-                }
-
-                db.SaveChanges();
-                MessageBox.Show("The test was succesfull deleted");
-                this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
-
-
-
-            }
-            else
-            {
-
-                MessageBox.Show("Sorry but there are no tests at this moment");
-            }
-
-
-
-
-        }
-
-        private void btn_delete_insurance_Click(object sender, EventArgs e)
-        {
-
-            if (comboBox2.Items.Count > 0)
-            {
-
-                string insuranceName = comboBox2.Text;
-
-                var insurance = db.Insurances.Where(x => x.Name == insuranceName);
-
-
-                foreach (var element in insurance)
-                {
-
-                    db.Insurances.Remove(element);
-                    //insuranceName = element.Name;
-
-                }
-              
-
-                db.SaveChanges();
-                MessageBox.Show("The insurance was succesfull deleted");
-                this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
-                // TODO: This line of code loads data into the 'logo_manager2DataSet.Insurances' table. You can move, or remove it, as needed.
-                this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
-                // TODO: This line of code loads data into the 'logo_manager2DataSet.Tests' table. You can move, or remove it, as needed.
-                this.testsTableAdapter.Fill(this.logo_manager2DataSet.Tests);
-                // TODO: This line of code loads data into the 'logo_manager2DataSet.Patients' table. You can move, or remove it, as needed.
-                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
-                // TODO: This line of code loads data into the 'logo_manager2DataSet.Users' table. You can move, or remove it, as needed.
-                this.usersTableAdapter.Fill(this.logo_manager2DataSet.Users);
-            }
-            else
-            {
-                MessageBox.Show("Sorry but there are no insurances at this moment");
-
-            }
-
-        }
+ 
 
         private void testsDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -312,17 +239,21 @@ namespace Logo_Manager2
             if (delete_Insurance.DialogResult == DialogResult.OK)
             {
                 this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
             }
 
             if (insurance_Profile.DialogResult == DialogResult.OK)
             {
                 this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
             }
 
             if (modify_Insurance.DialogResult == DialogResult.OK)
             {
                 this.insurancesTableAdapter.Fill(this.logo_manager2DataSet.Insurances);
+                this.patientsTableAdapter1.Fill(this.logo_manager2DataSet1.Patients);
             }
+
         }
     }
 }

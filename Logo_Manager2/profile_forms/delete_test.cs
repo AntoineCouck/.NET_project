@@ -19,7 +19,7 @@ namespace Logo_Manager2.profile_forms
             foreach (var element in test)
             {
 
-                name.Text = name.Text + " " + element.Name + "?";
+                name.Text = "delete " + element.Name + "?";
 
             }
         }

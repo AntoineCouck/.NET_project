@@ -2,6 +2,7 @@
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace Logo_Manager2.profile_forms
 {
@@ -18,6 +19,9 @@ namespace Logo_Manager2.profile_forms
         public string followup { get; set; }
 
         public string insurance { get; set; }
+
+    
+
 
         public modify_patient()
         {
@@ -43,7 +47,7 @@ namespace Logo_Manager2.profile_forms
                      input_edit_insurance.Text = patient.InsuranceName;
                     profile_edit_following_for.Text = patient.Followup;
 
-                  MessageBox.Show(profile_edit_followby.Text); 
+                 
 
                 }
                 
@@ -103,6 +107,7 @@ namespace Logo_Manager2.profile_forms
                     patient.InsuranceName = input_edit_insurance.Text;
 
                 }
+
 
                 FirstName = input_edit_name.Text;
                 LastName = input_edit_lastname.Text;

@@ -21,7 +21,7 @@ namespace Logo_Manager2.profile_forms
             foreach (var element in user)
             {
 
-                name.Text = name.Text + " " + element.Firstname + " " + element.Lastname + "?";
+                name.Text = "delete "  + element.Firstname + " " + element.Lastname + "?";
 
             }
 

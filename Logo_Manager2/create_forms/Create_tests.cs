@@ -35,15 +35,23 @@ namespace Logo_Manager2.create_forms
             }
 
 
-            if (!(input_test_age.Value < input_tests_maxage.Value))
+            else if (!(input_test_age.Value < input_tests_maxage.Value))
             {
                 MessageBox.Show("Sorry but the max age must be higher then the min age");
                 createObj = false;
 
+            } 
+
+            else if(input_tests_maxage.Value == null || input_test_age.Value == null)
+            {
+                MessageBox.Show("Sorry but min and max age must be completed");
+                input_test_age.Value = 0;
+                input_tests_maxage.Value = 0;
+                createObj = false;
             }
 
 
-            else if (createObj == true)
+            if (createObj == true)
             {
                 var test = new Test();
                 test.Name = input_test_name.Text;

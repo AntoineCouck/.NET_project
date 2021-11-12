@@ -139,7 +139,16 @@ namespace Logo_Manager2.create_forms
                 patient.Birthday = input_patient_birthday.Value;
                 patient.Followup = input_patient_followup.Text;
                 patient.UserName = input_patient_user.Text;
-                patient.InsuranceName = input_patient_insurance.Text;
+               
+
+                if (!string.IsNullOrEmpty(input_patient_insurance.Text))
+                {
+                    patient.InsuranceName = input_patient_insurance.Text;
+                  
+                } 
+
+               
+              
 
                 db.Patients.Add(patient);
 

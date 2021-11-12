@@ -2,6 +2,7 @@
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 
 namespace Logo_Manager2.profile_forms
@@ -12,7 +13,21 @@ namespace Logo_Manager2.profile_forms
         Logo_manager2Entities1 db = new Logo_manager2Entities1();
         public delegate int leftSessionsdelegate(int total  , int remove , int add);
         public event leftSessionsdelegate NomoreSessions;
+        public List<int> _patientId = new List<int>();
+        public List<string> _FirstName = new List<string>();
+        public List<string> _LastName = new List<string>();
+        public List<string> _birthday = new List<string>();
+        public List<string> _UserName = new List<string>();
+        public List<string> _followup = new List<string>();
+        public List<string> _insurance = new List<string>();
 
+        public IList<int> patientId { get { return _patientId; } }
+        public IList<string> FirstName { get { return _FirstName; } }
+        public IList<string> LastName { get { return _LastName; } }
+        public IList<string> birthday { get { return _birthday; } }
+        public IList<string> UserName { get { return _UserName; } }
+        public IList<string> followup { get { return _followup; } }
+        public IList<string> insurance { get { return _insurance; } }
 
 
         public User_profile()
@@ -33,13 +48,14 @@ namespace Logo_Manager2.profile_forms
         private void User_profile_Load(object sender, EventArgs e)
         {
 
-            
+
             testsList.Items.Clear();
 
 
             this.testsTableAdapter1.Fill(this.logo_manager2DataSet.Tests);
 
             var Patient = db.Patients.Where(x => x.Id == User_Dashboard.currentPatientId);
+
 
             var ListTests = db.PatientsTests.Join(db.Patients, x => x.PatientId, y => y.Id, (x, y) => new
             {
@@ -52,22 +68,20 @@ namespace Logo_Manager2.profile_forms
                 testName = y.Name
             }).Where(x => x.patientTest2.patientId == User_Dashboard.currentPatientId);
 
-
-
-            if (User_Dashboard.modify_profile.FirstName != null)
+            if (patientId.Contains(User_Dashboard.currentPatientId))
             {
+                int index = patientId.IndexOf(User_Dashboard.currentPatientId);
 
-                title_profile_patient.Text = "profile of:" + "" + User_Dashboard.modify_profile.LastName + " " + User_Dashboard.modify_profile.FirstName;
-                profile_info_firstname.Text = User_Dashboard.modify_profile.FirstName;
-                profile_info_lastname.Text = User_Dashboard.modify_profile.LastName;
-                profile_info_birthday.Text = User_Dashboard.modify_profile.birthday;
-                profile_info_followBy.Text = User_Dashboard.modify_profile.UserName;
-                input_paztient_insurance.Text = User_Dashboard.modify_profile.insurance;
-                textBox1.Text = User_Dashboard.modify_profile.followup;
-            } else
+                title_profile_patient.Text = "profile of:" + "" + LastName[index] + " " + FirstName[index];
+                profile_info_firstname.Text = FirstName[index];
+                profile_info_lastname.Text = LastName[index];
+                profile_info_birthday.Text = birthday[index];
+                profile_info_followBy.Text = UserName[index];
+                input_paztient_insurance.Text = insurance[index];
+                textBox1.Text = followup[index];
+            }
+            else
             {
-
-
                 foreach (var patient in Patient)
                 {
                     title_profile_patient.Text = "profile of:" + "" + patient.Lastname + " " + patient.Firstname;
@@ -77,31 +91,30 @@ namespace Logo_Manager2.profile_forms
                     profile_info_followBy.Text = patient.UserName;
                     input_paztient_insurance.Text = patient.InsuranceName;
                     textBox1.Text = patient.Followup;
-
-                    if (patient.LeftSessions == 0)
-                    {
-                        patient_total.Text = "0";
-                    }
-                    else
-                    {
-                        patient_total.Text = patient.LeftSessions.ToString();
-                    }
-
                 }
-
             }
-
-
+            foreach (var patient in Patient)
+            {
+                if (patient.LeftSessions == 0)
+                {
+                    patient_total.Text = "0";
+                }
+                else
+                {
+                    patient_total.Text = patient.LeftSessions.ToString();
+                }
+            }
 
             foreach (var element in ListTests)
             {
                 testsList.Items.Add(element.testName);
             }
 
+            }
 
 
 
-        }
+        
 
         private void button_save_Click(object sender, EventArgs e)
         {
@@ -175,8 +188,6 @@ namespace Logo_Manager2.profile_forms
                 testsList.Items.Add(element.testName);
             }
 
-
-
         }
 
         private void btn_del_user_Click(object sender, EventArgs e)
@@ -192,9 +203,6 @@ namespace Logo_Manager2.profile_forms
             if (User_Dashboard.modify_profile.DialogResult == DialogResult.OK)
             {
 
-
-
-
                 title_profile_patient.Text = "profile of:" + "" + User_Dashboard.modify_profile.LastName + " " + User_Dashboard.modify_profile.FirstName;
                 profile_info_firstname.Text = User_Dashboard.modify_profile.FirstName;
                 profile_info_lastname.Text = User_Dashboard.modify_profile.LastName;
@@ -203,13 +211,35 @@ namespace Logo_Manager2.profile_forms
                 input_paztient_insurance.Text = User_Dashboard.modify_profile.insurance;
                 textBox1.Text = User_Dashboard.modify_profile.followup;
 
+                if (!patientId.Contains(User_Dashboard.currentPatientId))
+                {
+                    _patientId.Add(User_Dashboard.currentPatientId);
+                    _FirstName.Add(User_Dashboard.modify_profile.FirstName);
+                    _LastName.Add(User_Dashboard.modify_profile.LastName);
+                    _birthday.Add(User_Dashboard.modify_profile.birthday);
+                    _UserName.Add(User_Dashboard.modify_profile.UserName);
+                    _followup.Add(User_Dashboard.modify_profile.followup);
+                    _insurance.Add(User_Dashboard.modify_profile.insurance);
+                }
+                else
+                {
+                    int index = patientId.IndexOf(User_Dashboard.currentPatientId);
+
+                    FirstName[index] = User_Dashboard.modify_profile.FirstName;
+                    LastName[index] = User_Dashboard.modify_profile.LastName;
+                    birthday[index] = User_Dashboard.modify_profile.birthday;
+                    UserName[index] = User_Dashboard.modify_profile.UserName;
+                    insurance[index] = User_Dashboard.modify_profile.followup;
+                    followup[index] = User_Dashboard.modify_profile.insurance;
+
+                }
 
 
             }
         }
 
-    
-   
+
+
         public void RemoveChange()
         {
 

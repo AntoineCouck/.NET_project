@@ -21,7 +21,7 @@ namespace Logo_Manager2.profile_forms
             foreach (var element in insurances)
             {
 
-                title_del_insurance.Text = title_del_insurance.Text + " " + element.Name + "?";
+                title_del_insurance.Text =  "delete " + element.Name + "?";
 
             }
         }
